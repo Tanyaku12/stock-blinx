@@ -8,6 +8,7 @@ merge_scan_update_rapi.py — Script lengkap untuk:
 
 import json
 import os
+import sys
 import shutil
 import re
 
@@ -288,13 +289,7 @@ def rebuild_rapi_data_json(sync_spin=None):
     save_json(data_json_path, result_list)
 
     if sync_spin is None:
-        try:
-            print("\n" + "-" * 50)
-            ans = input("Apakah Anda ingin upload/sync data.json ke spin (/root/spin/gajah & dark)? (y/n): ").strip().lower()
-            print("-" * 50)
-            sync_spin = ans in ["y", "yes"]
-        except Exception:
-            sync_spin = False
+        sync_spin = os.environ.get("SYNC_SPIN", "").lower() in ["1", "true", "y", "yes"]
 
     if sync_spin:
         for spin_dst in ["/root/spin/gajah", "/root/spin/dark"]:

@@ -687,5 +687,18 @@
     "date_identified": "2026-07-26 11:48:00",
     "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjU5NjY2NDQ0NCwibmlja25hbWUiOiIwK1NrMnFXZUFROExWaHlFNWRQYnM0R2tpb0RsMFE9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiNTZiOWMxNzBiZDBjZGI1NTM5YTAyN2NlMzgyODMxNjUiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkZSIiwiZXh0ZXJuYWxfdWlkIjo1NzY4MzM5NDgzLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1MDcwMDgwfQ.03QeaHJ5xHaROi_VxQg-i3XvaKr1D9E_xOPaWdpzigM",
     "thread_id": 229
+  },
+  {
+    "uid": 6070485967,
+    "password": "BLINXANDSLVFFYKINGPAINZYGHhhwdhp",
+    "account_id": "16777222294",
+    "name": "❦〆blinx⁸³⁰¹",
+    "region": "ID",
+    "rarity_type": "LEGENDARY",
+    "rarity_score": 38,
+    "reason": "Score:38|R4+8,R3+5,SPM+2,QD+8,QUAD_IDENTICAL+10,TRIPLE_IDENTICAL+5",
+    "date_identified": "2026-08-03 22:41:01",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc3NzIyMjI5NCwibmlja25hbWUiOiIzc2FLMnFTZWdPUGtXZ2dQQ2h6YnM0bWtpb0RsMWFPQiIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiMzI3OGY4OWNjZmRhZjc0YjcwMGZiYzIyMjJkZjlmZTQiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IlVTIiwiZXh0ZXJuYWxfdWlkIjo2MDcwNDg1OTY3LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODAwNDYwfQ.qR3EwaHbHfcKxLuZxR2XzJe1SoUTLPDOefSk7kvS-iU",
+    "thread_id": 16
   }
 ]

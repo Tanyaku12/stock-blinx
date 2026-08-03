@@ -7759,5 +7759,18 @@
     "date_identified": "2026-08-02 09:13:11",
     "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc0NDMwNzc3Nywibmlja25hbWUiOiJVd2xjVmtIYS9zYWdnWWJuMElhNGh0UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJmMjBhZTI2OTFmYjMyYWNiOWRjMTJhZTMyZmIxMGUzYiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSlAiLCJleHRlcm5hbF91aWQiOjU5ODU4NzYzNzgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU2NjU1OTF9.M9voMLyjRBfOGgy19Q0Nz0P4kMNfdrCpOy2UktvEXz4",
     "thread_id": 666
+  },
+  {
+    "uid": 6069727868,
+    "password": "BLINXANDSLVFFY_DUsOi4eY",
+    "account_id": "16776979888",
+    "name": "blinx✪⁴⁸¹⁶",
+    "region": "ID",
+    "rarity_type": "EPIC",
+    "rarity_score": 17,
+    "reason": "ID:16776979888 | Score:17 | SPH,SPM,CLEAN_DIGIT,TRIPLE_EIGHT_NINE",
+    "date_identified": "2026-08-03 22:25:05",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc3Njk3OTg4OCwibmlja25hbWUiOiJVd2xjVmtIYS84bUF1ZENFNWR6N2k5UG5qdz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiIyY2Y5YWUwMWM5ZTNjYzQ2MzA1ZWRmN2Q3MjBhYzNhNyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiUlUiLCJleHRlcm5hbF91aWQiOjYwNjk3Mjc4NjgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU3OTk1MDV9.Wo3Ow1WT_kb0gjq7ztXES9jYwLUfRpKCxdb998e48-k",
+    "thread_id": 231
   }
 ]
