@@ -296,11 +296,51 @@ def rebuild_rapi_data_json(sync_spin=None):
             if os.path.exists(spin_dst):
                 dst_file = os.path.join(spin_dst, "data.json")
                 save_json(dst_file, result_list)
-                print(f"  ✓ Synced data.json → {dst_file}")
+                print(f"  ✓ Synced data.json → {spin_dst}")
     else:
         print("  ℹ Upload/sync ke spin dilewati.")
 
+    # Auto update web catalog and push to GitHub for Vercel deployment
+    auto_push_web_stock()
+
     return len(result_list)
+
+def update_web_stock_data():
+    """Generates web/stock_data.js from RAPI/all.txt and RAPI/sold.txt."""
+    try:
+        api_dir = os.path.join(BASE, "api")
+        if api_dir not in sys.path:
+            sys.path.append(api_dir)
+        from stock import load_all_stock
+        items = load_all_stock()
+        js_content = "window.STOCK_DATA = " + json.dumps(items, ensure_ascii=False, indent=2) + ";\n"
+        web_stock_path = os.path.join(BASE, "web", "stock_data.js")
+        with open(web_stock_path, "w", encoding="utf-8") as f:
+            f.write(js_content)
+        print(f"  ✓ Re-generated web/stock_data.js ({len(items)} stock items)")
+        return True
+    except Exception as e:
+        print(f"  ❌ Failed to update web/stock_data.js: {e}")
+        return False
+
+def auto_push_web_stock():
+    """Auto commits and pushes changes to GitHub for Vercel deployment."""
+    try:
+        update_web_stock_data()
+        os.system(f"cd {BASE} && git add .")
+        status = os.popen(f"cd {BASE} && git status --porcelain").read().strip()
+        if status:
+            commit_msg = "Auto update stock_data.js & RAPI catalog [Vercel Push]"
+            os.system(f'cd {BASE} && git commit -m "{commit_msg}"')
+            push_res = os.system(f"cd {BASE} && git push origin main")
+            if push_res == 0:
+                print("  🚀 Successfully pushed changes to GitHub (Vercel deployment auto-triggered)!")
+            else:
+                print("  ❌ Git push failed.")
+        else:
+            print("  ℹ No changes detected for git commit.")
+    except Exception as e:
+                print(f"  ❌ Auto push error: {e}")
 
 def merge_by_uid(dst_path, src_path, key="uid"):
     """Merge src JSON array into dst JSON array, dedup by key."""
