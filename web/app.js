@@ -446,8 +446,7 @@ function createStockCard(item) {
     card.setAttribute('data-tier-type', tierType);
 
     // Format number nicely with spacing for ultra readability (e.g. 0882 0036 19577)
-    const readableNumber = formatReadablePhone(item.number);
-    const formattedNumber = formatNumberDisplay(readableNumber, currentSearchQuery || currentDigitFilter);
+    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter);
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 
