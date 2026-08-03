@@ -617,7 +617,7 @@ function createStockCard(item) {
         : '';
 
     const checkboxHtml = isSold
-        ? `<input type="checkbox" class="card-checkbox" disabled title="Nomor sudah terjual">`
+        ? `<input type="checkbox" class="card-checkbox" disabled title="ID sudah terjual">`
         : `<input type="checkbox" class="card-checkbox" ${selectedNumbers.has(item.number) ? 'checked' : ''}>`;
 
     const isSTier = isSTierCategory(item.category);
@@ -629,7 +629,7 @@ function createStockCard(item) {
            </button>`;
 
     const orderBtnHtml = isSold
-        ? `<button class="btn-card-order disabled" disabled title="Nomor ini sudah terjual">
+        ? `<button class="btn-card-order disabled" disabled title="ID ini sudah terjual">
             <i class="fa-solid fa-ban"></i> Terjual
            </button>`
         : (isSTier
@@ -654,7 +654,7 @@ function createStockCard(item) {
             <span class="pattern-tag">${patternTag}</span>
         </div>
         <div class="card-bottom">
-            <button class="btn-card-copy" title="Salin Nomor">
+            <button class="btn-card-copy" title="Salin ID">
                 <i class="fa-solid fa-copy"></i>
             </button>
             ${favBtnHtml}
@@ -826,14 +826,14 @@ function updateSelectionState() {
 
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text);
-    showToast(`Nomor ${text} berhasil disalin!`);
+    showToast(`ID ${text} berhasil disalin!`);
 }
 
 function copySelectedNumbers() {
     if (selectedNumbers.size === 0) return;
     const listText = Array.from(selectedNumbers).join('\n');
     navigator.clipboard.writeText(listText);
-    showToast(`${selectedNumbers.size} nomor berhasil disalin!`);
+    showToast(`${selectedNumbers.size} ID berhasil disalin!`);
 }
 
 function openWaDirect(textMessage) {
@@ -842,7 +842,7 @@ function openWaDirect(textMessage) {
 }
 
 function orderSingleViaWA(item) {
-    const message = `Halo Admin, saya berminat membeli nomor Stock Blinx berikut:\n\n📱 *Nomor*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah nomor ini masih ready?`;
+    const message = `Halo Admin, saya berminat membeli ID Stock Blinx berikut:\n\n🆔 *ID*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah ID ini masih ready?`;
     openWaDirect(message);
 }
 
@@ -868,21 +868,21 @@ function orderSelectedViaWA() {
     let message = `Halo Admin, saya berminat order via *PROMO BUY 2 GET 1 FREE*:\n\n`;
 
     if (mainItems.length > 0) {
-        message += `🛒 *NOMOR UTAMA (${mainItems.length} nomor)*:\n`;
+        message += `🛒 *ID UTAMA (${mainItems.length} ID)*:\n`;
         mainItems.forEach((item, idx) => {
             message += `${idx + 1}. ${item.number} (${item.category})\n`;
         });
     }
 
     if (sTierBonusItems.length > 0) {
-        message += `\n🎁 *BONUS S-TIER (${sTierBonusItems.length} nomor)*:\n`;
+        message += `\n🎁 *BONUS S-TIER (${sTierBonusItems.length} ID)*:\n`;
         sTierBonusItems.forEach((item, idx) => {
             message += `${idx + 1}. ${item.number}\n`;
         });
     }
 
     if (eligibleFreeBonusCount > 0 && sTierBonusItems.length === 0) {
-        message += `\n💡 *Info Promo*: Pembelian ${mainItems.length} nomor utama berhak klaim ${eligibleFreeBonusCount} nomor S-Tier GRATIS!`;
+        message += `\n💡 *Info Promo*: Pembelian ${mainItems.length} ID utama berhak klaim ${eligibleFreeBonusCount} ID S-Tier GRATIS!`;
     }
 
     message += `\nMohon info total harganya. Terima kasih Admin!`;

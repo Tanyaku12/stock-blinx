@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Blinx - Katalog ID Cantik & Nomor Langka</title>
-    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, dan Urut. Order mudah via WhatsApp.">
+    <title>Stock Blinx - Katalog ID Cantik & Rare IDs</title>
+    <meta name="description" content="Katalog stock ID cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, dan Urut. Order mudah via WhatsApp.">
 
     <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,8 +58,8 @@
                 <img src="assets/banner.jpg" alt="Stock Blinx Banner" class="banner-img">
                 <div class="hero-overlay">
                     <div class="hero-badge">OFFICIAL STOCK BLINX CATALOG</div>
-                    <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare Numbers</span></h1>
-                    <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">0</strong> pilihan stock utama ready. Order langsung terhubung ke WhatsApp Admin.</p>
+                    <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare IDs</span></h1>
+                    <p>Temukan ID cantik impianmu dari <strong id="total-hero-stock">0</strong> pilihan stock utama ready. Order langsung terhubung ke WhatsApp Admin.</p>
 
                     <!-- Quick Stats Cards (Hanya Stock Utama: SSS, SS, URUT) -->
                     <div class="hero-stats-grid">
@@ -96,7 +96,7 @@
                     <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
                     <div class="promo-text">
                         <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
-                        <p>Setiap pembelian <strong>2 Nomor Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 Nomor S-Tier GRATIS</strong>!</p>
+                        <p>Setiap pembelian <strong>2 ID Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 ID S-Tier GRATIS</strong>!</p>
                     </div>
                 </div>
                 <button id="btn-open-stier-modal" class="btn-stier-trigger">
@@ -111,7 +111,7 @@
                 <!-- Search Box -->
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Cari digit nomor utama (cth: 6666, 888, 123)..." autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Cari digit ID utama (cth: 6666, 888, 123)..." autocomplete="off">
                     <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
@@ -156,8 +156,8 @@
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
                                 <option value="tier">Prioritas Tier (SSS → SS → URUT)</option>
-                                <option value="num-asc">Nomor (Terkecil)</option>
-                                <option value="num-desc">Nomor (Terbesar)</option>
+                                <option value="num-asc">ID (Terkecil)</option>
+                                <option value="num-desc">ID (Terbesar)</option>
                             </select>
                         </div>
                     </div>
@@ -213,13 +213,13 @@
             
             <div class="modal-body">
                 <p class="modal-desc" id="stier-modal-desc">
-                    💡 Pilih nomor S-Tier favoritmu sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 Nomor Utama (SSS/SS/URUT).
+                    💡 Pilih ID S-Tier favoritmu sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 ID Utama (SSS/SS/URUT).
                 </p>
 
                 <!-- Search Inside Modal -->
                 <div class="search-box modal-search">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="stier-modal-search" placeholder="Cari digit nomor S-Tier (cth: 7777, 8888, 0000)..." autocomplete="off">
+                    <input type="text" id="stier-modal-search" placeholder="Cari digit ID S-Tier (cth: 7777, 8888, 0000)..." autocomplete="off">
                 </div>
 
                 <!-- S-Tier Grid List Container -->
@@ -245,7 +245,7 @@
     <div id="bulk-bar" class="bulk-bar hidden">
         <div class="bulk-info">
             <span class="bulk-badge" id="bulk-count">0</span>
-            <span>Nomor Dipilih</span>
+            <span>ID Dipilih</span>
             <span id="promo-bonus-badge" class="promo-bonus-badge hidden">🎁 1 S-Tier Gratis!</span>
         </div>
         <div class="bulk-actions">
@@ -283,6 +283,6 @@
 
     <!-- Scripts -->
     <script src="stock_data.js?v=20260803_v2"></script>
-    <script src="app.js?v=20260803_v3"></script>
+    <script src="app.js?v=20260803_v4"></script>
 </body>
 </html>
