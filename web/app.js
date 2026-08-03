@@ -424,7 +424,8 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        // ALWAYS exclude S-Tier from the main catalog list!
+        // ALWAYS exclude SOLD items and S-Tier from the main catalog list!
+        if (item.status === 'SOLD') return false;
         if (isSTierCategory(item.category)) return false;
 
         if (currentCategory === 'FAVORITE') {
