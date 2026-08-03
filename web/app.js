@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (NEOBRUTALISM & CLEAR STOCK VIEW)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (PROMO BUY 2 GET 1 FREE)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -17,9 +17,8 @@ let currentDigitFilter = '';
 let currentSort = 'tier';
 let currentPage = 1;
 let itemsPerPage = 60;
-let viewMode = localStorage.getItem('blinx_view_mode') || 'grid'; // 'grid' or 'list'
+let viewMode = localStorage.getItem('blinx_view_mode') || 'grid';
 
-// Category tier ranking for sorting
 const TIER_ORDER = {
     'SSS TIER (6x digit berulang)': 1,
     'SS TIER (5x digit berulang)': 2,
@@ -70,6 +69,7 @@ const DOM = {
 
     bulkBar: document.getElementById('bulk-bar'),
     bulkCount: document.getElementById('bulk-count'),
+    promoBonusBadge: document.getElementById('promo-bonus-badge'),
     btnCopyBulk: document.getElementById('btn-copy-bulk'),
     btnOrderBulk: document.getElementById('btn-order-bulk'),
 
@@ -77,7 +77,6 @@ const DOM = {
     toastMessage: document.getElementById('toast-message')
 };
 
-// Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
     initApp();
 });
@@ -89,9 +88,6 @@ async function initApp() {
     applyFiltersAndSort();
 }
 
-/**
- * Fetch Stock Data from /api/stock or fallback to RAPI / window.STOCK_DATA
- */
 async function loadStockData() {
     showLoading(true);
     try {
@@ -120,13 +116,10 @@ async function loadStockData() {
                 } catch (errSold) {
                     console.warn('Fallback sold.txt fetch failed:', errSold);
                 }
-
-                console.log('Loaded stock data from all.txt & sold.txt:', allStockItems.length);
             } else {
                 throw new Error('File fetch failed');
             }
         } catch (err) {
-            console.warn('Static file fetch failed, using window.STOCK_DATA fallback.');
             if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA)) {
                 allStockItems = window.STOCK_DATA;
             }
@@ -224,13 +217,12 @@ function renderStats() {
 
 function setupEventListeners() {
     if (DOM.btnWaNav) {
-        DOM.btnWaNav.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
+        DOM.btnWaNav.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Promo Buy 2 Get 1 Free Stock Blinx."));
     }
     if (DOM.btnWaFooter) {
-        DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
+        DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Promo Buy 2 Get 1 Free Stock Blinx."));
     }
 
-    // View Mode Switcher
     if (DOM.btnViewGrid && DOM.btnViewList) {
         DOM.btnViewGrid.classList.toggle('active', viewMode === 'grid');
         DOM.btnViewList.classList.toggle('active', viewMode === 'list');
@@ -252,7 +244,6 @@ function setupEventListeners() {
         });
     }
 
-    // Per page select
     if (DOM.perPageSelect) {
         DOM.perPageSelect.addEventListener('change', (e) => {
             itemsPerPage = parseInt(e.target.value, 10) || 60;
@@ -261,7 +252,6 @@ function setupEventListeners() {
         });
     }
 
-    // Search input
     DOM.searchInput.addEventListener('input', (e) => {
         currentSearchQuery = e.target.value.trim();
         DOM.btnClearSearch.classList.toggle('hidden', currentSearchQuery === '');
@@ -277,7 +267,6 @@ function setupEventListeners() {
         applyFiltersAndSort();
     });
 
-    // Category Tabs
     DOM.categoryTabs.addEventListener('click', (e) => {
         const btn = e.target.closest('.tab-btn');
         if (!btn) return;
@@ -290,7 +279,6 @@ function setupEventListeners() {
         applyFiltersAndSort();
     });
 
-    // Pattern Quick Chips
     document.querySelectorAll('.chip').forEach(chip => {
         chip.addEventListener('click', () => {
             document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
@@ -301,7 +289,6 @@ function setupEventListeners() {
         });
     });
 
-    // Sorting select
     DOM.sortSelect.addEventListener('change', (e) => {
         currentSort = e.target.value;
         applyFiltersAndSort();
@@ -445,13 +432,16 @@ function createStockCard(item) {
 
     card.setAttribute('data-tier-type', tierType);
 
-    // Format number nicely with spacing for ultra readability (e.g. 0882 0036 19577)
     const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter);
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 
     const statusBadgeHtml = isSold
         ? `<span class="badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
+        : '';
+
+    const promoBadgeHtml = (tierType === 'S' && !isSold)
+        ? `<span class="badge-bonus-stier"><i class="fa-solid fa-gift"></i> BONUS BUY 2 GET 1</span>`
         : '';
 
     const checkboxHtml = isSold
@@ -473,6 +463,7 @@ function createStockCard(item) {
                 <span class="badge-tier ${tierBadgeClass}">
                     <i class="fa-solid ${tierIcon}"></i> ${tierLabel}
                 </span>
+                ${promoBadgeHtml}
                 ${statusBadgeHtml}
             </div>
         </div>
@@ -540,15 +531,6 @@ function createStockCard(item) {
     return card;
 }
 
-/**
- * Format phone number into clean readable blocks (e.g. 0882 0036 19577)
- */
-function formatReadablePhone(numStr) {
-    if (!numStr || numStr.length < 8) return numStr;
-    // Insert space every 4 digits for effortless scanning
-    return numStr.replace(/(.{4})/g, '$1 ').trim();
-}
-
 function formatNumberDisplay(numStr, highlightQuery) {
     if (!highlightQuery) return numStr;
     const regex = new RegExp(`(${highlightQuery})`, 'gi');
@@ -568,9 +550,38 @@ function getPatternDescription(numStr, tierType) {
     return `Stock Blinx`;
 }
 
+/**
+ * Update Selection State & Calculate Promo Buy 2 Get 1 Free Bonuses
+ */
 function updateSelectionState() {
     const count = selectedNumbers.size;
     DOM.bulkCount.textContent = count;
+
+    // Calculate how many main items vs S-tier bonus items selected
+    let mainCount = 0;
+    let sTierCount = 0;
+
+    selectedNumbers.forEach(num => {
+        const found = allStockItems.find(i => i.number === num);
+        if (found) {
+            if (found.category.includes('S TIER')) {
+                sTierCount++;
+            } else {
+                mainCount++;
+            }
+        }
+    });
+
+    const eligibleFreeBonus = Math.floor(mainCount / 2);
+
+    if (DOM.promoBonusBadge) {
+        if (eligibleFreeBonus > 0) {
+            DOM.promoBonusBadge.classList.remove('hidden');
+            DOM.promoBonusBadge.textContent = `🎁 ${eligibleFreeBonus} S-Tier Gratis!`;
+        } else {
+            DOM.promoBonusBadge.classList.add('hidden');
+        }
+    }
 
     if (count > 0) {
         DOM.bulkBar.classList.remove('hidden');
@@ -621,10 +632,49 @@ function orderSingleViaWA(item) {
     openWaDirect(message);
 }
 
+/**
+ * Smart WA Bulk Order with Buy 2 Get 1 Free Promo formatting
+ */
 function orderSelectedViaWA() {
     if (selectedNumbers.size === 0) return;
-    let listText = Array.from(selectedNumbers).map((num, idx) => `${idx + 1}. ${num}`).join('\n');
-    const message = `Halo Admin, saya berminat membeli ${selectedNumbers.size} nomor Stock Blinx berikut:\n\n${listText}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`;
+
+    const mainItems = [];
+    const sTierBonusItems = [];
+
+    selectedNumbers.forEach(num => {
+        const found = allStockItems.find(i => i.number === num);
+        if (found && found.category.includes('S TIER')) {
+            sTierBonusItems.push(found);
+        } else if (found) {
+            mainItems.push(found);
+        } else {
+            mainItems.push({ number: num, category: 'Stock' });
+        }
+    });
+
+    const eligibleFreeBonusCount = Math.floor(mainItems.length / 2);
+
+    let message = `Halo Admin, saya berminat order via *PROMO BUY 2 GET 1 FREE*:\n\n`;
+
+    if (mainItems.length > 0) {
+        message += `🛒 *NOMOR UTAMA (${mainItems.length} nomor)*:\n`;
+        mainItems.forEach((item, idx) => {
+            message += `${idx + 1}. ${item.number} (${item.category})\n`;
+        });
+    }
+
+    if (sTierBonusItems.length > 0) {
+        message += `\n🎁 *BONUS S-TIER (${sTierBonusItems.length} nomor)*:\n`;
+        sTierBonusItems.forEach((item, idx) => {
+            message += `${idx + 1}. ${item.number}\n`;
+        });
+    }
+
+    if (eligibleFreeBonusCount > 0 && sTierBonusItems.length === 0) {
+        message += `\n💡 *Info Promo*: Pembelian ${mainItems.length} nomor utama berhak klaim ${eligibleFreeBonusCount} nomor S-Tier GRATIS!`;
+    }
+
+    message += `\nMohon info total harganya. Terima kasih Admin!`;
     openWaDirect(message);
 }
 

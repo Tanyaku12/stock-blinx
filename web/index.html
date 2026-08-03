@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Blinx - Katalog ID Cantik & Nomor Langka</title>
-    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah langsung via WhatsApp Admin.">
+    <title>Stock Blinx - Katalog ID Cantik & Promo Buy 2 Get 1 Free</title>
+    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Promo Buy 2 Get 1 Free S-Tier! Temukan ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah via WhatsApp.">
 
     <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,13 @@
                 <div class="hero-overlay">
                     <div class="hero-badge">OFFICIAL STOCK BLINX CATALOG</div>
                     <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare Numbers</span></h1>
-                    <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">2,500+</strong> pilihan stock ready. Order langsung terhubung ke WhatsApp Admin.</p>
+                    
+                    <!-- PROMO BANNER BOX -->
+                    <div class="promo-hero-card" onclick="filterCategory('S TIER (4x digit berulang)')">
+                        <span class="promo-fire-badge">🔥 PROMO TERHEBOH</span>
+                        <div class="promo-hero-title">🎁 BUY 2 GET 1 FREE (BONUS S-TIER)</div>
+                        <p class="promo-hero-desc">Beli 2 Nomor (SSS / SS / Urut), <strong>GRATIS 1 Nomor S-Tier!</strong> Pilihan bonus otomatis dihitung saat kamu order.</p>
+                    </div>
 
                     <!-- Quick Stats Cards -->
                     <div class="hero-stats-grid">
@@ -81,10 +87,10 @@
                             </div>
                         </div>
                         <div class="stat-card stat-s" onclick="filterCategory('S TIER (4x digit berulang)')">
-                            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="stat-icon"><i class="fa-solid fa-gift"></i></div>
                             <div class="stat-info">
                                 <span class="stat-val" id="count-s">2,250</span>
-                                <span class="stat-lbl">S Tier · 4x Digit</span>
+                                <span class="stat-lbl">S Tier (BONUS BUY 2 GET 1)</span>
                             </div>
                         </div>
                     </div>
@@ -119,7 +125,7 @@
                         <i class="fa-solid fa-arrow-trend-up"></i> Urut (<span id="tab-count-urut">0</span>)
                     </button>
                     <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
-                        <i class="fa-solid fa-star"></i> S Tier (<span id="tab-count-s">0</span>)
+                        <i class="fa-solid fa-gift"></i> S Tier 🎁 Bonus (<span id="tab-count-s">0</span>)
                     </button>
                     <button class="tab-btn tab-fav" data-category="FAVORITE">
                         <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
@@ -219,18 +225,19 @@
         </section>
     </main>
 
-    <!-- Floating Bulk Order Bar -->
+    <!-- Floating Bulk Order Bar (WITH PROMO BONUS CALCULATOR BADGE) -->
     <div id="bulk-bar" class="bulk-bar hidden">
         <div class="bulk-info">
             <span class="bulk-badge" id="bulk-count">0</span>
             <span>Nomor Dipilih</span>
+            <span id="promo-bonus-badge" class="promo-bonus-badge hidden">🎁 1 S-Tier Gratis!</span>
         </div>
         <div class="bulk-actions">
             <button id="btn-copy-bulk" class="btn-bulk-secondary">
                 <i class="fa-solid fa-copy"></i> Salin List
             </button>
             <button id="btn-order-bulk" class="btn-bulk-primary">
-                <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Order Promo WA
             </button>
         </div>
     </div>

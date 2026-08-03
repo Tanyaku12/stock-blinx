@@ -1,6 +1,5 @@
 /* ==========================================================================
-   STOCK BLINX — NEOBRUTALISM DESIGN SYSTEM
-   High contrast, bold 3px borders, hard offset shadows, vibrant punchy colors
+   STOCK BLINX — NEOBRUTALISM DESIGN SYSTEM & PROMO BUY 2 GET 1 FREE
    ========================================================================== */
 
 :root {
@@ -145,7 +144,7 @@ input, select { font-family: inherit; }
 /* ======== MAIN CONTENT ======== */
 .main-content { max-width: 1340px; margin: 0 auto; padding: 1.5rem; }
 
-/* ======== HERO SECTION ======== */
+/* ======== HERO SECTION & PROMO CARD ======== */
 .hero-section { margin-bottom: 2rem; }
 
 .hero-banner {
@@ -156,12 +155,12 @@ input, select { font-family: inherit; }
 }
 
 .banner-img {
-    width: 100%; max-height: 360px; object-fit: cover; opacity: 0.2;
+    width: 100%; max-height: 420px; object-fit: cover; opacity: 0.2;
     filter: grayscale(80%) contrast(150%);
 }
 
 .hero-overlay {
-    position: absolute; inset: 0; padding: 2.5rem;
+    position: absolute; inset: 0; padding: 2.25rem;
     display: flex; flex-direction: column; justify-content: flex-end;
     background: linear-gradient(180deg, rgba(13,15,18,0.3) 0%, rgba(13,15,18,0.95) 100%);
 }
@@ -172,14 +171,14 @@ input, select { font-family: inherit; }
     border: var(--neo-border); box-shadow: var(--neo-shadow-sm);
     font-family: var(--font-heading); font-size: 0.72rem; font-weight: 900;
     letter-spacing: 1px; padding: 0.35rem 0.85rem; border-radius: var(--radius-neo);
-    margin-bottom: 0.85rem; text-transform: uppercase;
+    margin-bottom: 0.65rem; text-transform: uppercase;
 }
 
 .hero-overlay h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900;
     letter-spacing: -1px; text-transform: uppercase; color: var(--neo-white);
-    margin-bottom: 0.5rem; line-height: 1.05;
+    margin-bottom: 0.75rem; line-height: 1.05;
 }
 
 .text-gradient {
@@ -188,19 +187,56 @@ input, select { font-family: inherit; }
     box-shadow: 4px 4px 0px #000; display: inline-block;
 }
 
-.hero-overlay p {
-    font-size: 1rem; font-weight: 600; color: #c0c6d4;
-    max-width: 650px; margin-bottom: 1.75rem;
+/* PROMO BANNER BOX (BUY 2 GET 1 FREE) */
+.promo-hero-card {
+    background: var(--neo-yellow);
+    color: #000;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0px #000;
+    border-radius: var(--radius-neo);
+    padding: 0.9rem 1.25rem;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.promo-hero-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px #000;
+    background: #ffe033;
+}
+.promo-fire-badge {
+    display: inline-block;
+    background: var(--neo-pink);
+    color: #fff;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0px #000;
+    font-family: var(--font-heading);
+    font-size: 0.7rem; font-weight: 900;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.35rem;
+}
+.promo-hero-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem; font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+    margin-bottom: 0.2rem;
+}
+.promo-hero-desc {
+    font-size: 0.85rem; font-weight: 700; color: #111;
 }
 
 .hero-stats-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem;
 }
 
 .stat-card {
     background: #1e2330; border: var(--neo-border); box-shadow: var(--neo-shadow-md);
-    border-radius: var(--radius-neo); padding: 1rem 1.15rem;
-    display: flex; align-items: center; gap: 1rem; cursor: pointer;
+    border-radius: var(--radius-neo); padding: 0.85rem 1rem;
+    display: flex; align-items: center; gap: 0.85rem; cursor: pointer;
     transition: var(--transition);
 }
 .stat-card:hover { transform: translate(-3px, -3px); }
@@ -212,10 +248,10 @@ input, select { font-family: inherit; }
 .stat-card.stat-s   { background: var(--neo-purple); color: #fff; }
 
 .stat-icon {
-    width: 44px; height: 44px; background: #000; color: #fff;
+    width: 40px; height: 40px; background: #000; color: #fff;
     border: 2px solid #000; border-radius: var(--radius-neo);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; flex-shrink: 0;
+    font-size: 1.1rem; flex-shrink: 0;
 }
 .stat-card.stat-sss .stat-icon { color: var(--neo-yellow); }
 .stat-card.stat-ss .stat-icon  { color: var(--neo-cyan); }
@@ -223,8 +259,8 @@ input, select { font-family: inherit; }
 .stat-card.stat-s .stat-icon   { color: var(--neo-purple); }
 
 .stat-info { display: flex; flex-direction: column; }
-.stat-val { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900; line-height: 1; }
-.stat-lbl { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; opacity: 0.85; }
+.stat-val { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 900; line-height: 1; }
+.stat-lbl { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; opacity: 0.9; }
 
 /* ======== CONTROL PANEL ======== */
 .control-panel-wrapper {
@@ -308,7 +344,6 @@ input, select { font-family: inherit; }
 
 .sort-view-group { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 
-/* View Switcher Toggle */
 .view-mode-toggle {
     display: flex; align-items: center;
     border: 2px solid #000; border-radius: var(--radius-neo);
@@ -390,7 +425,7 @@ input, select { font-family: inherit; }
     transform: translate(-2px, -2px); box-shadow: 7px 7px 0px #000; background: var(--neo-cyan);
 }
 
-/* ======== GRID VIEW STYLING (LARGE CARDS & CLEAR NUMBERS) ======== */
+/* ======== GRID VIEW STYLING ======== */
 .stock-grid.view-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -447,6 +482,14 @@ input, select { font-family: inherit; }
 .badge-urut { background: var(--neo-green);  color: #000; }
 .badge-s    { background: var(--neo-purple); color: #fff; }
 
+.badge-bonus-stier {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.25rem 0.65rem; background: var(--neo-yellow); color: #000;
+    border: 2px solid #000; border-radius: var(--radius-neo);
+    font-family: var(--font-heading); font-size: 0.68rem; font-weight: 900;
+    text-transform: uppercase; box-shadow: 2px 2px 0px #000;
+}
+
 .badge-sold {
     display: inline-flex; align-items: center; gap: 0.35rem;
     padding: 0.25rem 0.65rem; background: var(--neo-pink); color: #fff;
@@ -457,7 +500,6 @@ input, select { font-family: inherit; }
 
 .card-center { margin-bottom: 1.2rem; text-align: center; }
 
-/* Phone Number - EXTRA LARGE & Legible */
 .phone-number {
     font-family: var(--font-mono);
     font-size: 1.65rem; font-weight: 800;
@@ -513,20 +555,14 @@ input, select { font-family: inherit; }
     background: #333 !important; color: #888 !important; box-shadow: none !important; cursor: not-allowed; border-color: #000 !important;
 }
 
-/* ======== COMPACT LIST VIEW STYLING (SUPER EASY TO SCAN) ======== */
+/* ======== COMPACT LIST VIEW STYLING ======== */
 .stock-grid.view-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
 }
 
 .stock-grid.view-list .stock-card {
-    flex-direction: row;
-    align-items: center;
-    padding: 0.65rem 1rem;
-    gap: 1rem;
-    border-top: var(--neo-border) !important;
-    border-left: 6px solid #000;
+    flex-direction: row; align-items: center; padding: 0.65rem 1rem; gap: 1rem;
+    border-top: var(--neo-border) !important; border-left: 6px solid #000;
 }
 
 .stock-grid.view-list .stock-card[data-tier-type="SSS"] { border-left-color: var(--neo-yellow) !important; }
@@ -536,8 +572,7 @@ input, select { font-family: inherit; }
 
 .stock-grid.view-list .card-top { margin-bottom: 0; }
 .stock-grid.view-list .card-center {
-    margin-bottom: 0;
-    display: flex; align-items: center; gap: 1rem; flex: 1; text-align: left;
+    margin-bottom: 0; display: flex; align-items: center; gap: 1rem; flex: 1; text-align: left;
 }
 .stock-grid.view-list .phone-number {
     margin-bottom: 0; font-size: 1.45rem; padding: 0.2rem 0.6rem;
@@ -567,12 +602,12 @@ input, select { font-family: inherit; }
     font-family: var(--font-heading); font-size: 0.9rem; font-weight: 800; color: var(--neo-white); text-transform: uppercase;
 }
 
-/* ======== FLOATING BULK BAR ======== */
+/* ======== FLOATING BULK BAR & PROMO BONUS BADGE ======== */
 .bulk-bar {
     position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 1000;
     background: var(--neo-yellow); color: #000; border: var(--neo-border);
     box-shadow: var(--neo-shadow-lg); border-radius: var(--radius-neo);
-    padding: 0.85rem 1.5rem; display: flex; align-items: center; gap: 1.75rem;
+    padding: 0.85rem 1.5rem; display: flex; align-items: center; gap: 1.5rem;
     animation: neoSlideUp 0.2s cubic-bezier(0,0,0.2,1); white-space: nowrap;
 }
 
@@ -591,6 +626,17 @@ input, select { font-family: inherit; }
     background: #000; color: var(--neo-yellow); border: 2px solid #000;
     border-radius: 4px; display: flex; align-items: center; justify-content: center;
     font-size: 0.85rem; font-weight: 900;
+}
+
+.promo-bonus-badge {
+    background: var(--neo-green);
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: 2px 2px 0px #000;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.78rem; font-weight: 900;
+    animation: neoPulse 1s infinite alternate;
 }
 
 .bulk-actions { display: flex; align-items: center; gap: 0.75rem; }
@@ -664,7 +710,7 @@ input, select { font-family: inherit; }
 @media (max-width: 768px) {
     .nav-container { padding: 0.75rem 1rem; }
     .brand-sub { display: none; }
-    .hero-overlay { padding: 1.5rem; }
+    .hero-overlay { padding: 1.25rem; }
     .hero-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
     .control-panel-wrapper { top: 64px; }
     .stock-grid.view-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 0.85rem; }
@@ -676,7 +722,7 @@ input, select { font-family: inherit; }
 
 @media (max-width: 480px) {
     .main-content { padding: 1rem; }
-    .hero-overlay h1 { font-size: 1.6rem; }
+    .hero-overlay h1 { font-size: 1.5rem; }
     .stock-grid.view-grid { grid-template-columns: 1fr; }
     .phone-number { font-size: 1.35rem; }
     .live-status-pill { display: none; }
