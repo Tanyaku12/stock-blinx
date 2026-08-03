@@ -619,13 +619,23 @@ function createStockCard(item) {
         ? `<input type="checkbox" class="card-checkbox" disabled title="Nomor sudah terjual">`
         : `<input type="checkbox" class="card-checkbox" ${selectedNumbers.has(item.number) ? 'checked' : ''}>`;
 
+    const isSTier = isSTierCategory(item.category);
+
+    const favBtnHtml = isSTier
+        ? ''
+        : `<button class="btn-card-fav ${isFav ? 'active' : ''}" title="Tambah ke Favorit">
+            <i class="fa-solid fa-heart"></i>
+           </button>`;
+
     const orderBtnHtml = isSold
         ? `<button class="btn-card-order disabled" disabled title="Nomor ini sudah terjual">
             <i class="fa-solid fa-ban"></i> Terjual
            </button>`
-        : `<button class="btn-card-order">
-            <i class="fa-brands fa-whatsapp"></i> Beli
-           </button>`;
+        : (isSTier
+            ? `<span class="badge-bonus-tag"><i class="fa-solid fa-gift"></i> Stock Bonus</span>`
+            : `<button class="btn-card-order">
+                <i class="fa-brands fa-whatsapp"></i> Beli
+               </button>`);
 
     card.innerHTML = `
         <div class="card-top">
@@ -646,9 +656,7 @@ function createStockCard(item) {
             <button class="btn-card-copy" title="Salin Nomor">
                 <i class="fa-solid fa-copy"></i>
             </button>
-            <button class="btn-card-fav ${isFav ? 'active' : ''}" title="Tambah ke Favorit">
-                <i class="fa-solid fa-heart"></i>
-            </button>
+            ${favBtnHtml}
             ${orderBtnHtml}
         </div>
     `;
@@ -696,24 +704,27 @@ function createStockCard(item) {
         copyToClipboard(item.number);
     });
 
-    card.querySelector('.btn-card-fav').addEventListener('click', (e) => {
-        e.stopPropagation();
-        const favBtn = e.currentTarget;
-        if (favoriteNumbers.has(item.number)) {
-            favoriteNumbers.delete(item.number);
-            favBtn.classList.remove('active');
-            showToast(`Dihapus dari favorit`);
-        } else {
-            favoriteNumbers.add(item.number);
-            favBtn.classList.add('active');
-            showToast(`Ditambahkan ke favorit ❤️`);
-        }
-        localStorage.setItem('blinx_fav_numbers', JSON.stringify(Array.from(favoriteNumbers)));
-        animateCounter(DOM.tabCountFav, favoriteNumbers.size, 400);
-    });
+    const favBtn = card.querySelector('.btn-card-fav');
+    if (favBtn) {
+        favBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (favoriteNumbers.has(item.number)) {
+                favoriteNumbers.delete(item.number);
+                favBtn.classList.remove('active');
+                showToast(`Dihapus dari favorit`);
+            } else {
+                favoriteNumbers.add(item.number);
+                favBtn.classList.add('active');
+                showToast(`Ditambahkan ke favorit ❤️`);
+            }
+            localStorage.setItem('blinx_fav_numbers', JSON.stringify(Array.from(favoriteNumbers)));
+            animateCounter(DOM.tabCountFav, favoriteNumbers.size, 400);
+        });
+    }
 
-    if (!isSold) {
-        card.querySelector('.btn-card-order').addEventListener('click', (e) => {
+    const orderBtn = card.querySelector('.btn-card-order');
+    if (orderBtn && !isSold) {
+        orderBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             orderSingleViaWA(item);
         });
