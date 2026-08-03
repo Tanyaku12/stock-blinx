@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (ACCURATE S-TIER CATEGORY MATCHING)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (CLEAN TOOLBAR LAYOUT)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -16,8 +16,7 @@ let currentSearchQuery = '';
 let currentDigitFilter = '';
 let currentSort = 'tier';
 let currentPage = 1;
-let itemsPerPage = 60;
-let viewMode = localStorage.getItem('blinx_view_mode') || 'grid';
+const ITEMS_PER_PAGE = 60;
 
 const TIER_ORDER = {
     'SSS TIER (6x digit berulang)': 1,
@@ -49,9 +48,6 @@ const DOM = {
     btnClearSearch: document.getElementById('btn-clear-search'),
     categoryTabs: document.getElementById('category-tabs'),
     sortSelect: document.getElementById('sort-select'),
-    perPageSelect: document.getElementById('per-page-select'),
-    btnViewGrid: document.getElementById('btn-view-grid'),
-    btnViewList: document.getElementById('btn-view-list'),
     
     tabCountAll: document.getElementById('tab-count-all'),
     tabCountSSS: document.getElementById('tab-count-sss'),
@@ -98,7 +94,6 @@ async function loadStockData() {
     showLoading(true);
     let loadedSuccess = false;
 
-    // First attempt: API endpoint
     try {
         const response = await fetch('/api/stock');
         if (response.ok) {
@@ -113,7 +108,6 @@ async function loadStockData() {
         console.warn('API fetch error:', e);
     }
 
-    // Second attempt: parse /RAPI/all.txt + /RAPI/sold.txt
     if (!loadedSuccess) {
         try {
             const txtResponse = await fetch('/RAPI/all.txt');
@@ -142,7 +136,6 @@ async function loadStockData() {
         }
     }
 
-    // Third attempt: window.STOCK_DATA fallback
     if (!loadedSuccess) {
         if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA) && window.STOCK_DATA.length > 0) {
             allStockItems = window.STOCK_DATA;
@@ -235,7 +228,7 @@ function renderStats() {
     DOM.countUrut.textContent = counts.urut;
     DOM.countS.textContent = counts.s;
 
-    DOM.tabCountAll.textContent = mainReady; // Exact 284 main items in ALL tab
+    DOM.tabCountAll.textContent = mainReady;
     DOM.tabCountSSS.textContent = counts.sss;
     DOM.tabCountSS.textContent = counts.ss;
     DOM.tabCountUrut.textContent = counts.urut;
@@ -249,35 +242,6 @@ function setupEventListeners() {
     }
     if (DOM.btnWaFooter) {
         DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
-    }
-
-    if (DOM.btnViewGrid && DOM.btnViewList) {
-        DOM.btnViewGrid.classList.toggle('active', viewMode === 'grid');
-        DOM.btnViewList.classList.toggle('active', viewMode === 'list');
-
-        DOM.btnViewGrid.addEventListener('click', () => {
-            viewMode = 'grid';
-            localStorage.setItem('blinx_view_mode', 'grid');
-            DOM.btnViewGrid.classList.add('active');
-            DOM.btnViewList.classList.remove('active');
-            renderGrid();
-        });
-
-        DOM.btnViewList.addEventListener('click', () => {
-            viewMode = 'list';
-            localStorage.setItem('blinx_view_mode', 'list');
-            DOM.btnViewList.classList.add('active');
-            DOM.btnViewGrid.classList.remove('active');
-            renderGrid();
-        });
-    }
-
-    if (DOM.perPageSelect) {
-        DOM.perPageSelect.addEventListener('change', (e) => {
-            itemsPerPage = parseInt(e.target.value, 10) || 60;
-            currentPage = 1;
-            renderGrid();
-        });
     }
 
     DOM.searchInput.addEventListener('input', (e) => {
@@ -334,7 +298,7 @@ function setupEventListeners() {
     });
 
     DOM.btnNextPage.addEventListener('click', () => {
-        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
         if (currentPage < totalPages) {
             currentPage++;
             renderGrid();
@@ -348,7 +312,6 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        // If currentCategory is 'ALL', EXCLUDE S-TIER (only show SSS, SS, and URUT!)
         if (currentCategory === 'ALL') {
             if (isSTierCategory(item.category)) return false;
         } else if (currentCategory === 'FAVORITE') {
@@ -400,7 +363,6 @@ function getFilterDescriptionText() {
 
 function renderGrid() {
     DOM.stockGrid.innerHTML = '';
-    DOM.stockGrid.className = `stock-grid view-${viewMode}`;
 
     if (filteredItems.length === 0) {
         DOM.emptyState.classList.remove('hidden');
@@ -410,11 +372,11 @@ function renderGrid() {
 
     DOM.emptyState.classList.add('hidden');
 
-    const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
     if (currentPage > totalPages) currentPage = totalPages || 1;
 
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const pageItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     pageItems.forEach(item => {
         const card = createStockCard(item);
@@ -622,8 +584,8 @@ function updateSelectionState() {
 }
 
 function selectAllCurrentPage() {
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const pageItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
     pageItems.forEach(item => {
         if (item.status !== 'SOLD') {
             selectedNumbers.add(item.number);

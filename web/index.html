@@ -141,26 +141,6 @@
                     </div>
 
                     <div class="sort-view-group">
-                        <!-- View Switcher Toggle (Grid vs Compact List View) -->
-                        <div class="view-mode-toggle">
-                            <button id="btn-view-grid" class="view-btn active" title="Tampilan Card Grid">
-                                <i class="fa-solid fa-grip"></i> Grid
-                            </button>
-                            <button id="btn-view-list" class="view-btn" title="Tampilan Daftar Ringkas & Jelas">
-                                <i class="fa-solid fa-list-ul"></i> Daftar Ringkas
-                            </button>
-                        </div>
-
-                        <!-- Per Page Picker -->
-                        <div class="select-wrapper">
-                            <i class="fa-solid fa-eye"></i>
-                            <select id="per-page-select">
-                                <option value="60">60 stok/hal</option>
-                                <option value="120">120 stok/hal</option>
-                                <option value="300">300 stok/hal</option>
-                            </select>
-                        </div>
-
                         <!-- Sort Select -->
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
@@ -207,8 +187,8 @@
                 <button onclick="resetFilters()" class="btn-primary">Reset Filter</button>
             </div>
 
-            <!-- Stock Grid / List Container -->
-            <div id="stock-grid" class="stock-grid view-grid"></div>
+            <!-- Stock Grid Container -->
+            <div id="stock-grid" class="stock-grid"></div>
 
             <!-- Pagination -->
             <div id="pagination-controls" class="pagination-wrapper hidden">
