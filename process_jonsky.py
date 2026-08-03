@@ -210,5 +210,11 @@ def main():
     print("PROSES GABUNG & UPDATE JONSKY-ACC SELESAI!")
     print("=" * 60)
 
+    # Clean up JONSKY-ACC directory after successful merge
+    if os.path.exists(JONSKY_DIR):
+        import shutil
+        shutil.rmtree(JONSKY_DIR)
+        print(f"  ✓ Folder {JONSKY_DIR} berhasil dihapus setelah merge!")
+
 if __name__ == "__main__":
     main()
