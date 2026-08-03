@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Stock Store - Catalog ID Cantik & Nomor Langka</title>
+    <meta name="description" content="Katalog stock nomor VIP, ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah via WhatsApp +62882003619577">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">VIP STOCK <span class="highlight">STORE</span></span>
+                    <span class="brand-sub">Premium ID Cantik & Rare Numbers</span>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <div class="live-status-pill">
+                    <span class="status-dot pulsing"></span>
+                    <span id="header-stock-count">Syncing stock...</span>
+                </div>
+
+                <a href="https://wa.me/62882003619577?text=Halo%20Admin,%20saya%20ingin%20tanya%20stock%20nomor%20VIP" target="_blank" class="btn-wa-header">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Contact Admin</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-banner">
+                <img src="assets/banner.jpg" alt="VIP Stock Banner" class="banner-img">
+                <div class="hero-overlay">
+                    <div class="hero-badge">OFFICIAL STOCK CATALOG</div>
+                    <h1>Katalog Stock <span class="text-gradient">Nomor VIP & Rare</span></h1>
+                    <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">2,500+</strong> pilihan stock ready. Order langsung terhubung ke WhatsApp Admin.</p>
+
+                    <!-- Quick Stats Cards -->
+                    <div class="hero-stats-grid">
+                        <div class="stat-card stat-sss" onclick="filterCategory('SSS TIER (6x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-sss">47</span>
+                                <span class="stat-lbl">SSS Tier (6x Digit)</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-ss" onclick="filterCategory('SS TIER (5x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-gem"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-ss">102</span>
+                                <span class="stat-lbl">SS Tier (5x Digit)</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-urut" onclick="filterCategory('(URUT)')">
+                            <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-urut">135</span>
+                                <span class="stat-lbl">Urut (Sequential)</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-s" onclick="filterCategory('S TIER (4x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-s">2,250</span>
+                                <span class="stat-lbl">S Tier (4x Digit)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Control Panel -->
+        <section class="control-panel-wrapper" id="catalog">
+            <div class="control-panel">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Cari digit nomor (cth: 6666, 888, 1655, 123)..." autocomplete="off">
+                    <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="category-tabs" id="category-tabs">
+                    <button class="tab-btn active" data-category="ALL">
+                        <i class="fa-solid fa-border-all"></i> Semua (<span id="tab-count-all">0</span>)
+                    </button>
+                    <button class="tab-btn tab-sss" data-category="SSS TIER (6x digit berulang)">
+                        <i class="fa-solid fa-crown"></i> SSS Tier (<span id="tab-count-sss">0</span>)
+                    </button>
+                    <button class="tab-btn tab-ss" data-category="SS TIER (5x digit berulang)">
+                        <i class="fa-solid fa-gem"></i> SS Tier (<span id="tab-count-ss">0</span>)
+                    </button>
+                    <button class="tab-btn tab-urut" data-category="(URUT)">
+                        <i class="fa-solid fa-arrow-trend-up"></i> Urut (<span id="tab-count-urut">0</span>)
+                    </button>
+                    <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
+                        <i class="fa-solid fa-star"></i> S Tier (<span id="tab-count-s">0</span>)
+                    </button>
+                    <button class="tab-btn tab-fav" data-category="FAVORITE">
+                        <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
+                    </button>
+                </div>
+
+                <!-- Filter Pattern Quick Chips & Sort -->
+                <div class="filter-toolbar">
+                    <div class="pattern-chips">
+                        <span class="chip-label">Digit Kembar:</span>
+                        <button class="chip" data-digit="">Semua</button>
+                        <button class="chip" data-digit="999">999</button>
+                        <button class="chip" data-digit="888">888</button>
+                        <button class="chip" data-digit="777">777</button>
+                        <button class="chip" data-digit="666">666</button>
+                        <button class="chip" data-digit="555">555</button>
+                        <button class="chip" data-digit="000">000</button>
+                        <button class="chip" data-digit="111">111</button>
+                    </div>
+
+                    <div class="sort-view-group">
+                        <div class="select-wrapper">
+                            <i class="fa-solid fa-arrow-down-short-wide"></i>
+                            <select id="sort-select">
+                                <option value="tier">Prioritas Tier (SSS → S)</option>
+                                <option value="num-asc">Nomor (TerKecil)</option>
+                                <option value="num-desc">Nomor (TerBesar)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stock Catalog Results Section -->
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <div class="result-info">
+                    <h2>Menampilkan <span id="showing-count">0</span> Stock</h2>
+                    <p id="active-filter-text">Semua Kategori</p>
+                </div>
+
+                <div class="selection-controls">
+                    <button id="btn-select-all" class="btn-secondary">
+                        <i class="fa-solid fa-square-check"></i> Pilih Semua Tampak
+                    </button>
+                    <button id="btn-unselect-all" class="btn-secondary hidden">
+                        <i class="fa-solid fa-square-xmark"></i> Batal Semua
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading-state" class="loading-container hidden">
+                <div class="spinner"></div>
+                <p>Memuat katalog stock...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-container hidden">
+                <i class="fa-solid fa-ghost empty-icon"></i>
+                <h3>Tidak Ada Stock Ditemukan</h3>
+                <p>Coba gunakan kata kunci pencarian lain atau ubah filter tier.</p>
+                <button onclick="resetFilters()" class="btn-primary">Reset Filter</button>
+            </div>
+
+            <!-- Stock Grid -->
+            <div id="stock-grid" class="stock-grid"></div>
+
+            <!-- Pagination -->
+            <div id="pagination-controls" class="pagination-wrapper hidden">
+                <button id="btn-prev-page" class="btn-page"><i class="fa-solid fa-chevron-left"></i> SEBELUMNYA</button>
+                <span id="page-info" class="page-info">Halaman 1 dari 10</span>
+                <button id="btn-next-page" class="btn-page">SELANJUTNYA <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Bulk Order Bar -->
+    <div id="bulk-bar" class="bulk-bar hidden">
+        <div class="bulk-info">
+            <span class="bulk-badge" id="bulk-count">0</span>
+            <span>Nomor Stock Dipilih</span>
+        </div>
+        <div class="bulk-actions">
+            <button id="btn-copy-bulk" class="btn-bulk-secondary">
+                <i class="fa-solid fa-copy"></i> Salin List
+            </button>
+            <button id="btn-order-bulk" class="btn-bulk-primary">
+                <i class="fa-brands fa-whatsapp"></i> Order via WA (62882003619577)
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon small"><i class="fa-solid fa-gem"></i></div>
+                <span>VIP STOCK STORE</span>
+            </div>
+            <p>Direct Order Official WhatsApp: <a href="https://wa.me/62882003619577" target="_blank" class="wa-link">+62 882-0036-19577</a></p>
+            <p class="copyright">&copy; 2026 VIP Stock Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Pesan toast</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="stock_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

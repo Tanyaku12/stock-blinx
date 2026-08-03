@@ -1,0 +1,1 @@
+/root/.pyenv/versions/3.13.0/bin/python /root/max/run_cracked.py
