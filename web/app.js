@@ -87,6 +87,7 @@ const DOM = {
     btnSTierPrev: document.getElementById('btn-stier-prev'),
     btnSTierNext: document.getElementById('btn-stier-next'),
     stierPageInfo: document.getElementById('stier-page-info'),
+    stierModalDesc: document.getElementById('stier-modal-desc'),
 
     bulkBar: document.getElementById('bulk-bar'),
     bulkCount: document.getElementById('bulk-count'),
@@ -522,6 +523,20 @@ function closeSTierModal() {
 }
 
 function renderSTierModalGrid() {
+    const mainCount = getMainStockCount();
+    const sTierCount = getSTierSelectedCount();
+    const eligibleBonus = Math.floor(mainCount / 2);
+
+    if (DOM.stierModalDesc) {
+        if (mainCount < 2) {
+            DOM.stierModalDesc.className = 'modal-desc modal-warning';
+            DOM.stierModalDesc.innerHTML = `⚠️ <strong>Syarat Promo:</strong> Kamu baru memilih ${mainCount} Stok Utama. Minimal pilih <strong>2 Stok Utama (SSS/SS/URUT)</strong> terlebih dahulu untuk mengklaim Bonus S-Tier GRATIS.`;
+        } else {
+            DOM.stierModalDesc.className = 'modal-desc';
+            DOM.stierModalDesc.innerHTML = `🎁 <strong>Promo Aktif:</strong> Kamu berhak memilih <strong>${eligibleBonus} Bonus S-Tier GRATIS</strong> (${sTierCount}/${eligibleBonus} telah dipilih).`;
+        }
+    }
+
     filteredSTierItems = sTierStockItems.filter(item => {
         if (stierModalSearchQuery) {
             return item.number.toLowerCase().includes(stierModalSearchQuery.toLowerCase());
@@ -642,6 +657,26 @@ function createStockCard(item) {
     if (!isSold) {
         checkbox.addEventListener('change', () => {
             if (checkbox.checked) {
+                if (isSTierCategory(item.category)) {
+                    const mainCount = getMainStockCount();
+                    if (mainCount < 2) {
+                        checkbox.checked = false;
+                        if (mainCount === 0) {
+                            showToast(`⚠️ Pilih minimal 2 Stok Utama (SSS/SS/URUT) terlebih dahulu untuk memilih Bonus S-Tier!`);
+                        } else {
+                            showToast(`⚠️ Pilih 1 Stok Utama lagi untuk membuka 1 Bonus S-Tier GRATIS!`);
+                        }
+                        return;
+                    }
+
+                    const eligibleBonus = Math.floor(mainCount / 2);
+                    const currentSTierCount = getSTierSelectedCount();
+                    if (currentSTierCount >= eligibleBonus) {
+                        checkbox.checked = false;
+                        showToast(`⚠️ Kuota bonus tercapai (${eligibleBonus} S-Tier). Tambah 2 Stok Utama lagi untuk bonus berikutnya!`);
+                        return;
+                    }
+                }
                 selectedNumbers.add(item.number);
                 card.classList.add('selected');
             } else {
@@ -706,18 +741,38 @@ function getPatternDescription(numStr, tierType) {
     return `Stock Blinx`;
 }
 
+function getMainStockCount() {
+    let count = 0;
+    selectedNumbers.forEach(num => {
+        const found = allStockItems.find(i => i.number === num);
+        if (found && !isSTierCategory(found.category)) count++;
+    });
+    return count;
+}
+
+function getSTierSelectedCount() {
+    let count = 0;
+    selectedNumbers.forEach(num => {
+        const found = allStockItems.find(i => i.number === num);
+        if (found && isSTierCategory(found.category)) count++;
+    });
+    return count;
+}
+
 function updateSelectionState() {
     const count = selectedNumbers.size;
     animateCounter(DOM.bulkCount, count, 400);
 
     let mainCount = 0;
     let sTierCount = 0;
+    const sTierSelectedList = [];
 
     selectedNumbers.forEach(num => {
         const found = allStockItems.find(i => i.number === num);
         if (found) {
             if (isSTierCategory(found.category)) {
                 sTierCount++;
+                sTierSelectedList.push(found.number);
             } else {
                 mainCount++;
             }
@@ -726,10 +781,25 @@ function updateSelectionState() {
 
     const eligibleFreeBonus = Math.floor(mainCount / 2);
 
+    // Auto-prune S-Tier items if main items were unselected and quota is exceeded
+    if (sTierCount > eligibleFreeBonus) {
+        const excessCount = sTierCount - eligibleFreeBonus;
+        for (let i = 0; i < excessCount; i++) {
+            const numToRemove = sTierSelectedList.pop();
+            selectedNumbers.delete(numToRemove);
+        }
+        showToast(`⚠️ Kuota bonus disesuaikan. Membutuhkan minimal 2 Stok Utama per 1 Bonus S-Tier.`);
+        renderGrid();
+        if (DOM.stierModal && !DOM.stierModal.classList.contains('hidden')) {
+            renderSTierModalGrid();
+        }
+        return;
+    }
+
     if (DOM.promoBonusBadge) {
         if (eligibleFreeBonus > 0) {
             DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `🎁 ${eligibleFreeBonus} S-Tier Gratis!`;
+            DOM.promoBonusBadge.textContent = `🎁 ${sTierCount}/${eligibleFreeBonus} Bonus S-Tier Dipilih`;
         } else {
             DOM.promoBonusBadge.classList.add('hidden');
         }
