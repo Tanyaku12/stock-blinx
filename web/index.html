@@ -6,10 +6,10 @@
     <title>Stock Blinx - Katalog ID Cantik & Nomor Langka</title>
     <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah langsung via WhatsApp Admin.">
 
-    <!-- Google Fonts — Neobrutalism Fonts -->
+    <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -141,6 +141,27 @@
                     </div>
 
                     <div class="sort-view-group">
+                        <!-- View Switcher Toggle (Grid vs Compact List View) -->
+                        <div class="view-mode-toggle">
+                            <button id="btn-view-grid" class="view-btn active" title="Tampilan Card Grid">
+                                <i class="fa-solid fa-grip"></i> Grid
+                            </button>
+                            <button id="btn-view-list" class="view-btn" title="Tampilan Daftar Ringkas & Jelas">
+                                <i class="fa-solid fa-list-ul"></i> Daftar Ringkas
+                            </button>
+                        </div>
+
+                        <!-- Per Page Picker -->
+                        <div class="select-wrapper">
+                            <i class="fa-solid fa-eye"></i>
+                            <select id="per-page-select">
+                                <option value="60">60 stok/hal</option>
+                                <option value="120">120 stok/hal</option>
+                                <option value="300">300 stok/hal</option>
+                            </select>
+                        </div>
+
+                        <!-- Sort Select -->
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
@@ -186,8 +207,8 @@
                 <button onclick="resetFilters()" class="btn-primary">Reset Filter</button>
             </div>
 
-            <!-- Stock Grid -->
-            <div id="stock-grid" class="stock-grid"></div>
+            <!-- Stock Grid / List Container -->
+            <div id="stock-grid" class="stock-grid view-grid"></div>
 
             <!-- Pagination -->
             <div id="pagination-controls" class="pagination-wrapper hidden">

@@ -1,10 +1,9 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (MD3 DESIGN)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (NEOBRUTALISM & CLEAR STOCK VIEW)
  * WhatsApp Admin: 62882003619577
  */
 
 const ADMIN_WA = "62882003619577";
-const ITEMS_PER_PAGE = 60;
 
 // Application State
 let allStockItems = [];
@@ -17,6 +16,8 @@ let currentSearchQuery = '';
 let currentDigitFilter = '';
 let currentSort = 'tier';
 let currentPage = 1;
+let itemsPerPage = 60;
+let viewMode = localStorage.getItem('blinx_view_mode') || 'grid'; // 'grid' or 'list'
 
 // Category tier ranking for sorting
 const TIER_ORDER = {
@@ -43,6 +44,9 @@ const DOM = {
     btnClearSearch: document.getElementById('btn-clear-search'),
     categoryTabs: document.getElementById('category-tabs'),
     sortSelect: document.getElementById('sort-select'),
+    perPageSelect: document.getElementById('per-page-select'),
+    btnViewGrid: document.getElementById('btn-view-grid'),
+    btnViewList: document.getElementById('btn-view-list'),
     
     tabCountAll: document.getElementById('tab-count-all'),
     tabCountSSS: document.getElementById('tab-count-sss'),
@@ -91,7 +95,6 @@ async function initApp() {
 async function loadStockData() {
     showLoading(true);
     try {
-        // First attempt: API endpoint
         const response = await fetch('/api/stock');
         if (response.ok) {
             allStockItems = await response.json();
@@ -102,7 +105,6 @@ async function loadStockData() {
     } catch (e) {
         console.warn('API fetch failed, trying static file fallback...', e);
         try {
-            // Second attempt: parse /RAPI/all.txt directly
             const txtResponse = await fetch('/RAPI/all.txt');
             if (txtResponse.ok) {
                 const text = await txtResponse.text();
@@ -133,9 +135,6 @@ async function loadStockData() {
     showLoading(false);
 }
 
-/**
- * Parse raw all.txt string into item objects
- */
 function parseAllTxt(rawText) {
     const lines = rawText.split('\n');
     const items = [];
@@ -159,9 +158,6 @@ function parseAllTxt(rawText) {
     return items;
 }
 
-/**
- * Parse raw sold.txt string into item objects
- */
 function parseSoldTxt(rawText) {
     const lines = rawText.split('\n');
     const items = [];
@@ -199,20 +195,12 @@ function determineTier(numStr) {
     return 'S TIER (4x digit berulang)';
 }
 
-/**
- * Update stats and counts across header and tabs
- */
 function renderStats() {
     const total = allStockItems.length;
     DOM.headerStockCount.textContent = `${total.toLocaleString()} Stock Ready`;
     DOM.totalHeroStock.textContent = `${total.toLocaleString()}+`;
 
-    const counts = {
-        sss: 0,
-        ss: 0,
-        urut: 0,
-        s: 0
-    };
+    const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
     allStockItems.forEach(item => {
         if (item.category.includes('SSS TIER')) counts.sss++;
@@ -234,19 +222,42 @@ function renderStats() {
     DOM.tabCountFav.textContent = favoriteNumbers.size;
 }
 
-/**
- * Setup Event Listeners
- */
 function setupEventListeners() {
-    // Contact WA nav & footer
     if (DOM.btnWaNav) {
-        DOM.btnWaNav.addEventListener('click', () => {
-            openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx.");
-        });
+        DOM.btnWaNav.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
     }
     if (DOM.btnWaFooter) {
-        DOM.btnWaFooter.addEventListener('click', () => {
-            openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx.");
+        DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
+    }
+
+    // View Mode Switcher
+    if (DOM.btnViewGrid && DOM.btnViewList) {
+        DOM.btnViewGrid.classList.toggle('active', viewMode === 'grid');
+        DOM.btnViewList.classList.toggle('active', viewMode === 'list');
+
+        DOM.btnViewGrid.addEventListener('click', () => {
+            viewMode = 'grid';
+            localStorage.setItem('blinx_view_mode', 'grid');
+            DOM.btnViewGrid.classList.add('active');
+            DOM.btnViewList.classList.remove('active');
+            renderGrid();
+        });
+
+        DOM.btnViewList.addEventListener('click', () => {
+            viewMode = 'list';
+            localStorage.setItem('blinx_view_mode', 'list');
+            DOM.btnViewList.classList.add('active');
+            DOM.btnViewGrid.classList.remove('active');
+            renderGrid();
+        });
+    }
+
+    // Per page select
+    if (DOM.perPageSelect) {
+        DOM.perPageSelect.addEventListener('change', (e) => {
+            itemsPerPage = parseInt(e.target.value, 10) || 60;
+            currentPage = 1;
+            renderGrid();
         });
     }
 
@@ -296,11 +307,9 @@ function setupEventListeners() {
         applyFiltersAndSort();
     });
 
-    // Select all / Unselect all
     DOM.btnSelectAll.addEventListener('click', selectAllCurrentPage);
     DOM.btnUnselectAll.addEventListener('click', unselectAllCurrentPage);
 
-    // Pagination
     DOM.btnPrevPage.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
@@ -310,7 +319,7 @@ function setupEventListeners() {
     });
 
     DOM.btnNextPage.addEventListener('click', () => {
-        const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+        const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
         if (currentPage < totalPages) {
             currentPage++;
             renderGrid();
@@ -318,24 +327,18 @@ function setupEventListeners() {
         }
     });
 
-    // Bulk actions
     DOM.btnCopyBulk.addEventListener('click', copySelectedNumbers);
     DOM.btnOrderBulk.addEventListener('click', orderSelectedViaWA);
 }
 
-/**
- * Filter & Sort Logic
- */
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        // Category filter
         if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
         } else if (currentCategory !== 'ALL') {
             if (item.category !== currentCategory) return false;
         }
 
-        // Search query filter
         if (currentSearchQuery) {
             const query = currentSearchQuery.toLowerCase();
             const matchNumber = item.number.toLowerCase().includes(query);
@@ -343,7 +346,6 @@ function applyFiltersAndSort() {
             if (!matchNumber && !matchCategory) return false;
         }
 
-        // Digit pattern filter
         if (currentDigitFilter) {
             if (!item.number.includes(currentDigitFilter)) return false;
         }
@@ -351,7 +353,6 @@ function applyFiltersAndSort() {
         return true;
     });
 
-    // Sort items
     filteredItems.sort((a, b) => {
         if (currentSort === 'tier') {
             const tierA = TIER_ORDER[a.category] || 99;
@@ -379,11 +380,9 @@ function getFilterDescriptionText() {
     return catText;
 }
 
-/**
- * Render Cards Grid & Pagination
- */
 function renderGrid() {
     DOM.stockGrid.innerHTML = '';
+    DOM.stockGrid.className = `stock-grid view-${viewMode}`;
 
     if (filteredItems.length === 0) {
         DOM.emptyState.classList.remove('hidden');
@@ -393,18 +392,17 @@ function renderGrid() {
 
     DOM.emptyState.classList.add('hidden');
 
-    const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
     if (currentPage > totalPages) currentPage = totalPages || 1;
 
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const pageItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
 
     pageItems.forEach(item => {
         const card = createStockCard(item);
         DOM.stockGrid.appendChild(card);
     });
 
-    // Update Pagination
     if (totalPages > 1) {
         DOM.paginationControls.classList.remove('hidden');
         DOM.pageInfo.textContent = `Halaman ${currentPage} dari ${totalPages}`;
@@ -417,9 +415,6 @@ function renderGrid() {
     updateSelectionState();
 }
 
-/**
- * Create DOM Card Element for a Stock Item
- */
 function createStockCard(item) {
     const isSold = item.status === 'SOLD';
     const card = document.createElement('div');
@@ -450,8 +445,9 @@ function createStockCard(item) {
 
     card.setAttribute('data-tier-type', tierType);
 
-    // Pattern highlights
-    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter);
+    // Format number nicely with spacing for ultra readability (e.g. 0882 0036 19577)
+    const readableNumber = formatReadablePhone(item.number);
+    const formattedNumber = formatNumberDisplay(readableNumber, currentSearchQuery || currentDigitFilter);
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 
@@ -468,7 +464,7 @@ function createStockCard(item) {
             <i class="fa-solid fa-ban"></i> Terjual
            </button>`
         : `<button class="btn-card-order">
-            <i class="fa-brands fa-whatsapp"></i> Beli via WA
+            <i class="fa-brands fa-whatsapp"></i> Beli
            </button>`;
 
     card.innerHTML = `
@@ -482,7 +478,7 @@ function createStockCard(item) {
             </div>
         </div>
         <div class="card-center">
-            <div class="phone-number">${formattedNumber}</div>
+            <div class="phone-number" title="Klik untuk salin">${formattedNumber}</div>
             <span class="pattern-tag">${patternTag}</span>
         </div>
         <div class="card-bottom">
@@ -496,7 +492,6 @@ function createStockCard(item) {
         </div>
     `;
 
-    // Event Listeners for Card Controls
     const checkbox = card.querySelector('.card-checkbox');
     if (!isSold) {
         checkbox.addEventListener('change', () => {
@@ -513,8 +508,11 @@ function createStockCard(item) {
 
     card.querySelector('.btn-card-copy').addEventListener('click', (e) => {
         e.stopPropagation();
-        navigator.clipboard.writeText(item.number);
-        showToast(`Nomor ${item.number} berhasil disalin!`);
+        copyToClipboard(item.number);
+    });
+
+    card.querySelector('.phone-number').addEventListener('click', () => {
+        copyToClipboard(item.number);
     });
 
     card.querySelector('.btn-card-fav').addEventListener('click', (e) => {
@@ -544,17 +542,20 @@ function createStockCard(item) {
 }
 
 /**
- * Highlight search or pattern matches
+ * Format phone number into clean readable blocks (e.g. 0882 0036 19577)
  */
+function formatReadablePhone(numStr) {
+    if (!numStr || numStr.length < 8) return numStr;
+    // Insert space every 4 digits for effortless scanning
+    return numStr.replace(/(.{4})/g, '$1 ').trim();
+}
+
 function formatNumberDisplay(numStr, highlightQuery) {
     if (!highlightQuery) return numStr;
     const regex = new RegExp(`(${highlightQuery})`, 'gi');
     return numStr.replace(regex, '<span class="phone-highlight">$1</span>');
 }
 
-/**
- * Get description tag for phone number pattern
- */
 function getPatternDescription(numStr, tierType) {
     for (let d = 9; d >= 0; d--) {
         const seq6 = String(d).repeat(6);
@@ -568,9 +569,6 @@ function getPatternDescription(numStr, tierType) {
     return `Stock Blinx`;
 }
 
-/**
- * Update Floating Bulk Selection Bar
- */
 function updateSelectionState() {
     const count = selectedNumbers.size;
     DOM.bulkCount.textContent = count;
@@ -587,8 +585,8 @@ function updateSelectionState() {
 }
 
 function selectAllCurrentPage() {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const pageItems = filteredItems.slice(startIndex, startIndex + itemsPerPage);
     pageItems.forEach(item => {
         if (item.status !== 'SOLD') {
             selectedNumbers.add(item.number);
@@ -600,6 +598,11 @@ function selectAllCurrentPage() {
 function unselectAllCurrentPage() {
     selectedNumbers.clear();
     renderGrid();
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+    showToast(`Nomor ${text} berhasil disalin!`);
 }
 
 function copySelectedNumbers() {
@@ -614,28 +617,18 @@ function openWaDirect(textMessage) {
     window.open(waUrl, '_blank');
 }
 
-/**
- * Order single item via WhatsApp
- */
 function orderSingleViaWA(item) {
     const message = `Halo Admin, saya berminat membeli nomor Stock Blinx berikut:\n\n📱 *Nomor*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah nomor ini masih ready?`;
     openWaDirect(message);
 }
 
-/**
- * Order multiple items via WhatsApp
- */
 function orderSelectedViaWA() {
     if (selectedNumbers.size === 0) return;
-    
     let listText = Array.from(selectedNumbers).map((num, idx) => `${idx + 1}. ${num}`).join('\n');
     const message = `Halo Admin, saya berminat membeli ${selectedNumbers.size} nomor Stock Blinx berikut:\n\n${listText}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`;
     openWaDirect(message);
 }
 
-/**
- * Filter category programmatically (e.g. from Hero stat cards)
- */
 function filterCategory(catName) {
     currentCategory = catName;
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -661,9 +654,6 @@ function resetFilters() {
     applyFiltersAndSort();
 }
 
-/**
- * Helper UI functions
- */
 function showLoading(isLoading) {
     if (isLoading) {
         DOM.loadingState.classList.remove('hidden');
