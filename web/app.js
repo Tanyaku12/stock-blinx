@@ -67,8 +67,6 @@ const DOM = {
 
     showingCount: document.getElementById('showing-count'),
     activeFilterText: document.getElementById('active-filter-text'),
-    btnSelectAll: document.getElementById('btn-select-all'),
-    btnUnselectAll: document.getElementById('btn-unselect-all'),
 
     stockGrid: document.getElementById('stock-grid'),
     loadingState: document.getElementById('loading-state'),
@@ -230,34 +228,14 @@ function determineTier(numStr) {
     return 'S TIER (4x digit berulang)';
 }
 
-// Smooth Number Counter Animation Helper
-function animateCounter(element, targetValue, duration = 800) {
-    if (!element) return;
-    const startValue = 0;
-    const startTime = performance.now();
-
-    function updateValue(currentTime) {
-        const elapsedTime = currentTime - startTime;
-        if (elapsedTime >= duration) {
-            element.textContent = targetValue.toLocaleString();
-        } else {
-            const progress = elapsedTime / duration;
-            const current = Math.floor(progress * targetValue);
-            element.textContent = current.toLocaleString();
-            requestAnimationFrame(updateValue);
-        }
-    }
-    requestAnimationFrame(updateValue);
-}
-
 function renderStats() {
     const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
     const mainAvailableItems = availableItems.filter(item => !isSTierCategory(item.category));
     const mainReady = mainAvailableItems.length;
 
-    // Header & Hero animated stock counts
+    // Header & Hero stock counts
     DOM.headerStockCount.textContent = `${mainReady.toLocaleString()} Stock Utama Ready`;
-    animateCounter(DOM.totalHeroStock, mainReady);
+    DOM.totalHeroStock.textContent = mainReady.toLocaleString();
 
     const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
@@ -268,17 +246,19 @@ function renderStats() {
         else if (isSTierCategory(item.category)) counts.s++;
     });
 
-    // Animate stats cards
-    animateCounter(DOM.countSSS, counts.sss);
-    animateCounter(DOM.countSS, counts.ss);
-    animateCounter(DOM.countUrut, counts.urut);
+    // Stats cards
+    DOM.countSSS.textContent = counts.sss.toLocaleString();
+    DOM.countSS.textContent = counts.ss.toLocaleString();
+    DOM.countUrut.textContent = counts.urut.toLocaleString();
 
-    DOM.tabCountAll.textContent = mainReady;
-    DOM.tabCountSSS.textContent = counts.sss;
-    DOM.tabCountSS.textContent = counts.ss;
-    DOM.tabCountUrut.textContent = counts.urut;
+    // Category tab badges
+    DOM.tabCountAll.textContent = mainReady.toLocaleString();
+    DOM.tabCountSSS.textContent = counts.sss.toLocaleString();
+    DOM.tabCountSS.textContent = counts.ss.toLocaleString();
+    DOM.tabCountUrut.textContent = counts.urut.toLocaleString();
     DOM.tabCountFav.textContent = favoriteNumbers.size;
 
+    // S-Tier promo counts
     if (DOM.stierTotalCount) DOM.stierTotalCount.textContent = counts.s.toLocaleString();
     if (DOM.modalSTierCount) DOM.modalSTierCount.textContent = counts.s.toLocaleString();
 }
@@ -332,9 +312,6 @@ function setupEventListeners() {
         currentSort = e.target.value;
         applyFiltersAndSort();
     });
-
-    DOM.btnSelectAll.addEventListener('click', selectAllCurrentPage);
-    DOM.btnUnselectAll.addEventListener('click', unselectAllCurrentPage);
 
     DOM.btnPrevPage.addEventListener('click', () => {
         if (currentPage > 1) {
@@ -716,29 +693,9 @@ function updateSelectionState() {
 
     if (count > 0) {
         DOM.bulkBar.classList.remove('hidden');
-        DOM.btnSelectAll.classList.add('hidden');
-        DOM.btnUnselectAll.classList.remove('hidden');
     } else {
         DOM.bulkBar.classList.add('hidden');
-        DOM.btnSelectAll.classList.remove('hidden');
-        DOM.btnUnselectAll.classList.add('hidden');
     }
-}
-
-function selectAllCurrentPage() {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-    pageItems.forEach(item => {
-        if (item.status !== 'SOLD') {
-            selectedNumbers.add(item.number);
-        }
-    });
-    renderGrid();
-}
-
-function unselectAllCurrentPage() {
-    selectedNumbers.clear();
-    renderGrid();
 }
 
 function copyToClipboard(text) {

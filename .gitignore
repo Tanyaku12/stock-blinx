@@ -6,3 +6,5 @@ ALL/TOKENS/tokens-ID.json
 ALL/TOKENS/tokens-ID.json
 ALL/TOKENS/tokens-ID.json
 __pycache__/
+.vercel
+.env*
