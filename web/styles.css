@@ -679,6 +679,12 @@ button {
     margin-bottom: 1rem;
 }
 
+.card-badges {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 .card-checkbox {
     width: 18px;
     height: 18px;
@@ -686,7 +692,27 @@ button {
     accent-color: var(--primary-cyan);
 }
 
+.card-checkbox:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
 .badge-tier {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-sold {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
     font-size: 0.7rem;
     font-weight: 700;
     padding: 0.25rem 0.65rem;
@@ -702,6 +728,31 @@ button {
 .badge-ss { background: rgba(0, 240, 255, 0.15); color: var(--primary-cyan); border: 1px solid rgba(0, 240, 255, 0.4); }
 .badge-urut { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.4); }
 .badge-s { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); border: 1px solid rgba(168, 85, 247, 0.4); }
+
+.stock-card.sold {
+    opacity: 0.8;
+    border-color: rgba(239, 68, 68, 0.25);
+    background: linear-gradient(145deg, rgba(30, 24, 38, 0.85), rgba(18, 14, 26, 0.9));
+}
+
+.stock-card.sold .phone-number {
+    color: #94a3b8;
+    text-decoration: line-through rgba(239, 68, 68, 0.4);
+}
+
+.btn-card-order.disabled {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #64748b !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none !important;
+}
+
+.btn-card-order.disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
 
 .card-center {
     margin-bottom: 1.25rem;

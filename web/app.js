@@ -103,7 +103,19 @@ async function loadStockData() {
             if (txtResponse.ok) {
                 const text = await txtResponse.text();
                 allStockItems = parseAllTxt(text);
-                console.log('Loaded stock data from all.txt:', allStockItems.length);
+
+                try {
+                    const soldResponse = await fetch('../RAPI/sold.txt');
+                    if (soldResponse.ok) {
+                        const soldText = await soldResponse.text();
+                        const soldItems = parseSoldTxt(soldText);
+                        allStockItems = [...allStockItems, ...soldItems];
+                    }
+                } catch (errSold) {
+                    console.warn('Fallback sold.txt fetch failed:', errSold);
+                }
+
+                console.log('Loaded stock data from all.txt & sold.txt:', allStockItems.length);
             } else {
                 throw new Error('File fetch failed');
             }
@@ -134,12 +146,53 @@ function parseAllTxt(rawText) {
         } else {
             items.push({
                 number: line,
-                category: currentCat
+                category: currentCat,
+                status: 'AVAILABLE'
             });
         }
     });
 
     return items;
+}
+
+/**
+ * Parse raw sold.txt string into item objects
+ */
+function parseSoldTxt(rawText) {
+    const lines = rawText.split('\n');
+    const items = [];
+
+    lines.forEach(line => {
+        line = line.trim();
+        if (!line || line.startsWith('#')) return;
+
+        if (line.includes('|')) {
+            const parts = line.split('|');
+            items.push({
+                number: parts[0].trim(),
+                category: parts[1].trim(),
+                status: 'SOLD'
+            });
+        } else if (!line.startsWith('---')) {
+            items.push({
+                number: line,
+                category: determineTier(line),
+                status: 'SOLD'
+            });
+        }
+    });
+
+    return items;
+}
+
+function determineTier(numStr) {
+    for (let d = 0; d < 10; d++) {
+        if (numStr.includes(String(d).repeat(6))) return 'SSS TIER (6x digit berulang)';
+    }
+    for (let d = 0; d < 10; d++) {
+        if (numStr.includes(String(d).repeat(5))) return 'SS TIER (5x digit berulang)';
+    }
+    return 'S TIER (4x digit berulang)';
 }
 
 /**
@@ -352,8 +405,9 @@ function renderGrid() {
  * Create DOM Card Element for a Stock Item
  */
 function createStockCard(item) {
+    const isSold = item.status === 'SOLD';
     const card = document.createElement('div');
-    card.className = 'stock-card';
+    card.className = `stock-card ${isSold ? 'sold' : ''}`;
     if (selectedNumbers.has(item.number)) card.classList.add('selected');
 
     let tierType = 'S';
@@ -385,12 +439,31 @@ function createStockCard(item) {
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 
+    const statusBadgeHtml = isSold
+        ? `<span class="badge-status badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
+        : '';
+
+    const checkboxHtml = isSold
+        ? `<input type="checkbox" class="card-checkbox" disabled title="Nomor sudah terjual">`
+        : `<input type="checkbox" class="card-checkbox" ${selectedNumbers.has(item.number) ? 'checked' : ''}>`;
+
+    const orderBtnHtml = isSold
+        ? `<button class="btn-card-order disabled" disabled title="Nomor ini sudah terjual">
+            <i class="fa-solid fa-ban"></i> Terjual
+           </button>`
+        : `<button class="btn-card-order">
+            <i class="fa-brands fa-whatsapp"></i> Beli WA
+           </button>`;
+
     card.innerHTML = `
         <div class="card-top">
-            <input type="checkbox" class="card-checkbox" ${selectedNumbers.has(item.number) ? 'checked' : ''}>
-            <span class="badge-tier ${tierBadgeClass}">
-                <i class="fa-solid ${tierIcon}"></i> ${tierLabel}
-            </span>
+            ${checkboxHtml}
+            <div class="card-badges">
+                <span class="badge-tier ${tierBadgeClass}">
+                    <i class="fa-solid ${tierIcon}"></i> ${tierLabel}
+                </span>
+                ${statusBadgeHtml}
+            </div>
         </div>
         <div class="card-center">
             <div class="phone-number">${formattedNumber}</div>
@@ -403,24 +476,24 @@ function createStockCard(item) {
             <button class="btn-card-fav ${isFav ? 'active' : ''}" title="Tambah ke Favorit">
                 <i class="fa-solid fa-heart"></i>
             </button>
-            <button class="btn-card-order">
-                <i class="fa-brands fa-whatsapp"></i> Beli WA
-            </button>
+            ${orderBtnHtml}
         </div>
     `;
 
     // Event Listeners for Card Controls
     const checkbox = card.querySelector('.card-checkbox');
-    checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-            selectedNumbers.add(item.number);
-            card.classList.add('selected');
-        } else {
-            selectedNumbers.delete(item.number);
-            card.classList.remove('selected');
-        }
-        updateSelectionState();
-    });
+    if (!isSold) {
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                selectedNumbers.add(item.number);
+                card.classList.add('selected');
+            } else {
+                selectedNumbers.delete(item.number);
+                card.classList.remove('selected');
+            }
+            updateSelectionState();
+        });
+    }
 
     card.querySelector('.btn-card-copy').addEventListener('click', (e) => {
         e.stopPropagation();
@@ -444,10 +517,12 @@ function createStockCard(item) {
         DOM.tabCountFav.textContent = favoriteNumbers.size;
     });
 
-    card.querySelector('.btn-card-order').addEventListener('click', (e) => {
-        e.stopPropagation();
-        orderSingleViaWA(item);
-    });
+    if (!isSold) {
+        card.querySelector('.btn-card-order').addEventListener('click', (e) => {
+            e.stopPropagation();
+            orderSingleViaWA(item);
+        });
+    }
 
     return card;
 }
@@ -498,7 +573,11 @@ function updateSelectionState() {
 function selectAllCurrentPage() {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const pageItems = filteredItems.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-    pageItems.forEach(item => selectedNumbers.add(item.number));
+    pageItems.forEach(item => {
+        if (item.status !== 'SOLD') {
+            selectedNumbers.add(item.number);
+        }
+    });
     renderGrid();
 }
 

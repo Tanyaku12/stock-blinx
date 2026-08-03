@@ -1,0 +1,4 @@
+# List Stock Terjual (SOLD)
+# Format: nomor atau nomor|KATEGORI
+16555655555|SS TIER (5x digit berulang)
+16399991999|S TIER (4x digit berulang)

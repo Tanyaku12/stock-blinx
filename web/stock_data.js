@@ -1,5 +1,15 @@
 window.STOCK_DATA = [
   {
+    "number": "16555655555",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "SOLD"
+  },
+  {
+    "number": "16399991999",
+    "category": "S TIER (4x digit berulang)",
+    "status": "SOLD"
+  },
+  {
     "number": "16363666666",
     "category": "SSS TIER (6x digit berulang)"
   },
