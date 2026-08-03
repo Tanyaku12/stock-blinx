@@ -424,10 +424,6 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        // ALWAYS exclude SOLD items and S-Tier from the main catalog list!
-        if (item.status === 'SOLD') return false;
-        if (isSTierCategory(item.category)) return false;
-
         if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
         } else if (currentCategory !== 'ALL') {
@@ -444,6 +440,10 @@ function applyFiltersAndSort() {
         if (currentDigitFilter) {
             if (!item.number.includes(currentDigitFilter)) return false;
         }
+
+        // Exclude available S-Tier items from main catalog (they are for S-Tier bonus modal),
+        // but include SOLD items (such as 16555655555 & 16399991999) so they appear in catalog as TERJUAL.
+        if (item.status !== 'SOLD' && isSTierCategory(item.category)) return false;
 
         return true;
     });
