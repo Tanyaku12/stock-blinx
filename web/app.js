@@ -228,14 +228,58 @@ function determineTier(numStr) {
     return 'S TIER (4x digit berulang)';
 }
 
+// Smooth Ease-Out Animated Stock Counter Helper
+function animateCounter(element, targetValue, options = {}) {
+    if (!element) return;
+
+    const duration = typeof options === 'number' ? options : (options.duration || 800);
+    const prefix = typeof options === 'object' && options.prefix ? options.prefix : '';
+    const suffix = typeof options === 'object' && options.suffix ? options.suffix : '';
+
+    const prevValAttr = element.dataset.animVal;
+    let startValue = prevValAttr !== undefined ? parseInt(prevValAttr, 10) : 0;
+    if (isNaN(startValue)) startValue = 0;
+
+    targetValue = parseInt(targetValue, 10) || 0;
+
+    if (element._animId) {
+        cancelAnimationFrame(element._animId);
+    }
+
+    element.dataset.animVal = targetValue;
+
+    if (startValue === targetValue && element.textContent !== '') {
+        element.textContent = `${prefix}${targetValue.toLocaleString()}${suffix}`;
+        return;
+    }
+
+    const startTime = performance.now();
+
+    function updateValue(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        if (elapsedTime >= duration) {
+            element.textContent = `${prefix}${targetValue.toLocaleString()}${suffix}`;
+            delete element._animId;
+        } else {
+            const progress = elapsedTime / duration;
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(startValue + (targetValue - startValue) * easeOut);
+            element.textContent = `${prefix}${current.toLocaleString()}${suffix}`;
+            element._animId = requestAnimationFrame(updateValue);
+        }
+    }
+
+    element._animId = requestAnimationFrame(updateValue);
+}
+
 function renderStats() {
     const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
     const mainAvailableItems = availableItems.filter(item => !isSTierCategory(item.category));
     const mainReady = mainAvailableItems.length;
 
     // Header & Hero stock counts
-    DOM.headerStockCount.textContent = `${mainReady.toLocaleString()} Stock Utama Ready`;
-    DOM.totalHeroStock.textContent = mainReady.toLocaleString();
+    animateCounter(DOM.headerStockCount, mainReady, { duration: 1000, suffix: ' Stock Utama Ready' });
+    animateCounter(DOM.totalHeroStock, mainReady, 1000);
 
     const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
@@ -247,20 +291,20 @@ function renderStats() {
     });
 
     // Stats cards
-    DOM.countSSS.textContent = counts.sss.toLocaleString();
-    DOM.countSS.textContent = counts.ss.toLocaleString();
-    DOM.countUrut.textContent = counts.urut.toLocaleString();
+    animateCounter(DOM.countSSS, counts.sss, 900);
+    animateCounter(DOM.countSS, counts.ss, 900);
+    animateCounter(DOM.countUrut, counts.urut, 900);
 
     // Category tab badges
-    DOM.tabCountAll.textContent = mainReady.toLocaleString();
-    DOM.tabCountSSS.textContent = counts.sss.toLocaleString();
-    DOM.tabCountSS.textContent = counts.ss.toLocaleString();
-    DOM.tabCountUrut.textContent = counts.urut.toLocaleString();
-    DOM.tabCountFav.textContent = favoriteNumbers.size;
+    animateCounter(DOM.tabCountAll, mainReady, 800);
+    animateCounter(DOM.tabCountSSS, counts.sss, 800);
+    animateCounter(DOM.tabCountSS, counts.ss, 800);
+    animateCounter(DOM.tabCountUrut, counts.urut, 800);
+    animateCounter(DOM.tabCountFav, favoriteNumbers.size, 500);
 
     // S-Tier promo counts
-    if (DOM.stierTotalCount) DOM.stierTotalCount.textContent = counts.s.toLocaleString();
-    if (DOM.modalSTierCount) DOM.modalSTierCount.textContent = counts.s.toLocaleString();
+    if (DOM.stierTotalCount) animateCounter(DOM.stierTotalCount, counts.s, 1000);
+    if (DOM.modalSTierCount) animateCounter(DOM.modalSTierCount, counts.s, 1000);
 }
 
 function setupEventListeners() {
@@ -416,7 +460,7 @@ function applyFiltersAndSort() {
         return 0;
     });
 
-    DOM.showingCount.textContent = filteredItems.length.toLocaleString();
+    animateCounter(DOM.showingCount, filteredItems.length, 500);
     DOM.activeFilterText.textContent = getFilterDescriptionText();
 
     renderGrid();
@@ -630,7 +674,7 @@ function createStockCard(item) {
             showToast(`Ditambahkan ke favorit ❤️`);
         }
         localStorage.setItem('blinx_fav_numbers', JSON.stringify(Array.from(favoriteNumbers)));
-        DOM.tabCountFav.textContent = favoriteNumbers.size;
+        animateCounter(DOM.tabCountFav, favoriteNumbers.size, 400);
     });
 
     if (!isSold) {
@@ -664,7 +708,7 @@ function getPatternDescription(numStr, tierType) {
 
 function updateSelectionState() {
     const count = selectedNumbers.size;
-    DOM.bulkCount.textContent = count;
+    animateCounter(DOM.bulkCount, count, 400);
 
     let mainCount = 0;
     let sTierCount = 0;
