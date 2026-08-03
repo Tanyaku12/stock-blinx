@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "stock-blinx",
+  "rewrites": [
+    { "source": "/api/stock", "destination": "/api/stock.py" },
+    { "source": "/RAPI/all.txt", "destination": "/RAPI/all.txt" },
+    { "source": "/(.*)", "destination": "/web/$1" }
+  ]
+}
