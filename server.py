@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-VIP Stock Store - Web Server
+Stock Blinx - Web Server
 Serves static web application and provides live /api/stock endpoint reading /root/max/RAPI/all.txt
 """
 
@@ -34,7 +34,7 @@ def parse_all_txt(file_path):
                 })
     return items
 
-class VIPStockHandler(http.server.SimpleHTTPRequestHandler):
+class BlinxStockHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=WEB_DIR, **kwargs)
 
@@ -68,9 +68,9 @@ class VIPStockHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     os.chdir(WEB_DIR)
-    with socketserver.TCPServer(("", PORT), VIPStockHandler) as httpd:
+    with socketserver.TCPServer(("", PORT), BlinxStockHandler) as httpd:
         print(f"==================================================")
-        print(f" 🚀 VIP Stock Store Server Running!")
+        print(f" 🚀 Stock Blinx Server Running!")
         print(f" 🌐 Web UI: http://localhost:{PORT}")
         print(f" 📊 API Stock: http://localhost:{PORT}/api/stock")
         print(f" 📄 Reading stock from: {ALL_TXT_PATH}")

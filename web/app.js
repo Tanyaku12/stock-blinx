@@ -1,5 +1,5 @@
 /**
- * VIP STOCK STORE - MAIN APPLICATION LOGIC
+ * STOCK BLINX - MAIN APPLICATION LOGIC
  * WhatsApp Admin: 62882003619577
  */
 
@@ -10,7 +10,7 @@ const ITEMS_PER_PAGE = 60;
 let allStockItems = [];
 let filteredItems = [];
 let selectedNumbers = new Set();
-let favoriteNumbers = new Set(JSON.parse(localStorage.getItem('vip_fav_numbers') || '[]'));
+let favoriteNumbers = new Set(JSON.parse(localStorage.getItem('blinx_fav_numbers') || '[]'));
 
 let currentCategory = 'ALL';
 let currentSearchQuery = '';
@@ -440,7 +440,7 @@ function createStockCard(item) {
             favBtn.classList.add('active');
             showToast(`Ditambahkan ke favorit ❤️`);
         }
-        localStorage.setItem('vip_fav_numbers', JSON.stringify(Array.from(favoriteNumbers)));
+        localStorage.setItem('blinx_fav_numbers', JSON.stringify(Array.from(favoriteNumbers)));
         DOM.tabCountFav.textContent = favoriteNumbers.size;
     });
 
@@ -465,7 +465,6 @@ function formatNumberDisplay(numStr, highlightQuery) {
  * Get description tag for phone number pattern
  */
 function getPatternDescription(numStr, tierType) {
-    // Check repeating sequences
     for (let d = 9; d >= 0; d--) {
         const seq6 = String(d).repeat(6);
         const seq5 = String(d).repeat(5);
@@ -475,7 +474,7 @@ function getPatternDescription(numStr, tierType) {
         if (numStr.includes(seq4)) return `Repeat ${seq4}`;
     }
     if (tierType === 'URUT') return `Urut Sequential`;
-    return `ID Cantik Stock`;
+    return `Stock Blinx`;
 }
 
 /**
@@ -519,7 +518,7 @@ function copySelectedNumbers() {
  * Order single item via WhatsApp
  */
 function orderSingleViaWA(item) {
-    const message = `Halo Admin, saya berminat membeli nomor VIP stock berikut:\n\n📱 *Nomor*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah nomor ini masih ready?`;
+    const message = `Halo Admin, saya berminat membeli nomor Stock Blinx berikut:\n\n📱 *Nomor*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah nomor ini masih ready?`;
     const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
 }
@@ -531,7 +530,7 @@ function orderSelectedViaWA() {
     if (selectedNumbers.size === 0) return;
     
     let listText = Array.from(selectedNumbers).map((num, idx) => `${idx + 1}. ${num}`).join('\n');
-    const message = `Halo Admin, saya berminat membeli ${selectedNumbers.size} nomor VIP stock berikut:\n\n${listText}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`;
+    const message = `Halo Admin, saya berminat membeli ${selectedNumbers.size} nomor Stock Blinx berikut:\n\n${listText}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`;
     const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, '_blank');
 }
