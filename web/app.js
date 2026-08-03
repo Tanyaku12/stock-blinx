@@ -1,5 +1,6 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (CLEAN TOOLBAR LAYOUT)
+ * STOCK BLINX - MAIN APPLICATION LOGIC
+ * Includes Animated Stock Counters, Clean Main Catalog (SSS/SS/URUT), and S-Tier Bonus Modal
  * WhatsApp Admin: 62882003619577
  */
 
@@ -8,6 +9,9 @@ const ADMIN_WA = "62882003619577";
 // Application State
 let allStockItems = [];
 let filteredItems = [];
+let sTierStockItems = [];
+let filteredSTierItems = [];
+
 let selectedNumbers = new Set();
 let favoriteNumbers = new Set(JSON.parse(localStorage.getItem('blinx_fav_numbers') || '[]'));
 
@@ -17,6 +21,11 @@ let currentDigitFilter = '';
 let currentSort = 'tier';
 let currentPage = 1;
 const ITEMS_PER_PAGE = 60;
+
+// S-Tier Modal Pagination & Search State
+let stierModalSearchQuery = '';
+let stierModalPage = 1;
+const STIER_PER_PAGE = 50;
 
 const TIER_ORDER = {
     'SSS TIER (6x digit berulang)': 1,
@@ -38,8 +47,9 @@ const DOM = {
     countSSS: document.getElementById('count-sss'),
     countSS: document.getElementById('count-ss'),
     countUrut: document.getElementById('count-urut'),
-    countS: document.getElementById('count-s'),
-    
+    stierTotalCount: document.getElementById('stier-total-count'),
+    modalSTierCount: document.getElementById('modal-stier-count'),
+
     btnWaNav: document.getElementById('btn-wa-nav'),
     btnWaFooter: document.getElementById('btn-wa-footer'),
     catalog: document.getElementById('catalog'),
@@ -53,7 +63,6 @@ const DOM = {
     tabCountSSS: document.getElementById('tab-count-sss'),
     tabCountSS: document.getElementById('tab-count-ss'),
     tabCountUrut: document.getElementById('tab-count-urut'),
-    tabCountS: document.getElementById('tab-count-s'),
     tabCountFav: document.getElementById('tab-count-fav'),
 
     showingCount: document.getElementById('showing-count'),
@@ -68,6 +77,18 @@ const DOM = {
     btnPrevPage: document.getElementById('btn-prev-page'),
     btnNextPage: document.getElementById('btn-next-page'),
     pageInfo: document.getElementById('page-info'),
+
+    // Promo & S-Tier Modal DOM
+    btnOpenSTierModal: document.getElementById('btn-open-stier-modal'),
+    stierModal: document.getElementById('stier-modal'),
+    btnCloseSTierModal: document.getElementById('btn-close-stier-modal'),
+    btnDoneSTierModal: document.getElementById('btn-done-stier-modal'),
+    stierModalSearch: document.getElementById('stier-modal-search'),
+    stierModalGrid: document.getElementById('stier-modal-grid'),
+    stierModalPagination: document.getElementById('stier-modal-pagination'),
+    btnSTierPrev: document.getElementById('btn-stier-prev'),
+    btnSTierNext: document.getElementById('btn-stier-next'),
+    stierPageInfo: document.getElementById('stier-page-info'),
 
     bulkBar: document.getElementById('bulk-bar'),
     bulkCount: document.getElementById('bulk-count'),
@@ -143,6 +164,9 @@ async function loadStockData() {
         }
     }
 
+    // Separate S-Tier items from main stock
+    sTierStockItems = allStockItems.filter(item => isSTierCategory(item.category) && item.status !== 'SOLD');
+
     showLoading(false);
 }
 
@@ -206,13 +230,34 @@ function determineTier(numStr) {
     return 'S TIER (4x digit berulang)';
 }
 
+// Smooth Number Counter Animation Helper
+function animateCounter(element, targetValue, duration = 800) {
+    if (!element) return;
+    const startValue = 0;
+    const startTime = performance.now();
+
+    function updateValue(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        if (elapsedTime >= duration) {
+            element.textContent = targetValue.toLocaleString();
+        } else {
+            const progress = elapsedTime / duration;
+            const current = Math.floor(progress * targetValue);
+            element.textContent = current.toLocaleString();
+            requestAnimationFrame(updateValue);
+        }
+    }
+    requestAnimationFrame(updateValue);
+}
+
 function renderStats() {
     const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
     const mainAvailableItems = availableItems.filter(item => !isSTierCategory(item.category));
     const mainReady = mainAvailableItems.length;
 
+    // Header & Hero animated stock counts
     DOM.headerStockCount.textContent = `${mainReady.toLocaleString()} Stock Utama Ready`;
-    DOM.totalHeroStock.textContent = `${mainReady.toLocaleString()}+`;
+    animateCounter(DOM.totalHeroStock, mainReady);
 
     const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
@@ -223,17 +268,19 @@ function renderStats() {
         else if (isSTierCategory(item.category)) counts.s++;
     });
 
-    DOM.countSSS.textContent = counts.sss;
-    DOM.countSS.textContent = counts.ss;
-    DOM.countUrut.textContent = counts.urut;
-    DOM.countS.textContent = counts.s;
+    // Animate stats cards
+    animateCounter(DOM.countSSS, counts.sss);
+    animateCounter(DOM.countSS, counts.ss);
+    animateCounter(DOM.countUrut, counts.urut);
 
     DOM.tabCountAll.textContent = mainReady;
     DOM.tabCountSSS.textContent = counts.sss;
     DOM.tabCountSS.textContent = counts.ss;
     DOM.tabCountUrut.textContent = counts.urut;
-    DOM.tabCountS.textContent = counts.s;
     DOM.tabCountFav.textContent = favoriteNumbers.size;
+
+    if (DOM.stierTotalCount) DOM.stierTotalCount.textContent = counts.s.toLocaleString();
+    if (DOM.modalSTierCount) DOM.modalSTierCount.textContent = counts.s.toLocaleString();
 }
 
 function setupEventListeners() {
@@ -306,17 +353,61 @@ function setupEventListeners() {
         }
     });
 
+    // Modal S-Tier Events
+    if (DOM.btnOpenSTierModal) {
+        DOM.btnOpenSTierModal.addEventListener('click', openSTierModal);
+    }
+    if (DOM.btnCloseSTierModal) {
+        DOM.btnCloseSTierModal.addEventListener('click', closeSTierModal);
+    }
+    if (DOM.btnDoneSTierModal) {
+        DOM.btnDoneSTierModal.addEventListener('click', closeSTierModal);
+    }
+    if (DOM.stierModal) {
+        DOM.stierModal.addEventListener('click', (e) => {
+            if (e.target === DOM.stierModal) closeSTierModal();
+        });
+    }
+
+    if (DOM.stierModalSearch) {
+        DOM.stierModalSearch.addEventListener('input', (e) => {
+            stierModalSearchQuery = e.target.value.trim();
+            stierModalPage = 1;
+            renderSTierModalGrid();
+        });
+    }
+
+    if (DOM.btnSTierPrev) {
+        DOM.btnSTierPrev.addEventListener('click', () => {
+            if (stierModalPage > 1) {
+                stierModalPage--;
+                renderSTierModalGrid();
+            }
+        });
+    }
+
+    if (DOM.btnSTierNext) {
+        DOM.btnSTierNext.addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredSTierItems.length / STIER_PER_PAGE);
+            if (stierModalPage < totalPages) {
+                stierModalPage++;
+                renderSTierModalGrid();
+            }
+        });
+    }
+
     DOM.btnCopyBulk.addEventListener('click', copySelectedNumbers);
     DOM.btnOrderBulk.addEventListener('click', orderSelectedViaWA);
 }
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        if (currentCategory === 'ALL') {
-            if (isSTierCategory(item.category)) return false;
-        } else if (currentCategory === 'FAVORITE') {
+        // ALWAYS exclude S-Tier from the main catalog list!
+        if (isSTierCategory(item.category)) return false;
+
+        if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
-        } else {
+        } else if (currentCategory !== 'ALL') {
             if (item.category !== currentCategory) return false;
         }
 
@@ -341,7 +432,7 @@ function applyFiltersAndSort() {
             if (tierA !== tierB) return tierA - tierB;
             return a.number.localeCompare(b.number);
         } else if (currentSort === 'num-asc') {
-            return a.number.localeCompare(b.number, undefined, { numeric: true });
+            return a.number.localeCompare(a.number, undefined, { numeric: true });
         } else if (currentSort === 'num-desc') {
             return b.number.localeCompare(a.number, undefined, { numeric: true });
         }
@@ -395,6 +486,57 @@ function renderGrid() {
     updateSelectionState();
 }
 
+// S-Tier Modal Logic
+function openSTierModal() {
+    DOM.stierModal.classList.remove('hidden');
+    stierModalSearchQuery = '';
+    if (DOM.stierModalSearch) DOM.stierModalSearch.value = '';
+    stierModalPage = 1;
+    renderSTierModalGrid();
+}
+
+function closeSTierModal() {
+    DOM.stierModal.classList.add('hidden');
+    renderGrid(); // Refresh main grid selection checkboxes
+}
+
+function renderSTierModalGrid() {
+    filteredSTierItems = sTierStockItems.filter(item => {
+        if (stierModalSearchQuery) {
+            return item.number.toLowerCase().includes(stierModalSearchQuery.toLowerCase());
+        }
+        return true;
+    });
+
+    DOM.stierModalGrid.innerHTML = '';
+
+    if (filteredSTierItems.length === 0) {
+        DOM.stierModalGrid.innerHTML = '<div style="text-align:center; padding: 2rem; color: #888;">Tidak ada stok S-Tier yang cocok dengan pencarian.</div>';
+        DOM.stierModalPagination.classList.add('hidden');
+        return;
+    }
+
+    const totalPages = Math.ceil(filteredSTierItems.length / STIER_PER_PAGE);
+    if (stierModalPage > totalPages) stierModalPage = totalPages || 1;
+
+    const startIndex = (stierModalPage - 1) * STIER_PER_PAGE;
+    const pageItems = filteredSTierItems.slice(startIndex, startIndex + STIER_PER_PAGE);
+
+    pageItems.forEach(item => {
+        const card = createStockCard(item);
+        DOM.stierModalGrid.appendChild(card);
+    });
+
+    if (totalPages > 1) {
+        DOM.stierModalPagination.classList.remove('hidden');
+        DOM.stierPageInfo.textContent = `Halaman ${stierModalPage} dari ${totalPages}`;
+        DOM.btnSTierPrev.disabled = stierModalPage === 1;
+        DOM.btnSTierNext.disabled = stierModalPage === totalPages;
+    } else {
+        DOM.stierModalPagination.classList.add('hidden');
+    }
+}
+
 function createStockCard(item) {
     const isSold = item.status === 'SOLD';
     const card = document.createElement('div');
@@ -425,7 +567,7 @@ function createStockCard(item) {
 
     card.setAttribute('data-tier-type', tierType);
 
-    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter);
+    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter || stierModalSearchQuery);
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 

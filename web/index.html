@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Blinx - Katalog ID Cantik & Nomor Langka</title>
-    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah via WhatsApp.">
+    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, dan Urut. Order mudah via WhatsApp.">
 
     <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
             <div class="nav-actions">
                 <div class="live-status-pill">
                     <span class="status-dot pulsing"></span>
-                    <span id="header-stock-count">Syncing stock...</span>
+                    <span id="header-stock-count">0 Stock Utama Ready</span>
                 </div>
 
                 <button class="btn-wa-header" id="btn-wa-nav" title="Hubungi Admin via WhatsApp">
@@ -55,40 +55,49 @@
                 <div class="hero-overlay">
                     <div class="hero-badge">OFFICIAL STOCK BLINX CATALOG</div>
                     <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare Numbers</span></h1>
-                    <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">2,500+</strong> pilihan stock ready. Order langsung terhubung ke WhatsApp Admin.</p>
+                    <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">0</strong> pilihan stock utama ready. Order langsung terhubung ke WhatsApp Admin.</p>
 
-                    <!-- Quick Stats Cards -->
+                    <!-- Quick Stats Cards (Hanya Stock Utama: SSS, SS, URUT) -->
                     <div class="hero-stats-grid">
                         <div class="stat-card stat-sss" onclick="filterCategory('SSS TIER (6x digit berulang)')">
                             <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
                             <div class="stat-info">
-                                <span class="stat-val" id="count-sss">47</span>
+                                <span class="stat-val" id="count-sss">0</span>
                                 <span class="stat-lbl">SSS Tier · 6x Digit</span>
                             </div>
                         </div>
                         <div class="stat-card stat-ss" onclick="filterCategory('SS TIER (5x digit berulang)')">
                             <div class="stat-icon"><i class="fa-solid fa-gem"></i></div>
                             <div class="stat-info">
-                                <span class="stat-val" id="count-ss">102</span>
+                                <span class="stat-val" id="count-ss">0</span>
                                 <span class="stat-lbl">SS Tier · 5x Digit</span>
                             </div>
                         </div>
                         <div class="stat-card stat-urut" onclick="filterCategory('(URUT)')">
                             <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
                             <div class="stat-info">
-                                <span class="stat-val" id="count-urut">135</span>
+                                <span class="stat-val" id="count-urut">0</span>
                                 <span class="stat-lbl">Urut · Sequential</span>
-                            </div>
-                        </div>
-                        <div class="stat-card stat-s" onclick="filterCategory('S TIER (4x digit berulang)')">
-                            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
-                            <div class="stat-info">
-                                <span class="stat-val" id="count-s">2,250</span>
-                                <span class="stat-lbl">S Tier · 4x Digit</span>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Buy 2 Get 1 Free Promo Banner Card -->
+        <section class="promo-banner-section">
+            <div class="promo-banner-card">
+                <div class="promo-banner-content">
+                    <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
+                    <div class="promo-text">
+                        <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
+                        <p>Setiap pembelian <strong>2 Nomor Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 Nomor S-Tier GRATIS</strong>!</p>
+                    </div>
+                </div>
+                <button id="btn-open-stier-modal" class="btn-stier-trigger">
+                    <i class="fa-solid fa-eye"></i> Lihat Stock Bonus S-Tier (<span id="stier-total-count">2,250</span>)
+                </button>
             </div>
         </section>
 
@@ -98,13 +107,13 @@
                 <!-- Search Box -->
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Cari digit nomor (cth: 6666, 888, 123)..." autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Cari digit nomor utama (cth: 6666, 888, 123)..." autocomplete="off">
                     <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
 
-                <!-- Category Tabs -->
+                <!-- Category Tabs (Tanpa S-Tier) -->
                 <div class="category-tabs" id="category-tabs">
                     <button class="tab-btn active" data-category="ALL">
                         <i class="fa-solid fa-border-all"></i> Semua (<span id="tab-count-all">0</span>)
@@ -117,9 +126,6 @@
                     </button>
                     <button class="tab-btn tab-urut" data-category="(URUT)">
                         <i class="fa-solid fa-arrow-trend-up"></i> Urut (<span id="tab-count-urut">0</span>)
-                    </button>
-                    <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
-                        <i class="fa-solid fa-gift"></i> Pilih Bonus S-Tier (<span id="tab-count-s">0</span>)
                     </button>
                     <button class="tab-btn tab-fav" data-category="FAVORITE">
                         <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
@@ -145,7 +151,7 @@
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
-                                <option value="tier">Prioritas Tier (SSS → S)</option>
+                                <option value="tier">Prioritas Tier (SSS → SS → URUT)</option>
                                 <option value="num-asc">Nomor (Terkecil)</option>
                                 <option value="num-desc">Nomor (Terbesar)</option>
                             </select>
@@ -159,8 +165,8 @@
         <section class="catalog-section">
             <div class="catalog-header">
                 <div class="result-info">
-                    <h2>Menampilkan <span id="showing-count">0</span> Stock</h2>
-                    <p id="active-filter-text">Semua Kategori</p>
+                    <h2>Menampilkan <span id="showing-count">0</span> Stock Utama</h2>
+                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT)</p>
                 </div>
 
                 <div class="selection-controls">
@@ -198,6 +204,47 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal Seluruh S-Tier Bonus -->
+    <div id="stier-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fa-solid fa-gift text-purple"></i>
+                    <h2>Katalog Stock Bonus S-Tier (<span id="modal-stier-count">2,250</span>)</h2>
+                </div>
+                <button id="btn-close-stier-modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-desc">
+                    💡 Pilih nomor S-Tier favoritmu sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 Nomor Utama (SSS/SS/URUT).
+                </p>
+
+                <!-- Search Inside Modal -->
+                <div class="search-box modal-search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="stier-modal-search" placeholder="Cari digit nomor S-Tier (cth: 7777, 8888, 0000)..." autocomplete="off">
+                </div>
+
+                <!-- S-Tier Grid List Container -->
+                <div id="stier-modal-grid" class="stock-grid view-list modal-grid-container"></div>
+                
+                <!-- Pagination inside Modal -->
+                <div id="stier-modal-pagination" class="pagination-wrapper hidden">
+                    <button id="btn-stier-prev" class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
+                    <span id="stier-page-info" class="page-info">Halaman 1 dari 10</span>
+                    <button id="btn-stier-next" class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="btn-done-stier-modal" class="btn-primary">
+                    <i class="fa-solid fa-check"></i> Selesai Memilih Bonus
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating Bulk Order Bar -->
     <div id="bulk-bar" class="bulk-bar hidden">
