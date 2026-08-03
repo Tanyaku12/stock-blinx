@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (PROMO BUY 2 GET 1 FREE)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (ACCURATE STOCK COUNTS & FALLBACKS)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -90,16 +90,25 @@ async function initApp() {
 
 async function loadStockData() {
     showLoading(true);
+    let loadedSuccess = false;
+
+    // First attempt: API endpoint
     try {
         const response = await fetch('/api/stock');
         if (response.ok) {
-            allStockItems = await response.json();
-            console.log('Loaded stock data via API:', allStockItems.length);
-        } else {
-            throw new Error('API not available');
+            const data = await response.json();
+            if (Array.isArray(data) && data.length > 0) {
+                allStockItems = data;
+                loadedSuccess = true;
+                console.log('Loaded stock data via API:', allStockItems.length);
+            }
         }
     } catch (e) {
-        console.warn('API fetch failed, trying static file fallback...', e);
+        console.warn('API fetch error:', e);
+    }
+
+    // Second attempt: parse /RAPI/all.txt + /RAPI/sold.txt
+    if (!loadedSuccess) {
         try {
             const txtResponse = await fetch('/RAPI/all.txt');
             if (txtResponse.ok) {
@@ -116,15 +125,25 @@ async function loadStockData() {
                 } catch (errSold) {
                     console.warn('Fallback sold.txt fetch failed:', errSold);
                 }
-            } else {
-                throw new Error('File fetch failed');
+
+                if (allStockItems.length > 0) {
+                    loadedSuccess = true;
+                    console.log('Loaded stock data from all.txt & sold.txt:', allStockItems.length);
+                }
             }
         } catch (err) {
-            if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA)) {
-                allStockItems = window.STOCK_DATA;
-            }
+            console.warn('Static file fetch error:', err);
         }
     }
+
+    // Third attempt: window.STOCK_DATA fallback
+    if (!loadedSuccess) {
+        if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA) && window.STOCK_DATA.length > 0) {
+            allStockItems = window.STOCK_DATA;
+            console.log('Loaded stock data via window.STOCK_DATA fallback:', allStockItems.length);
+        }
+    }
+
     showLoading(false);
 }
 
@@ -189,13 +208,16 @@ function determineTier(numStr) {
 }
 
 function renderStats() {
-    const total = allStockItems.length;
-    DOM.headerStockCount.textContent = `${total.toLocaleString()} Stock Ready`;
-    DOM.totalHeroStock.textContent = `${total.toLocaleString()}+`;
+    // Only count AVAILABLE items as ready stock
+    const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
+    const totalReady = availableItems.length;
+
+    DOM.headerStockCount.textContent = `${totalReady.toLocaleString()} Stock Ready`;
+    DOM.totalHeroStock.textContent = `${totalReady.toLocaleString()}+`;
 
     const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
-    allStockItems.forEach(item => {
+    availableItems.forEach(item => {
         if (item.category.includes('SSS TIER')) counts.sss++;
         else if (item.category.includes('SS TIER')) counts.ss++;
         else if (item.category.includes('URUT')) counts.urut++;
@@ -207,7 +229,7 @@ function renderStats() {
     DOM.countUrut.textContent = counts.urut;
     DOM.countS.textContent = counts.s;
 
-    DOM.tabCountAll.textContent = total;
+    DOM.tabCountAll.textContent = allStockItems.length;
     DOM.tabCountSSS.textContent = counts.sss;
     DOM.tabCountSS.textContent = counts.ss;
     DOM.tabCountUrut.textContent = counts.urut;
@@ -217,10 +239,10 @@ function renderStats() {
 
 function setupEventListeners() {
     if (DOM.btnWaNav) {
-        DOM.btnWaNav.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Promo Buy 2 Get 1 Free Stock Blinx."));
+        DOM.btnWaNav.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
     }
     if (DOM.btnWaFooter) {
-        DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Promo Buy 2 Get 1 Free Stock Blinx."));
+        DOM.btnWaFooter.addEventListener('click', () => openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx."));
     }
 
     if (DOM.btnViewGrid && DOM.btnViewList) {
@@ -550,14 +572,10 @@ function getPatternDescription(numStr, tierType) {
     return `Stock Blinx`;
 }
 
-/**
- * Update Selection State & Calculate Promo Buy 2 Get 1 Free Bonuses
- */
 function updateSelectionState() {
     const count = selectedNumbers.size;
     DOM.bulkCount.textContent = count;
 
-    // Calculate how many main items vs S-tier bonus items selected
     let mainCount = 0;
     let sTierCount = 0;
 
@@ -632,9 +650,6 @@ function orderSingleViaWA(item) {
     openWaDirect(message);
 }
 
-/**
- * Smart WA Bulk Order with Buy 2 Get 1 Free Promo formatting
- */
 function orderSelectedViaWA() {
     if (selectedNumbers.size === 0) return;
 

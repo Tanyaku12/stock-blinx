@@ -2,7 +2,11 @@
   "version": 2,
   "name": "stock-blinx",
   "builds": [
-    { "src": "api/stock.py", "use": "@vercel/python" },
+    {
+      "src": "api/stock.py",
+      "use": "@vercel/python",
+      "config": { "includeFiles": "RAPI/**" }
+    },
     { "src": "web/**", "use": "@vercel/static" },
     { "src": "RAPI/all.txt", "use": "@vercel/static" },
     { "src": "RAPI/sold.txt", "use": "@vercel/static" }

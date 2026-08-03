@@ -12,14 +12,26 @@ def determine_tier(num_str):
     return 'S TIER (4x digit berulang)'
 
 def load_all_stock():
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    all_path = os.path.join(base_dir, "RAPI", "all.txt")
-    sold_path = os.path.join(base_dir, "RAPI", "sold.txt")
+    possible_dirs = [
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        os.getcwd(),
+        "/var/task",
+        os.path.abspath(".")
+    ]
+
+    all_path = None
+    sold_path = None
+    for p in possible_dirs:
+        test_all = os.path.join(p, "RAPI", "all.txt")
+        if os.path.exists(test_all):
+            all_path = test_all
+            sold_path = os.path.join(p, "RAPI", "sold.txt")
+            break
 
     items = []
     
     # Load available stock from all.txt
-    if os.path.exists(all_path):
+    if all_path and os.path.exists(all_path):
         current_cat = 'S TIER (4x digit berulang)'
         with open(all_path, 'r', encoding='utf-8', errors='ignore') as f:
             for line in f:
@@ -36,7 +48,7 @@ def load_all_stock():
                     })
 
     # Load sold stock from sold.txt
-    if os.path.exists(sold_path):
+    if sold_path and os.path.exists(sold_path):
         current_cat = 'S TIER (4x digit berulang)'
         with open(sold_path, 'r', encoding='utf-8', errors='ignore') as f:
             for line in f:
