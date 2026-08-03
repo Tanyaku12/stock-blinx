@@ -1,0 +1,12 @@
+ALL/
+__pycache__/
+scan_report.json
+updateapis.py
+merge_and_scan.py
+process_jonsky.py
+run_cracked.py
+cararun.txt
+pyproject.toml
+RAPI/data.json
+RAPI/guest100067.dat
+RAPI/blinx.txt
