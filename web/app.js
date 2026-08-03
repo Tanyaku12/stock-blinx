@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (HIDE S-TIER FROM DEFAULT ALL VIEW)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (ACCURATE S-TIER CATEGORY MATCHING)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -25,6 +25,12 @@ const TIER_ORDER = {
     '(URUT)': 3,
     'S TIER (4x digit berulang)': 4
 };
+
+// Helper: Strictly check if a category is S-TIER (and not SSS or SS)
+function isSTierCategory(cat) {
+    if (!cat) return false;
+    return cat.includes('S TIER') && !cat.includes('SSS') && !cat.includes('SS');
+}
 
 // DOM Elements
 const DOM = {
@@ -209,7 +215,7 @@ function determineTier(numStr) {
 
 function renderStats() {
     const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
-    const mainAvailableItems = availableItems.filter(item => !item.category.includes('S TIER'));
+    const mainAvailableItems = availableItems.filter(item => !isSTierCategory(item.category));
     const mainReady = mainAvailableItems.length;
 
     DOM.headerStockCount.textContent = `${mainReady.toLocaleString()} Stock Utama Ready`;
@@ -221,7 +227,7 @@ function renderStats() {
         if (item.category.includes('SSS TIER')) counts.sss++;
         else if (item.category.includes('SS TIER')) counts.ss++;
         else if (item.category.includes('URUT')) counts.urut++;
-        else if (item.category.includes('S TIER')) counts.s++;
+        else if (isSTierCategory(item.category)) counts.s++;
     });
 
     DOM.countSSS.textContent = counts.sss;
@@ -229,7 +235,7 @@ function renderStats() {
     DOM.countUrut.textContent = counts.urut;
     DOM.countS.textContent = counts.s;
 
-    DOM.tabCountAll.textContent = mainReady; // Main premium items in default ALL tab
+    DOM.tabCountAll.textContent = mainReady; // Exact 284 main items in ALL tab
     DOM.tabCountSSS.textContent = counts.sss;
     DOM.tabCountSS.textContent = counts.ss;
     DOM.tabCountUrut.textContent = counts.urut;
@@ -342,9 +348,9 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        // If currentCategory is 'ALL', EXCLUDE S-TIER (it only shows SSS, SS, and URUT!)
+        // If currentCategory is 'ALL', EXCLUDE S-TIER (only show SSS, SS, and URUT!)
         if (currentCategory === 'ALL') {
-            if (item.category.includes('S TIER')) return false;
+            if (isSTierCategory(item.category)) return false;
         } else if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
         } else {
@@ -465,7 +471,7 @@ function createStockCard(item) {
         ? `<span class="badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
         : '';
 
-    const promoBadgeHtml = (tierType === 'S' && !isSold)
+    const promoBadgeHtml = (isSTierCategory(item.category) && !isSold)
         ? `<span class="badge-bonus-stier"><i class="fa-solid fa-gift"></i> BONUS BUY 2 GET 1</span>`
         : '';
 
@@ -585,7 +591,7 @@ function updateSelectionState() {
     selectedNumbers.forEach(num => {
         const found = allStockItems.find(i => i.number === num);
         if (found) {
-            if (found.category.includes('S TIER')) {
+            if (isSTierCategory(found.category)) {
                 sTierCount++;
             } else {
                 mainCount++;
@@ -661,7 +667,7 @@ function orderSelectedViaWA() {
 
     selectedNumbers.forEach(num => {
         const found = allStockItems.find(i => i.number === num);
-        if (found && found.category.includes('S TIER')) {
+        if (found && isSTierCategory(found.category)) {
             sTierBonusItems.push(found);
         } else if (found) {
             mainItems.push(found);
