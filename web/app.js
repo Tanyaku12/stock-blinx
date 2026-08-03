@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC (ACCURATE STOCK COUNTS & FALLBACKS)
+ * STOCK BLINX - MAIN APPLICATION LOGIC (HIDE S-TIER FROM DEFAULT ALL VIEW)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -208,12 +208,12 @@ function determineTier(numStr) {
 }
 
 function renderStats() {
-    // Only count AVAILABLE items as ready stock
     const availableItems = allStockItems.filter(item => item.status !== 'SOLD');
-    const totalReady = availableItems.length;
+    const mainAvailableItems = availableItems.filter(item => !item.category.includes('S TIER'));
+    const mainReady = mainAvailableItems.length;
 
-    DOM.headerStockCount.textContent = `${totalReady.toLocaleString()} Stock Ready`;
-    DOM.totalHeroStock.textContent = `${totalReady.toLocaleString()}+`;
+    DOM.headerStockCount.textContent = `${mainReady.toLocaleString()} Stock Utama Ready`;
+    DOM.totalHeroStock.textContent = `${mainReady.toLocaleString()}+`;
 
     const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
@@ -229,7 +229,7 @@ function renderStats() {
     DOM.countUrut.textContent = counts.urut;
     DOM.countS.textContent = counts.s;
 
-    DOM.tabCountAll.textContent = allStockItems.length;
+    DOM.tabCountAll.textContent = mainReady; // Main premium items in default ALL tab
     DOM.tabCountSSS.textContent = counts.sss;
     DOM.tabCountSS.textContent = counts.ss;
     DOM.tabCountUrut.textContent = counts.urut;
@@ -342,9 +342,12 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        if (currentCategory === 'FAVORITE') {
+        // If currentCategory is 'ALL', EXCLUDE S-TIER (it only shows SSS, SS, and URUT!)
+        if (currentCategory === 'ALL') {
+            if (item.category.includes('S TIER')) return false;
+        } else if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
-        } else if (currentCategory !== 'ALL') {
+        } else {
             if (item.category !== currentCategory) return false;
         }
 
@@ -383,7 +386,7 @@ function applyFiltersAndSort() {
 }
 
 function getFilterDescriptionText() {
-    let catText = currentCategory === 'ALL' ? 'Semua Kategori' : currentCategory;
+    let catText = currentCategory === 'ALL' ? 'Semua Kategori (SSS, SS, URUT)' : currentCategory;
     if (currentDigitFilter) catText += ` • Pattern '${currentDigitFilter}'`;
     if (currentSearchQuery) catText += ` • Cari: "${currentSearchQuery}"`;
     return catText;
