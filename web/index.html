@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Blinx - Catalog ID Cantik & Nomor Langka</title>
-    <meta name="description" content="Katalog stock nomor Stock Blinx, ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah via WhatsApp +62882003619577">
-    
-    <!-- Google Fonts -->
+    <title>Stock Blinx - Katalog ID Cantik & Nomor Langka</title>
+    <meta name="description" content="Katalog stock nomor cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, Urut, dan S. Order mudah langsung via WhatsApp Admin.">
+
+    <!-- Google Fonts — Material Design 3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&family=Google+Sans+Display:wght@400;500&family=Roboto:wght@300;400;500&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Top App Bar -->
     <header class="navbar">
         <div class="nav-container">
             <div class="brand">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="brand-text">
                     <span class="brand-name">STOCK <span class="highlight">BLINX</span></span>
-                    <span class="brand-sub">Premium ID Cantik & Rare Numbers</span>
+                    <span class="brand-sub">Premium ID Cantik &amp; Rare Numbers</span>
                 </div>
             </div>
 
@@ -38,10 +38,10 @@
                     <span id="header-stock-count">Syncing stock...</span>
                 </div>
 
-                <a href="https://wa.me/62882003619577?text=Halo%20Admin,%20saya%20ingin%20tanya%20Stock%20Blinx" target="_blank" class="btn-wa-header">
+                <button class="btn-wa-header" id="btn-wa-nav" title="Hubungi Admin via WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>Contact Admin</span>
-                </a>
+                    <span>Hubungi Admin</span>
+                </button>
             </div>
         </div>
     </header>
@@ -54,7 +54,7 @@
                 <img src="assets/banner.jpg" alt="Stock Blinx Banner" class="banner-img">
                 <div class="hero-overlay">
                     <div class="hero-badge">OFFICIAL STOCK BLINX CATALOG</div>
-                    <h1>Katalog Stock <span class="text-gradient">Blinx & Rare Numbers</span></h1>
+                    <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare Numbers</span></h1>
                     <p>Temukan nomor cantik impianmu dari <strong id="total-hero-stock">2,500+</strong> pilihan stock ready. Order langsung terhubung ke WhatsApp Admin.</p>
 
                     <!-- Quick Stats Cards -->
@@ -63,28 +63,28 @@
                             <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
                             <div class="stat-info">
                                 <span class="stat-val" id="count-sss">47</span>
-                                <span class="stat-lbl">SSS Tier (6x Digit)</span>
+                                <span class="stat-lbl">SSS Tier · 6x Digit</span>
                             </div>
                         </div>
                         <div class="stat-card stat-ss" onclick="filterCategory('SS TIER (5x digit berulang)')">
                             <div class="stat-icon"><i class="fa-solid fa-gem"></i></div>
                             <div class="stat-info">
                                 <span class="stat-val" id="count-ss">102</span>
-                                <span class="stat-lbl">SS Tier (5x Digit)</span>
+                                <span class="stat-lbl">SS Tier · 5x Digit</span>
                             </div>
                         </div>
                         <div class="stat-card stat-urut" onclick="filterCategory('(URUT)')">
                             <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
                             <div class="stat-info">
                                 <span class="stat-val" id="count-urut">135</span>
-                                <span class="stat-lbl">Urut (Sequential)</span>
+                                <span class="stat-lbl">Urut · Sequential</span>
                             </div>
                         </div>
                         <div class="stat-card stat-s" onclick="filterCategory('S TIER (4x digit berulang)')">
                             <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
                             <div class="stat-info">
                                 <span class="stat-val" id="count-s">2,250</span>
-                                <span class="stat-lbl">S Tier (4x Digit)</span>
+                                <span class="stat-lbl">S Tier · 4x Digit</span>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                 <!-- Search Box -->
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Cari digit nomor (cth: 6666, 888, 1655, 123)..." autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Cari digit nomor (cth: 6666, 888, 123)..." autocomplete="off">
                     <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
@@ -145,8 +145,8 @@
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
                                 <option value="tier">Prioritas Tier (SSS → S)</option>
-                                <option value="num-asc">Nomor (TerKecil)</option>
-                                <option value="num-desc">Nomor (TerBesar)</option>
+                                <option value="num-asc">Nomor (Terkecil)</option>
+                                <option value="num-desc">Nomor (Terbesar)</option>
                             </select>
                         </div>
                     </div>
@@ -191,9 +191,9 @@
 
             <!-- Pagination -->
             <div id="pagination-controls" class="pagination-wrapper hidden">
-                <button id="btn-prev-page" class="btn-page"><i class="fa-solid fa-chevron-left"></i> SEBELUMNYA</button>
+                <button id="btn-prev-page" class="btn-page"><i class="fa-solid fa-chevron-left"></i> Sebelumnya</button>
                 <span id="page-info" class="page-info">Halaman 1 dari 10</span>
-                <button id="btn-next-page" class="btn-page">SELANJUTNYA <i class="fa-solid fa-chevron-right"></i></button>
+                <button id="btn-next-page" class="btn-page">Selanjutnya <i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
     </main>
@@ -202,14 +202,14 @@
     <div id="bulk-bar" class="bulk-bar hidden">
         <div class="bulk-info">
             <span class="bulk-badge" id="bulk-count">0</span>
-            <span>Nomor Stock Dipilih</span>
+            <span>Nomor Dipilih</span>
         </div>
         <div class="bulk-actions">
             <button id="btn-copy-bulk" class="btn-bulk-secondary">
                 <i class="fa-solid fa-copy"></i> Salin List
             </button>
             <button id="btn-order-bulk" class="btn-bulk-primary">
-                <i class="fa-brands fa-whatsapp"></i> Order via WA (62882003619577)
+                <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
             </button>
         </div>
     </div>
@@ -221,7 +221,12 @@
                 <div class="logo-icon small"><i class="fa-solid fa-gem"></i></div>
                 <span>STOCK BLINX</span>
             </div>
-            <p>Direct Order Official WhatsApp: <a href="https://wa.me/62882003619577" target="_blank" class="wa-link">+62 882-0036-19577</a></p>
+            <p>
+                Hubungi Admin:
+                <button class="wa-link-btn" id="btn-wa-footer">
+                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                </button>
+            </p>
             <p class="copyright">&copy; 2026 Stock Blinx. All rights reserved.</p>
         </div>
     </footer>

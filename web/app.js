@@ -1,5 +1,5 @@
 /**
- * STOCK BLINX - MAIN APPLICATION LOGIC
+ * STOCK BLINX - MAIN APPLICATION LOGIC (MD3 DESIGN)
  * WhatsApp Admin: 62882003619577
  */
 
@@ -35,6 +35,10 @@ const DOM = {
     countUrut: document.getElementById('count-urut'),
     countS: document.getElementById('count-s'),
     
+    btnWaNav: document.getElementById('btn-wa-nav'),
+    btnWaFooter: document.getElementById('btn-wa-footer'),
+    catalog: document.getElementById('catalog'),
+
     searchInput: document.getElementById('search-input'),
     btnClearSearch: document.getElementById('btn-clear-search'),
     categoryTabs: document.getElementById('category-tabs'),
@@ -82,7 +86,7 @@ async function initApp() {
 }
 
 /**
- * Fetch Stock Data from /api/stock or fallback to window.STOCK_DATA / all.txt
+ * Fetch Stock Data from /api/stock or fallback to RAPI / window.STOCK_DATA
  */
 async function loadStockData() {
     showLoading(true);
@@ -99,13 +103,13 @@ async function loadStockData() {
         console.warn('API fetch failed, trying static file fallback...', e);
         try {
             // Second attempt: parse /RAPI/all.txt directly
-            const txtResponse = await fetch('../RAPI/all.txt');
+            const txtResponse = await fetch('/RAPI/all.txt');
             if (txtResponse.ok) {
                 const text = await txtResponse.text();
                 allStockItems = parseAllTxt(text);
 
                 try {
-                    const soldResponse = await fetch('../RAPI/sold.txt');
+                    const soldResponse = await fetch('/RAPI/sold.txt');
                     if (soldResponse.ok) {
                         const soldText = await soldResponse.text();
                         const soldItems = parseSoldTxt(soldText);
@@ -138,7 +142,7 @@ function parseAllTxt(rawText) {
     let currentCat = 'S TIER (4x digit berulang)';
 
     lines.forEach(line => {
-        line = line.strip ? line.strip() : line.trim();
+        line = line.trim();
         if (!line) return;
 
         if (line.startsWith('---')) {
@@ -234,6 +238,18 @@ function renderStats() {
  * Setup Event Listeners
  */
 function setupEventListeners() {
+    // Contact WA nav & footer
+    if (DOM.btnWaNav) {
+        DOM.btnWaNav.addEventListener('click', () => {
+            openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx.");
+        });
+    }
+    if (DOM.btnWaFooter) {
+        DOM.btnWaFooter.addEventListener('click', () => {
+            openWaDirect("Halo Admin, saya ingin menanyakan Stock Blinx.");
+        });
+    }
+
     // Search input
     DOM.searchInput.addEventListener('input', (e) => {
         currentSearchQuery = e.target.value.trim();
@@ -440,7 +456,7 @@ function createStockCard(item) {
     const isFav = favoriteNumbers.has(item.number);
 
     const statusBadgeHtml = isSold
-        ? `<span class="badge-status badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
+        ? `<span class="badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
         : '';
 
     const checkboxHtml = isSold
@@ -452,7 +468,7 @@ function createStockCard(item) {
             <i class="fa-solid fa-ban"></i> Terjual
            </button>`
         : `<button class="btn-card-order">
-            <i class="fa-brands fa-whatsapp"></i> Beli WA
+            <i class="fa-brands fa-whatsapp"></i> Beli via WA
            </button>`;
 
     card.innerHTML = `
@@ -593,13 +609,17 @@ function copySelectedNumbers() {
     showToast(`${selectedNumbers.size} nomor berhasil disalin!`);
 }
 
+function openWaDirect(textMessage) {
+    const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(textMessage)}`;
+    window.open(waUrl, '_blank');
+}
+
 /**
  * Order single item via WhatsApp
  */
 function orderSingleViaWA(item) {
     const message = `Halo Admin, saya berminat membeli nomor Stock Blinx berikut:\n\n📱 *Nomor*: ${item.number}\n🏷️ *Category*: ${item.category}\n\nApakah nomor ini masih ready?`;
-    const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(message)}`;
-    window.open(waUrl, '_blank');
+    openWaDirect(message);
 }
 
 /**
@@ -610,8 +630,7 @@ function orderSelectedViaWA() {
     
     let listText = Array.from(selectedNumbers).map((num, idx) => `${idx + 1}. ${num}`).join('\n');
     const message = `Halo Admin, saya berminat membeli ${selectedNumbers.size} nomor Stock Blinx berikut:\n\n${listText}\n\nMohon info ketersediaan dan total harganya. Terima kasih!`;
-    const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(message)}`;
-    window.open(waUrl, '_blank');
+    openWaDirect(message);
 }
 
 /**
@@ -625,7 +644,9 @@ function filterCategory(catName) {
     });
     currentPage = 1;
     applyFiltersAndSort();
-    window.scrollTo({ top: DOM.catalog.offsetTop - 100, behavior: 'smooth' });
+    if (DOM.catalog) {
+        window.scrollTo({ top: DOM.catalog.offsetTop - 80, behavior: 'smooth' });
+    }
 }
 
 function resetFilters() {
