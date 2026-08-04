@@ -755,6 +755,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16798666662",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16399990123",
     "category": "(URUT)",
     "status": "AVAILABLE"
@@ -1501,6 +1506,11 @@ window.STOCK_DATA = [
   },
   {
     "number": "16793678903",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16801237695",
     "category": "(URUT)",
     "status": "AVAILABLE"
   },
@@ -12875,6 +12885,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16794166665",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16794258888",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
@@ -12905,12 +12920,87 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16794466665",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16794512222",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
   {
     "number": "16794688889",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16795466665",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16796344442",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16796928888",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16797674444",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16797731111",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16798543333",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16798666625",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16798888201",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16798888244",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16798888581",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16799244447",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16799677778",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16800003672",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16800007153",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
