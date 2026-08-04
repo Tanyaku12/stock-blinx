@@ -1068,5 +1068,805 @@
     "date_time": "2026-08-04 21:05:18",
     "region": "ID",
     "thread_id": 60
+  },
+  {
+    "uid": 6116512991,
+    "account_id": "16795049301",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA0OTMwMSwibmlja25hbWUiOiJVd2xjVmtIYStzS0F1ZEtrMTRhNGd0UG5nQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI3MWNhYTEzYTdlNzhhZTI1ZmJkNGE1N2JjZDM0NGFlZSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR0IiLCJleHRlcm5hbF91aWQiOjYxMTY1MTI5OTEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODExNjd9.sYY9P4kvvje8ptm1PI1n53Pw-WHO5c-uNAQTYDyVEes",
+    "name": "blinx♡⁶³⁰⁹",
+    "password": "BLINXANDSLVFFY_nhlcwcmf",
+    "date_time": "2026-08-04 21:06:10",
+    "region": "ID",
+    "thread_id": 716
+  },
+  {
+    "uid": 6116511141,
+    "account_id": "16795050727",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MDcyNywibmlja25hbWUiOiJVd2xjVmtIYTR1R2dnWWJuMElhNGhkUG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0ZTdiMzhjN2QyYTAxZTJiOWUxYTRiMjM0NzQ3N2I1ZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiUlUiLCJleHRlcm5hbF91aWQiOjYxMTY1MTExNDEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODExNzJ9.FLig6CuEr-MgzaGoIF3xGx0RYmnnEBco08Xt17Rt_Nk",
+    "name": "blinx⁂¹⁴⁷⁴",
+    "password": "BLINXANDSLVFFY_5jcBqrGG",
+    "date_time": "2026-08-04 21:06:12",
+    "region": "ID",
+    "thread_id": 364
+  },
+  {
+    "uid": 6116512913,
+    "account_id": "16795050907",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MDkwNywibmlja25hbWUiOiJVd2xjVmtIYS84aWdnWWJuMGFhQThJZz0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImNlMzJmM2Q1ZWE5MGE3OWQzMzU1ODBjYTYxNTAwM2M0IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJLUiIsImV4dGVybmFsX3VpZCI6NjExNjUxMjkxMywicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTE3MH0.1j7NqJ_DpM1pjjOqqPDndDhgQRJ9itv7qzNKbvDwYbc",
+    "name": "blinx✫¹⁵¹¹",
+    "password": "BLINXANDSLVFFY_ctsAGamF",
+    "date_time": "2026-08-04 21:06:13",
+    "region": "ID",
+    "thread_id": 1083
+  },
+  {
+    "uid": 6116512941,
+    "account_id": "16795050945",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MDk0NSwibmlja25hbWUiOiJVd2xjVmtIYS84U2dpb2JuMElhNGh0UG5qdz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0MjRiNGVjZTZhOGVhNjM0ODIyNjNjNzhkMmZiY2E0MSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY1MTI5NDEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODExNzB9.dvxssEdrikQU0P_ihrf2_RNF7E3_ZOWdedveO5_wut4",
+    "name": "blinx✧²⁴⁴⁶",
+    "password": "BLINXANDSLVFFY_hG50xaEl",
+    "date_time": "2026-08-04 21:06:13",
+    "region": "ID",
+    "thread_id": 378
+  },
+  {
+    "uid": 6116509724,
+    "account_id": "16795051783",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MTc4Mywibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZEtFNWQzYnM0ZWtpZz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2MWUyNjBiNGQ3NDdmYmU4NWIwZGIyMmQzNzljZWMyMSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiS1IiLCJleHRlcm5hbF91aWQiOjYxMTY1MDk3MjQsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODExNzF9.d-XpdifsqyE0riOfUPP_52sQLfbUtkQ34IC-Ee1fcyM",
+    "name": "blinx✬⁶⁹⁶³",
+    "password": "BLINXANDSLVFFY_Gn29Ehpj",
+    "date_time": "2026-08-04 21:06:15",
+    "region": "ID",
+    "thread_id": 852
+  },
+  {
+    "uid": 6116511017,
+    "account_id": "16795050867",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MDg2Nywibmlja25hbWUiOiJVd2xjVmtIYjQrYUF1ZENrMTRhNGh0UG5qZz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0ZDQyYTI5MjU3Y2YzZjZiNzFmMWE5ZDVlYWZjM2IyMCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY1MTEwMTcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODExNzJ9.ugl75nPxyU1BdTJ1ZN3DWXO5-QVLrv2_p8x0O1-KF-k",
+    "name": "blinx々⁴³⁴⁷",
+    "password": "BLINXANDSLVFFY_rvE3aUWx",
+    "date_time": "2026-08-04 21:06:15",
+    "region": "ID",
+    "thread_id": 517
+  },
+  {
+    "uid": 6116509385,
+    "account_id": "16795053465",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA1MzQ2NSwibmlja25hbWUiOiJVd2xjVmtIYjQrYWdpcWJVaHVXQjBMRFEiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjMyMjdjZDQyZmJhOTRiZTI3MzA1ZWM2MTMwNDJmZjA0IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJLUiIsImV4dGVybmFsX3VpZCI6NjExNjUwOTM4NSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTE3N30.CuKyhYlcQbEl54cZ-RB4BhRJJPeulC7qq5fx3aMX39Y",
+    "name": "blinx々²²⁸⁶",
+    "password": "BLINXANDSLVFFY_6RVKZrv3",
+    "date_time": "2026-08-04 21:06:19",
+    "region": "ID",
+    "thread_id": 661
+  },
+  {
+    "uid": 6116552815,
+    "account_id": "16795068899",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA2ODg5OSwibmlja25hbWUiOiJVd2xjVmtIYTR2S0F1ZENFNWRQYnM0ZUV1TlU9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJmMjRhZGUzMzgyNWUyMTk2ZTRlNzc0M2UwMDBjYTEyZiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiRlIiLCJleHRlcm5hbF91aWQiOjYxMTY1NTI4MTUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyMzN9.s4fIzmYpXFnYOs06rvGX5u7mfo4Es29Yq_uhjzn_0kU",
+    "name": "blinx⁑⁴⁷⁶⁷",
+    "password": "BLINXANDSLVFFY_egj1X9j5",
+    "date_time": "2026-08-04 21:07:16",
+    "region": "ID",
+    "thread_id": 1031
+  },
+  {
+    "uid": 6116555650,
+    "account_id": "16795068086",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA2ODA4Niwibmlja25hbWUiOiJVd2xjVmtIYjQrV0F1ZEdFNWREYnM0ZUV1Tm89Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJhYzdlMTg4YjM3M2I1NDlhM2FkNTIyNDcwMDQ2YjA1MiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiS1IiLCJleHRlcm5hbF91aWQiOjYxMTY1NTU2NTAsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyMzJ9.tA8btZ7Xj6FLqCDXyP5BGJ20pDngZPmCS6IEc7OTwts",
+    "name": "blinx〆⁵⁴⁶⁸",
+    "password": "BLINXANDSLVFFY_ry6aN0ne",
+    "date_time": "2026-08-04 21:07:17",
+    "region": "ID",
+    "thread_id": 949
+  },
+  {
+    "uid": 6116554527,
+    "account_id": "16795070064",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA3MDA2NCwibmlja25hbWUiOiJVd2xjVmtIYS84aUF1ZEdrMW9hNGk5UG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2Y2NiNjdjYmI0YjdhM2E3ZDY5YzA2YjAzMGE2NWZjYSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY1NTQ1MjcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyMzl9.wbpXAUbzxIKDvJCaV5ilETZYNqWT6wDbl6L8qkT0NeI",
+    "name": "blinx✫⁵²⁹⁰",
+    "password": "BLINXANDSLVFFY_jVebCFDA",
+    "date_time": "2026-08-04 21:07:22",
+    "region": "ID",
+    "thread_id": 805
+  },
+  {
+    "uid": 6116592618,
+    "account_id": "16795084780",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA4NDc4MCwibmlja25hbWUiOiJVd2xjVmtIYS85T2dpNmJVcHQzN2dBPT0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjFmYzY3OWE4MTIwMWUzMzkyODJkYjZiZTVmZGU2NjU3IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDTiIsImV4dGVybmFsX3VpZCI6NjExNjU5MjYxOCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTI4OX0.7rLSAoOQtjIKAYAyYlMKteE0PzdwfAIs1UBmhyOhUG8",
+    "name": "blinx✰³²¹²",
+    "password": "BLINXANDSLVFFY_cKmQNyk5",
+    "date_time": "2026-08-04 21:08:13",
+    "region": "ID",
+    "thread_id": 163
+  },
+  {
+    "uid": 6116593993,
+    "account_id": "16795084890",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA4NDg5MCwibmlja25hbWUiOiJVd2xjVmtIYjQrYUF1ZE9FNWREYnM0U0V1Tm89Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI3NjU1ZWI4MzYxN2NlYTU1OTNhZmM3MmQ4OGIwMWY2NiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY1OTM5OTMsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyOTB9.taqff9JVJbkJziASHSlLdpKkfUJdOLFZg_yOCObb-_0",
+    "name": "blinx々⁷⁴⁵⁸",
+    "password": "BLINXANDSLVFFY_n8CX9laj",
+    "date_time": "2026-08-04 21:08:13",
+    "region": "ID",
+    "thread_id": 633
+  },
+  {
+    "uid": 6116591536,
+    "account_id": "16795084762",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA4NDc2Miwibmlja25hbWUiOiJVd2xjVmtIYS84Nmdpb2JuMDZhQThJST0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjFjMDQwYmEwMGZmZTI1OGVhNGJhNjRjYjM4ZWMwOWEyIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDTiIsImV4dGVybmFsX3VpZCI6NjExNjU5MTUzNiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTI5Mn0.TSM8_jZDmxwmQAMZm2xAWl3drUjTKNz8xuw7A0WSlmg",
+    "name": "blinx✭²⁷¹³",
+    "password": "BLINXANDSLVFFY_GLEc1FUe",
+    "date_time": "2026-08-04 21:08:15",
+    "region": "ID",
+    "thread_id": 969
+  },
+  {
+    "uid": 6116591697,
+    "account_id": "16795086005",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA4NjAwNSwibmlja25hbWUiOiJVd2xjVmtIYStzS0F1ZHlFNWQzYnM0V0V1TlE9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjODQ1YTZjYWYwODUxNWRjNmI2OTAzN2E3YzM5MTMxMCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY1OTE2OTcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyOTJ9.S9cffxqBveFR3p1KV5vwq1-5y2zf6oyXjxFE7Bqbmss",
+    "name": "blinx♡⁸⁹⁴⁶",
+    "password": "BLINXANDSLVFFY_kBuQ5oRr",
+    "date_time": "2026-08-04 21:08:15",
+    "region": "ID",
+    "thread_id": 768
+  },
+  {
+    "uid": 6116591654,
+    "account_id": "16795086032",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA4NjAzMiwibmlja25hbWUiOiJVd2xjVmtIYS9zV0F1ZENFNWRMYnM0aUV1Tkk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJkZjQ2MTVhNzM5ZmM2YTFiYjEyMDk4YTY5MzBmOWU0YSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR0IiLCJleHRlcm5hbF91aWQiOjYxMTY1OTE2NTQsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEyOTV9.quz3e2XReEcOQKbxikbu4ZF3Si7yh9q9H_whzQqeNzA",
+    "name": "blinx❦⁴⁶⁹⁰",
+    "password": "BLINXANDSLVFFY_WeKIkWPq",
+    "date_time": "2026-08-04 21:08:18",
+    "region": "ID",
+    "thread_id": 888
+  },
+  {
+    "uid": 6116631376,
+    "account_id": "16795099934",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA5OTkzNCwibmlja25hbWUiOiJVd2xjVmtIYS84aUF1ZEdFNWRMYnM0aUV1TlU9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0ZTBiOTc3YTg1Y2NmODEwY2Q4NjcyN2UzYTE0NjQ3ZSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR1IiLCJleHRlcm5hbF91aWQiOjYxMTY2MzEzNzYsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEzNDR9.5Gi1Jyx7JPLZuoHteWMDQeDB_o-s1CD9if1WPD-L2L0",
+    "name": "blinx✫⁵⁶⁹⁷",
+    "password": "BLINXANDSLVFFY_Qzn0QVPA",
+    "date_time": "2026-08-04 21:09:07",
+    "region": "ID",
+    "thread_id": 215
+  },
+  {
+    "uid": 6116631197,
+    "account_id": "16795099832",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTA5OTgzMiwibmlja25hbWUiOiJVd2xjVmtIYSsrV0F1ZEdrMW9hNGl2UFYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImRiYzAzMWQyY2I1MGM5YjBhMGUwMTU0Mzc4MzZkYzFmIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJKUCIsImV4dGVybmFsX3VpZCI6NjExNjYzMTE5NywicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTM0M30.ZBw7RvRwjXZj5xKiwCzDuhHg8W2KpPjuQZRPYkWYsdA",
+    "name": "blinx☆⁵²⁸³",
+    "password": "BLINXANDSLVFFY_stDxrDt0",
+    "date_time": "2026-08-04 21:09:07",
+    "region": "ID",
+    "thread_id": 379
+  },
+  {
+    "uid": 6116634419,
+    "account_id": "16795100525",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEwMDUyNSwibmlja25hbWUiOiJVd2xjVmtIYS85T0F1ZEtFNWQzN2kvUFUiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImYyNGU5MTgwYzNkYzgzM2MwMWZlZDg3NWVmMDYzYjFkIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJQTCIsImV4dGVybmFsX3VpZCI6NjExNjYzNDQxOSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTM0OH0.CdfVMFRrOusLA8zl4R0KakOC-ndymC5fu08JAr8W7nY",
+    "name": "blinx✰⁶⁹¹²",
+    "password": "BLINXANDSLVFFY_GsvD5aUd",
+    "date_time": "2026-08-04 21:09:11",
+    "region": "ID",
+    "thread_id": 621
+  },
+  {
+    "uid": 6116635464,
+    "account_id": "16795102138",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEwMjEzOCwibmlja25hbWUiOiJVd2xjVmtIYStzS0F1ZDJFNWRUN2dkUG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0ODY2MWI5MzQ0NDA0ODU4OWI0ZGU2OWVlODVhMDU3ZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR0IiLCJleHRlcm5hbF91aWQiOjYxMTY2MzU0NjQsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODEzNDh9._JPWM8y_XSe3-fTjHLlwnXVIAnMnWMuJKQDkJ7ZFQ6g",
+    "name": "blinx♡⁹⁰³⁴",
+    "password": "BLINXANDSLVFFY_yWiyHIyx",
+    "date_time": "2026-08-04 21:09:11",
+    "region": "ID",
+    "thread_id": 387
+  },
+  {
+    "uid": 6116636116,
+    "account_id": "16795102346",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEwMjM0Niwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZEdrM2FhQThJST0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImY2NzIyN2UxNDlkYzYxNTc4YTk3OGIyYjA3MTYzYmRhIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNjYzNjExNiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTM0OH0.XC3DEiHMxtEss5C_RjblAL-yyEPtYdRUbS3Zv2GstAw",
+    "name": "blinx✬⁵¹¹³",
+    "password": "BLINXANDSLVFFY_uSoDwxpw",
+    "date_time": "2026-08-04 21:09:12",
+    "region": "ID",
+    "thread_id": 747
+  },
+  {
+    "uid": 6116634236,
+    "account_id": "16795101924",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEwMTkyNCwibmlja25hbWUiOiJVd2xjVmtIYStzS2dpNGJuMDRhNGh2UFYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjZhMjhjODFiYjUyOGI0OTUzYzFkMmU5Y2VkOTRjY2FmIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJTRSIsImV4dGVybmFsX3VpZCI6NjExNjYzNDIzNiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTM1M30.F8vNRcOwCvQPILVlhigS2902I3hNM7Hrgy6GsHBD8-c",
+    "name": "blinx♡³⁷⁴³",
+    "password": "BLINXANDSLVFFY_ik6pQepL",
+    "date_time": "2026-08-04 21:09:16",
+    "region": "ID",
+    "thread_id": 410
+  },
+  {
+    "uid": 6116635812,
+    "account_id": "16795102193",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEwMjE5Mywibmlja25hbWUiOiIwdVdsV2xWUkRSdUJ1UFdrM1lhNGhOUG5pWURsMEE9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiMTE2ZWY4MTIxOWUwZGI0N2Y3NTc5OTRiMTc3NjllZWYiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkNOIiwiZXh0ZXJuYWxfdWlkIjo2MTE2NjM1ODEyLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxMzUzfQ.Gsc2IHpmMFE1aOXqN2pPTru91rxv_nFvxBe7Wl2QxVI",
+    "name": "【blinx】¹⁶⁰⁵",
+    "password": "BLINXANDSLVFFY_aUyluAgr",
+    "date_time": "2026-08-04 21:09:17",
+    "region": "ID",
+    "thread_id": 1018
+  },
+  {
+    "uid": 6116672579,
+    "account_id": "16795114501",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTExNDUwMSwibmlja25hbWUiOiJVd2xjVmtIYS84bWdpb2JuMUlhNGhOUG5nUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJkNzY1ZGNjNDUwNGNhZmY2NzAwZTNmNmJjMzc2YTI0ZSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY2NzI1NzksInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0MDV9.ed0Ly7jpEaQk9LHBMUDRx2SxRm8I4Hp96eJUwdDdk4Q",
+    "name": "blinx✪²⁰⁶⁸",
+    "password": "BLINXANDSLVFFY_YOCxtlnY",
+    "date_time": "2026-08-04 21:10:06",
+    "region": "ID",
+    "thread_id": 147
+  },
+  {
+    "uid": 6116669279,
+    "account_id": "16795113391",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTExMzM5MSwibmlja25hbWUiOiJVd2xjVmtIYS85T0F1ZFNFNWQzYnM0YUV1TlE9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJhNTg2ZTk2ZTkzZjRhYzNmNWUxNzliMTk2MGFkYzA4NCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSVIiLCJleHRlcm5hbF91aWQiOjYxMTY2NjkyNzksInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0MDR9.IUTuDfy3NhQJmyM73qo3UL0skwBck8M96u-iqB-J3Iw",
+    "name": "blinx✰⁰⁹⁷⁶",
+    "password": "BLINXANDSLVFFY_pq5kPbVL",
+    "date_time": "2026-08-04 21:10:08",
+    "region": "ID",
+    "thread_id": 7
+  },
+  {
+    "uid": 6116673402,
+    "account_id": "16795119502",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTExOTUwMiwibmlja25hbWUiOiJVd2xjVmtIYjQrYWdpb2JuM0lhNGd0UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI5ZDc5OWI2ZGFhZjYyYThmYjgwN2M4ZjFiNjQ5N2Y5NSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSUQiLCJleHRlcm5hbF91aWQiOjYxMTY2NzM0MDIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0MTF9.7NyP8gu0uCOcjWGSSF51YeyFGJF3r6UGbEfvlU6OfMM",
+    "name": "blinx々²⁸⁰⁴",
+    "password": "BLINXANDSLVFFY_LGnkrxzA",
+    "date_time": "2026-08-04 21:10:15",
+    "region": "ID",
+    "thread_id": 587
+  },
+  {
+    "uid": 6116671422,
+    "account_id": "16795120427",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEyMDQyNywibmlja25hbWUiOiJVd2xjVmtIYTR1R0F1ZE9FNWRQYnM0aWtpZz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI1ZWJkYTYxYWYxY2I2NWQ2N2I5NWJhZGM5ZTgzNGI4NiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSVIiLCJleHRlcm5hbF91aWQiOjYxMTY2NzE0MjIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0MTR9.p4fW5kY0ZLsB3C4esHvPW9mbN0QbCx_tJUWbGKEetv4",
+    "name": "blinx⁂⁷⁷⁹³",
+    "password": "BLINXANDSLVFFY_BvMPvnGj",
+    "date_time": "2026-08-04 21:10:21",
+    "region": "ID",
+    "thread_id": 843
+  },
+  {
+    "uid": 6116708930,
+    "account_id": "16795134558",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNDU1OCwibmlja25hbWUiOiJVd2xjVmtIYS84NkF1ZDJFNWQzYnM0bWtpdz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI5NjBlNjlkMjNhZGYyMDljNGQ1MWJlNGUzYjUyODc2ZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY3MDg5MzAsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njd9.AythH0qaO4QOP88FM0O2ihZfpLMuZyScx-nEXwbKVmU",
+    "name": "blinx✭⁹⁹⁸²",
+    "password": "BLINXANDSLVFFY_t8NCISxJ",
+    "date_time": "2026-08-04 21:11:10",
+    "region": "ID",
+    "thread_id": 46
+  },
+  {
+    "uid": 6116710478,
+    "account_id": "16795134857",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNDg1Nywibmlja25hbWUiOiJVd2xjVmtIYS84bUF1ZFNFNWREYnM0bUV1TlU9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI4YTI3NmY3YzYyOGY4YTY4MTljYjU5MzBiNmVjOTYyYyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVk4iLCJleHRlcm5hbF91aWQiOjYxMTY3MTA0NzgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njd9.kwc452f2XurcOzpOtSq2etsGVwD9vTQlXupcKq6JFMY",
+    "name": "blinx✪⁰⁴⁸⁷",
+    "password": "BLINXANDSLVFFY_fJMucX9w",
+    "date_time": "2026-08-04 21:11:10",
+    "region": "ID",
+    "thread_id": 989
+  },
+  {
+    "uid": 6116710768,
+    "account_id": "16795134794",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNDc5NCwibmlja25hbWUiOiJVd2xjVmtIYTQ5aUF1ZEtrM1lhNGd0UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2ZWMyMjRhYjQ0NTczOGZhNzllNzg3YTA2MWU1NWMxMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSVIiLCJleHRlcm5hbF91aWQiOjYxMTY3MTA3NjgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njd9.CpcedaL0-JajXnI958E4TGmiKF693Oc1PZwYx2ZtOpw",
+    "name": "blinx※⁶¹⁰⁴",
+    "password": "BLINXANDSLVFFY_jqthWWdU",
+    "date_time": "2026-08-04 21:11:10",
+    "region": "ID",
+    "thread_id": 884
+  },
+  {
+    "uid": 6116708987,
+    "account_id": "16795134823",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNDgyMywibmlja25hbWUiOiJVd2xjVmtIYS84cUF1ZEdFNWQzYnM0bUV1Tkk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiIzYmUyNzVmNjI0Zjc3ZGExNTRkNjU0YTNlMTRmOTgzMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiUlUiLCJleHRlcm5hbF91aWQiOjYxMTY3MDg5ODcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njd9.iaCie_bKyEMd4ANjsol4hfvN4BCzU4it5r8pxbIZ10I",
+    "name": "blinx✩⁵⁹⁸⁰",
+    "password": "BLINXANDSLVFFY_v8q4dZhb",
+    "date_time": "2026-08-04 21:11:10",
+    "region": "ID",
+    "thread_id": 86
+  },
+  {
+    "uid": 6116712345,
+    "account_id": "16795135116",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNTExNiwibmlja25hbWUiOiJVd2xjVmtIYS84V0F1ZE9FNWRQYnM0YUV1Tm89Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJkNjQxYWNkNjBjMzViOGI2NTgzMTQ1ODEyYTdjYTk0NyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiTkwiLCJleHRlcm5hbF91aWQiOjYxMTY3MTIzNDUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njh9.IT8Zr9Zat-FI10RhP1aMYylb1fQkfvKYLkYisBcKAMg",
+    "name": "blinx✦⁷⁷⁷⁸",
+    "password": "BLINXANDSLVFFY_JOemURfL",
+    "date_time": "2026-08-04 21:11:11",
+    "region": "ID",
+    "thread_id": 226
+  },
+  {
+    "uid": 6116711812,
+    "account_id": "16795135170",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTEzNTE3MCwibmlja25hbWUiOiJVd2xjVmtIYStzYUF1ZFNFNWQzYnM0YUV1Tlk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJlMDAxM2MxNDI1ZmU1YzFmODI0MjQ0MWYzYzkxZjcyMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY3MTE4MTIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE0Njh9.9v1yLNNhI7deV1ptXR-EViRE79U4D1AzIOe5KXq7R0M",
+    "name": "blinx♥⁰⁹⁷⁴",
+    "password": "BLINXANDSLVFFY_7qjptnHv",
+    "date_time": "2026-08-04 21:11:11",
+    "region": "ID",
+    "thread_id": 620
+  },
+  {
+    "uid": 6116751229,
+    "account_id": "16795152637",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1MjYzNywibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZEtrMTZhTDBMRFciLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjJlYTBlNGY5ZDkzZjIwYWNmMTI2NzkzODI2NTViZTM5IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJFUyIsImV4dGVybmFsX3VpZCI6NjExNjc1MTIyOSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTUyOH0.QEufYVNB2SSvcUok-tDaQBQUJ6ZeERsCqxEcRHP9ngo",
+    "name": "blinx✬⁶³²⁰",
+    "password": "BLINXANDSLVFFY_O7onVD25",
+    "date_time": "2026-08-04 21:12:10",
+    "region": "ID",
+    "thread_id": 749
+  },
+  {
+    "uid": 6116751770,
+    "account_id": "16795152612",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1MjYxMiwibmlja25hbWUiOiJVd2xjVmtIYTR1R0F1ZEtFNWRMN2dkUG5qZz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJmYThkOTBmZDM1YzkxM2IwMTUxM2ZkNzA5MDU0NDcwYSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY3NTE3NzAsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1Mjh9.YuHe7IjKjf5oxcbTC9W2SdVUb4baG3zTdm8kBL4gM8U",
+    "name": "blinx⁂⁶⁶³⁷",
+    "password": "BLINXANDSLVFFY_VuXKi7kO",
+    "date_time": "2026-08-04 21:12:10",
+    "region": "ID",
+    "thread_id": 889
+  },
+  {
+    "uid": 6116751632,
+    "account_id": "16795152646",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1MjY0Niwibmlja25hbWUiOiIwdVdsV2xWUkRSdUJ1UFdFNWREYnM0U0V1TmFHNU5jPSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiNDQ0NWZjNjE3MmY1ODRmYjgwYmY3ZWI1NTQ4ZTFiZDciLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkNOIiwiZXh0ZXJuYWxfdWlkIjo2MTE2NzUxNjMyLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxNTI4fQ.UIRp3jMzzW2XBzFJagqQ_MeylePByD-TGBBoS4Ph3Ug",
+    "name": "【blinx】⁴⁵⁴⁶",
+    "password": "BLINXANDSLVFFY_LqTmBb8f",
+    "date_time": "2026-08-04 21:12:10",
+    "region": "ID",
+    "thread_id": 929
+  },
+  {
+    "uid": 6116751252,
+    "account_id": "16795152594",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1MjU5NCwibmlja25hbWUiOiJVd2xjVmtIYS84eWdpb2JuMElhNGl0UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJhYjRjMDM0Mjk4MGNkOTFlYzMyNmJjYjU4MmYyZWUwMSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSU4iLCJleHRlcm5hbF91aWQiOjYxMTY3NTEyNTIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1Mjh9.Y-KKvofGqsV3VPLBL5sbzRNIarWPCgAmYLJus5i_-iQ",
+    "name": "blinx✯²⁴⁸⁴",
+    "password": "BLINXANDSLVFFY_GDnOK40v",
+    "date_time": "2026-08-04 21:12:10",
+    "region": "ID",
+    "thread_id": 112
+  },
+  {
+    "uid": 6116751092,
+    "account_id": "16795152590",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1MjU5MCwibmlja25hbWUiOiJVd2xjVmtIYStzYUF1ZDJFNWRUN2kvUGYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjJhNmU5MGIxYTJhYmU5OGU0YTg5ZDFjNzkxNWM0MjhhIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJSVSIsImV4dGVybmFsX3VpZCI6NjExNjc1MTA5MiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTUyOH0.qXiPVG98zXlvZifm7tZg9WcVPek7Wm7IMOC1_RSHzQc",
+    "name": "blinx♥⁹⁰¹¹",
+    "password": "BLINXANDSLVFFY_BmzPwGAr",
+    "date_time": "2026-08-04 21:12:10",
+    "region": "ID",
+    "thread_id": 1065
+  },
+  {
+    "uid": 6116753559,
+    "account_id": "16795153953",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE1Mzk1Mywibmlja25hbWUiOiJVd2xjVmtIYStzYWdnWWJuMFlhNGd0UG5nQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI1NWJmY2YxYjUwMWE2ZTZjYWJhMWE1M2ZjM2Q3NjE5ZiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY3NTM1NTksInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1MzB9.L8EAVyUjSLxmRQQCRk6bwHBUDxlANK1PBbjySHjPemA",
+    "name": "blinx♥¹⁵⁰⁹",
+    "password": "BLINXANDSLVFFY_EzPJUkon",
+    "date_time": "2026-08-04 21:12:13",
+    "region": "ID",
+    "thread_id": 241
+  },
+  {
+    "uid": 6116795306,
+    "account_id": "16795167562",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE2NzU2Miwibmlja25hbWUiOiJVd2xjVmtIYS85T0F1ZENrM1lhNGkvUGYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjRjODM2Nzc2ZGE5NzNhNjJiYjY3ZWU3MWE4ZWYyYTFjIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNjc5NTMwNiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTU4N30.hApLO4f1AG34XIYIN8NVshv4HPdgw2yw-BGWbPepFYQ",
+    "name": "blinx✰⁴¹⁹¹",
+    "password": "BLINXANDSLVFFY_WlxtzZ90",
+    "date_time": "2026-08-04 21:13:09",
+    "region": "ID",
+    "thread_id": 759
+  },
+  {
+    "uid": 6116792765,
+    "account_id": "16795167163",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE2NzE2Mywibmlja25hbWUiOiJVd2xjVmtIYS9zU0F1ZFNrMTRhNGk5UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJkOTFjZTQxZDhmYTIxY2MxMDdiNGI1NDY3M2NjYjUyMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY3OTI3NjUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1ODZ9._6HhFT-QUbcI68S6xdfef1TIdwcv6LRb1zoXPJf9_XY",
+    "name": "blinx❧⁰³⁹⁴",
+    "password": "BLINXANDSLVFFY_oFUv16Vx",
+    "date_time": "2026-08-04 21:13:09",
+    "region": "ID",
+    "thread_id": 469
+  },
+  {
+    "uid": 6116793963,
+    "account_id": "16795168826",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE2ODgyNiwibmlja25hbWUiOiJVd2xjVmtIYS9zYUF1ZEdrMW9hNGk5UG5qQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0YTc0ZjgwOGY4ODI3OTdiMTgxYjU2MzVlNDI1N2VlMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiRlIiLCJleHRlcm5hbF91aWQiOjYxMTY3OTM5NjMsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1ODh9.ddQuXTpP2unSAOr4JxCmmxtm1tAJejFKKpigM2q0GUE",
+    "name": "blinx❥⁵²⁹⁵",
+    "password": "BLINXANDSLVFFY_KRsTcw1T",
+    "date_time": "2026-08-04 21:13:11",
+    "region": "ID",
+    "thread_id": 293
+  },
+  {
+    "uid": 6116794608,
+    "account_id": "16795168555",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE2ODU1NSwibmlja25hbWUiOiJVd2xjVmtIYS84cUF1ZENFNWRMYnM0aUV1TlU9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJmYmZlN2RkZTAzZmQyNWVkNTgwOWEyMmQ0ZWEwMTY3YSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY3OTQ2MDgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE1ODh9.jyyy0F6LLOK3QjANJ-AzOY8kWNTORGnG_yZu8mB-Ihs",
+    "name": "blinx✩⁴⁶⁹⁷",
+    "password": "BLINXANDSLVFFY_zMccKIGC",
+    "date_time": "2026-08-04 21:13:12",
+    "region": "ID",
+    "thread_id": 1077
+  },
+  {
+    "uid": 6116793063,
+    "account_id": "16795168851",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE2ODg1MSwibmlja25hbWUiOiJVd2xjVmtIYS85T0F1ZEtrMW9hNGhQUGYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjBjNmU1YzAxYzQwYzYzN2YzM2QxOGZlNjI0ZTgyY2I2IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDQSIsImV4dGVybmFsX3VpZCI6NjExNjc5MzA2MywicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTU4OH0.C77BdUzp2z8bFobAuvEslxB1Rbg7NaKQqQRXKn9_bbA",
+    "name": "blinx✰⁶²⁶¹",
+    "password": "BLINXANDSLVFFY_cvli2rNx",
+    "date_time": "2026-08-04 21:13:14",
+    "region": "ID",
+    "thread_id": 867
+  },
+  {
+    "uid": 6116835245,
+    "account_id": "16795185219",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTIxOSwibmlja25hbWUiOiIwOE93V2xWUkRSdUFudUtFNWQzYnM0R0V1TmFHNU5rPSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiNzU2OTY2M2FiYmIzNThkZDdlNWMzZjEwOGRhZjEwNjQiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IklRIiwiZXh0ZXJuYWxfdWlkIjo2MTE2ODM1MjQ1LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxNjQ5fQ.A3Vctx61jss-A84a0IEm8lOX4awOoyi-smQQIcKOXDE",
+    "name": "⦅blinx⦆⁹⁰⁴⁸",
+    "password": "BLINXANDSLVFFY_bB5BemZZ",
+    "date_time": "2026-08-04 21:14:10",
+    "region": "ID",
+    "thread_id": 1045
+  },
+  {
+    "uid": 6116837176,
+    "account_id": "16795185281",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTI4MSwibmlja25hbWUiOiIwdVc3V2xWUkRSdUJ1T3VFNWR6N2dkUG5pWURsM0E9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiODU3NzhmNTQ4YjEyMDI2ODA0MDA1ZjJmYjg2Mzk5ZWIiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6Ik5PIiwiZXh0ZXJuYWxfdWlkIjo2MTE2ODM3MTc2LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxNjUwfQ.kzWKssUnWldvCtLSn18ka7in-WDg45Ukk7psfYsElBk",
+    "name": "『blinx』⁸³⁰⁹",
+    "password": "BLINXANDSLVFFY_UYWIhgPL",
+    "date_time": "2026-08-04 21:14:12",
+    "region": "ID",
+    "thread_id": 288
+  },
+  {
+    "uid": 6116835398,
+    "account_id": "16795185448",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTQ0OCwibmlja25hbWUiOiIwdVd0V2xWUkRSdUJ1UDJFNWREYnM0U2tpb0RsMVE9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiMTE3ZWFkOTFlNWRjYzk0NWU2YTY1ZWUyMWRhNjEwMDUiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IlVTIiwiZXh0ZXJuYWxfdWlkIjo2MTE2ODM1Mzk4LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxNjUwfQ.jzj1QwjJAN3eXrb7B6nIlDcvtM5bKvhY2WUu-eFCIRI",
+    "name": "〘blinx〙⁴⁵³⁰",
+    "password": "BLINXANDSLVFFY_lX9AHuZz",
+    "date_time": "2026-08-04 21:14:13",
+    "region": "ID",
+    "thread_id": 597
+  },
+  {
+    "uid": 6116837159,
+    "account_id": "16795185743",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTc0Mywibmlja25hbWUiOiJVd2xjVmtIYS9zZWdpb2JuMGFhQTBMRFQiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImY5Njk3MzZhODVlNTNhNDEzYjBkNzRlZWZhNzg0MzJlIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDTiIsImV4dGVybmFsX3VpZCI6NjExNjgzNzE1OSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTY1MX0.Hc1WTbr5AG3UlXHCdJx7RP678zxLI3V_cCxJqGMs1xQ",
+    "name": "blinx❤²⁵¹⁵",
+    "password": "BLINXANDSLVFFY_WK6Hkkbj",
+    "date_time": "2026-08-04 21:14:13",
+    "region": "ID",
+    "thread_id": 754
+  },
+  {
+    "uid": 6116835578,
+    "account_id": "16795185252",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTI1Miwibmlja25hbWUiOiJVd2xjVmtIYStzS2dnYWJWcHRiYnM0az0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjA4YzY2Mzg3MjFlMDAyNWYyMGEyZWU0ZDZmNDlkMTMxIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNjgzNTU3OCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTY1MX0.aO01WWn49cpppra8PWs43IRfMjMgd_kac0-VX2yEgts",
+    "name": "blinx♡¹³²⁸",
+    "password": "BLINXANDSLVFFY_S8FsnS39",
+    "date_time": "2026-08-04 21:14:13",
+    "region": "ID",
+    "thread_id": 739
+  },
+  {
+    "uid": 6116837378,
+    "account_id": "16795185458",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTQ1OCwibmlja25hbWUiOiJVd2xjVmtIYS85T0F1ZENFNWRMYnM0V2tnQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI5YmU1NmE5Y2ViYWM3MGIxY2ZmN2ExZmRhZGNkOGNjOSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiTkwiLCJleHRlcm5hbF91aWQiOjYxMTY4MzczNzgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE2NTN9.kbvFIyRLp80RPcz8wnCIWiQqvvZHYdaOxi0PX_9JnhQ",
+    "name": "blinx✰⁴⁶⁴¹",
+    "password": "BLINXANDSLVFFY_ScTtsFvs",
+    "date_time": "2026-08-04 21:14:15",
+    "region": "ID",
+    "thread_id": 101
+  },
+  {
+    "uid": 6116835582,
+    "account_id": "16795185500",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE4NTUwMCwibmlja25hbWUiOiJVd2xjVmtIYS84eWdpNGJuMElhNGkvUFYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjNkMWY4ZTA3ZmQ3YWI1NDAzNWVjNDM2YjJmNjIzMjRjIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJBVSIsImV4dGVybmFsX3VpZCI6NjExNjgzNTU4MiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTY1M30.bLt_FBFJIV3-oIbS3dVznCP0lqcUD5AYV-2Ug41PCnE",
+    "name": "blinx✯³⁴⁹³",
+    "password": "BLINXANDSLVFFY_hh0mundH",
+    "date_time": "2026-08-04 21:14:15",
+    "region": "ID",
+    "thread_id": 438
+  },
+  {
+    "uid": 6116875010,
+    "account_id": "16795196374",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTE5NjM3NCwibmlja25hbWUiOiJVd2xjVmtIYS84NkF1ZHlFNWR6YnM0aWtpZz09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI1NTBiNGJhYWJkM2Y3ODljOTJiZDM2Y2QwNGQ3MmQzZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR0IiLCJleHRlcm5hbF91aWQiOjYxMTY4NzUwMTAsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3MDF9.QRnkbu00PYrfC73bL2uTkUEr56o-P-1S71iT5hJiDCo",
+    "name": "blinx✭⁸⁸⁹³",
+    "password": "BLINXANDSLVFFY_35W1FlhT",
+    "date_time": "2026-08-04 21:15:01",
+    "region": "ID",
+    "thread_id": 111
+  },
+  {
+    "uid": 6116875718,
+    "account_id": "16795200498",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMDQ5OCwibmlja25hbWUiOiJVd2xjVmtIYS9zYUF1ZE9FNWQzYnM0ZUV1Tm89Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJlNjRhZmZiMDRlMTI1YWM1MDc2Y2Y2YzI5MjkyOGUzOSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiR0IiLCJleHRlcm5hbF91aWQiOjYxMTY4NzU3MTgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3MDZ9.ZotVrzTO8o_E5ikbFt4u--aw1dlmWDOKd1dzXfd1FDQ",
+    "name": "blinx❥⁷⁹⁶⁸",
+    "password": "BLINXANDSLVFFY_iEwmfKhm",
+    "date_time": "2026-08-04 21:15:06",
+    "region": "ID",
+    "thread_id": 561
+  },
+  {
+    "uid": 6116876176,
+    "account_id": "16795200539",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMDUzOSwibmlja25hbWUiOiJVd2xjVmtIYTR2S0F1ZDJrMW9hNGhkUG5nQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJmYThmMmRhZGQwNDFhMGQwMTFjM2I5ZWE5NDE0NjA1ZiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQVUiLCJleHRlcm5hbF91aWQiOjYxMTY4NzYxNzYsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3MDZ9.1e3aUIZ-NE4QKh9TcLHVjAaHKJHwW3XPhA_FEgGCedo",
+    "name": "blinx⁑⁹²⁷⁹",
+    "password": "BLINXANDSLVFFY_GlP8iHy1",
+    "date_time": "2026-08-04 21:15:06",
+    "region": "ID",
+    "thread_id": 13
+  },
+  {
+    "uid": 6116872798,
+    "account_id": "16795200949",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMDk0OSwibmlja25hbWUiOiIwdVdqV2xWUkRSdUJ1UE9rMW9hNGd0UG5qS0RXIiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiIyMWI5OThhZjNlNjg0OTE5ZmNjM2JiMGZhNDMyODdmNSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiS1IiLCJleHRlcm5hbF91aWQiOjYxMTY4NzI3OTgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3MDZ9.zMrUPemvqCi6Mc0mKXdR4s5KCvF3be1NflkjfIz8Gos",
+    "name": "〖blinx〗²⁰⁵²",
+    "password": "BLINXANDSLVFFY_f8Z6evu7",
+    "date_time": "2026-08-04 21:15:07",
+    "region": "ID",
+    "thread_id": 977
+  },
+  {
+    "uid": 6116872991,
+    "account_id": "16795200969",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMDk2OSwibmlja25hbWUiOiIwODZDV2xWUkRSdUFrOXlFNWRMYnM0U0V1TmVtMXc9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiMzdhNDUyNzY5YWRjYmM3YzYzMjg4MDQ1YjAyMDkxNDgiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkNOIiwiZXh0ZXJuYWxfdWlkIjo2MTE2ODcyOTkxLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxNzA2fQ.-s7K0ofveyHIH6S59jvKRkOcCnH1cqwL0XJUmNMBHkA",
+    "name": "⫷blinx⫸⁶⁵⁵²",
+    "password": "BLINXANDSLVFFY_MjLiQ67d",
+    "date_time": "2026-08-04 21:15:07",
+    "region": "ID",
+    "thread_id": 782
+  },
+  {
+    "uid": 6116875966,
+    "account_id": "16795201279",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMTI3OSwibmlja25hbWUiOiJVd2xjVmtIYStzYWdpb2JuMG9hNGh2UFYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6Ijg4MWUyZmNjZTZiNTMyMjhkNjFjYjg3ZTNhNGZjZjE5IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJSTyIsImV4dGVybmFsX3VpZCI6NjExNjg3NTk2NiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTcwN30.NDL_RdSQIOKDYSr3vKNTXxCpLOuHXw3X7TyKG90I8pY",
+    "name": "blinx♥²⁶⁴³",
+    "password": "BLINXANDSLVFFY_JjrVgKyq",
+    "date_time": "2026-08-04 21:15:07",
+    "region": "ID",
+    "thread_id": 333
+  },
+  {
+    "uid": 6116877205,
+    "account_id": "16795201384",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIwMTM4NCwibmlja25hbWUiOiJVd2xjVmtIYSsrV0F1ZFNFNWQzYnM0U0V1TmM9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI3ODE5MmQzYTg4ODBjM2E0OWMzYzE5NDMyOWNlZDczNCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiSlAiLCJleHRlcm5hbF91aWQiOjYxMTY4NzcyMDUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3MDh9.TAnjQ4qrxYJLDu_6X-0r0gETUSWQwmFGgkmmvtEbwns",
+    "name": "blinx☆⁰⁹⁵⁵",
+    "password": "BLINXANDSLVFFY_AQ6wvRHW",
+    "date_time": "2026-08-04 21:15:08",
+    "region": "ID",
+    "thread_id": 998
+  },
+  {
+    "uid": 6116917321,
+    "account_id": "16795216665",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIxNjY2NSwibmlja25hbWUiOiJVd2xjVmtIYS84V0F1ZEtrMW9hNGhOUG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI5NmEwNjdmNzRlNjVlN2YwMWY1NjE4MDYxZjE5MmU3YyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiS1IiLCJleHRlcm5hbF91aWQiOjYxMTY5MTczMjEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3NjV9.YJmEYuUNyrzDnRarxkPnNJrYtdpoFM7sZtnmo1vjagk",
+    "name": "blinx✦⁶²⁶⁴",
+    "password": "BLINXANDSLVFFY_WhWys2La",
+    "date_time": "2026-08-04 21:16:05",
+    "region": "ID",
+    "thread_id": 865
+  },
+  {
+    "uid": 6116916218,
+    "account_id": "16795217693",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIxNzY5Mywibmlja25hbWUiOiJVd2xjVmtIYS84aUF1ZEdrMW9hNGl0UG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjMWNlOTFjNzI0NjEwOGE5M2Q2OGVhZGM4NWM3NzJlNCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYxMTY5MTYyMTgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE3NjZ9.JVrpcFHNmpanUnw-PyNiLUY0ENW8UvyIo8wXQLAQnHw",
+    "name": "blinx✫⁵²⁸⁰",
+    "password": "BLINXANDSLVFFY_XqrLfk7K",
+    "date_time": "2026-08-04 21:16:06",
+    "region": "ID",
+    "thread_id": 223
+  },
+  {
+    "uid": 6116917298,
+    "account_id": "16795217974",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIxNzk3NCwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZHlrM1lhNGgvUGYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImUyYjMwMTlkYTBhN2I1Y2E1N2M3ZTdlNWJlMTIxZTNkIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJUVyIsImV4dGVybmFsX3VpZCI6NjExNjkxNzI5OCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTc2Nn0.l5TaoHrFp1cYxnVo4ZXPE37qzvMdBIE0bucc8Iz6Mi4",
+    "name": "blinx✬⁸¹⁵¹",
+    "password": "BLINXANDSLVFFY_i5J5sahf",
+    "date_time": "2026-08-04 21:16:07",
+    "region": "ID",
+    "thread_id": 528
+  },
+  {
+    "uid": 6116954834,
+    "account_id": "16795230715",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzMDcxNSwibmlja25hbWUiOiJVd2xjVmtIYS84bUF1ZEtFNWRQYnM0YWtnQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI1Nzk2M2M2ZDY0MGJlMzBhZWIzNzhlYjUzZTY3ZWI2NyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY5NTQ4MzQsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE4MjJ9.ZwHcaCZ4OntkPegcoV-oLGRrJdrcqRcHvZaOw5h3e-U",
+    "name": "blinx✪⁶⁷⁷¹",
+    "password": "BLINXANDSLVFFY_xvUy1N5o",
+    "date_time": "2026-08-04 21:17:02",
+    "region": "ID",
+    "thread_id": 1013
+  },
+  {
+    "uid": 6116957156,
+    "account_id": "16795231373",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzMTM3Mywibmlja25hbWUiOiIwdVd2V2xWUkRSdUJ1UCtFNWREYnM0U0V1TnFHNU5rPSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiNzgwNTVhYTY2NTI4NTBkMGQ2YTA2NGU0NGFlNmFhMTUiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IlZOIiwiZXh0ZXJuYWxfdWlkIjo2MTE2OTU3MTU2LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxODIyfQ.SaODz5TyhXAw9TEgC1rOiTadE0708fNHeOhbFASTrwE",
+    "name": "〚blinx〛⁴⁵⁸⁸",
+    "password": "BLINXANDSLVFFY_JID6ygQ5",
+    "date_time": "2026-08-04 21:17:02",
+    "region": "ID",
+    "thread_id": 77
+  },
+  {
+    "uid": 6116954777,
+    "account_id": "16795232246",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzMjI0Niwibmlja25hbWUiOiJVd2xjVmtIYS84eUF1ZENFNWQzYnM0bUV1Tlk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJiOThmZmI1MmJlZjJmZWIzNWRkYzNiODU0OWZkNjNmNSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY5NTQ3NzcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE4MjN9.mDLXBHO1n8qiPh3K9PN0CjBG273lgQ8L6CtyhAG2UKk",
+    "name": "blinx✯⁴⁹⁸⁴",
+    "password": "BLINXANDSLVFFY_wXvngHdM",
+    "date_time": "2026-08-04 21:17:04",
+    "region": "ID",
+    "thread_id": 168
+  },
+  {
+    "uid": 6116956681,
+    "account_id": "16795233923",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzMzkyMywibmlja25hbWUiOiJVd2xjVmtIYSsrYUF1ZEtrM2FhSzhJZz0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImNkMTUxNjBiNmM2NmViMTJjMWU5YzdkNGQ2YTVlZDY1IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDQSIsImV4dGVybmFsX3VpZCI6NjExNjk1NjY4MSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTgyNX0.uOHywuUoYkaGI0OJ7s_uroxYSabDVlGv2ydPWfyEuOE",
+    "name": "blinx★⁶¹³¹",
+    "password": "BLINXANDSLVFFY_HP9ga6Ps",
+    "date_time": "2026-08-04 21:17:06",
+    "region": "ID",
+    "thread_id": 980
+  },
+  {
+    "uid": 6116956556,
+    "account_id": "16795234272",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDI3Miwibmlja25hbWUiOiJVd2xjVmtIYS9zU0F1ZE9FNWRUN2k5UG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJiZWI5MzhmYWRjYjllZjM4NmIxMmE1ZjI3OWYxYTY2NCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQVUiLCJleHRlcm5hbF91aWQiOjYxMTY5NTY1NTYsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE4MjZ9.87qzWi2PZH-Xp9Qd1mSc9TFbN_xN5zoiOTPaLs2Pxvw",
+    "name": "blinx❧⁷⁰¹⁰",
+    "password": "BLINXANDSLVFFY_UoFY0ept",
+    "date_time": "2026-08-04 21:17:06",
+    "region": "ID",
+    "thread_id": 396
+  },
+  {
+    "uid": 6116955221,
+    "account_id": "16795234682",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDY4Miwibmlja25hbWUiOiJVd2xjVmtIYS84bWdpcWJWaHVXTjhJST0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjAyZjI4ZmVjNTM3NTRlODI1NTkzZDIzZWVhYjFkNTlkIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJDTiIsImV4dGVybmFsX3VpZCI6NjExNjk1NTIyMSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTgyN30.2nq2DjO3981f6XoUEf597GbsB0PvZKn3pfSb7AwMnAc",
+    "name": "blinx✪²³⁴³",
+    "password": "BLINXANDSLVFFY_faOUwFUV",
+    "date_time": "2026-08-04 21:17:07",
+    "region": "ID",
+    "thread_id": 686
+  },
+  {
+    "uid": 6116955584,
+    "account_id": "16795234705",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDcwNSwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZHlrMTZhTDBMRFQiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjlkY2ZjMGI5M2VmOGJmMWJlZDVjMjg2ZjA0NWM4NDQ2IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNjk1NTU4NCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTgyN30.1YX1do_K841PhluX7qd_JSsMwljcKbISxxIrd_Fk-QA",
+    "name": "blinx✬⁸³²⁵",
+    "password": "BLINXANDSLVFFY_NL6lJ4mF",
+    "date_time": "2026-08-04 21:17:07",
+    "region": "ID",
+    "thread_id": 305
+  },
+  {
+    "uid": 6116956858,
+    "account_id": "16795234790",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDc5MCwibmlja25hbWUiOiIwdVcvV2xWUkRSdUJ1TytrM2FhSzBMRFcyK1BRIiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI1ZjI0ZWUxNzhhN2I3YzJhNWYwOGIwODU2YzExYzI4NiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY5NTY4NTgsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE4Mjd9.qaEcpZxrUBKyLPp5TLeAxpGrWb7676UPEUAqaOCDEFE",
+    "name": "《blinx》¹³⁰⁴",
+    "password": "BLINXANDSLVFFY_f0ZzLLFW",
+    "date_time": "2026-08-04 21:17:07",
+    "region": "ID",
+    "thread_id": 673
+  },
+  {
+    "uid": 6116957332,
+    "account_id": "16795234981",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDk4MSwibmlja25hbWUiOiIwdVdqV2xWUkRSdUJ1UE9FNWRUYnM0ZUV1TldHNU5RPSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiYjY2M2Y3OThkZTdlMjcxMTc2NTljYzRjNWEyZmE4NjciLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkRFIiwiZXh0ZXJuYWxfdWlkIjo2MTE2OTU3MzMyLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1ODgxODI3fQ.uzbjl5Zph6gN5qirwGK04qY0P8WowAGF-5-PjWIz0Sk",
+    "name": "〖blinx〗⁰⁶⁷⁵",
+    "password": "BLINXANDSLVFFY_xR9XK068",
+    "date_time": "2026-08-04 21:17:08",
+    "region": "ID",
+    "thread_id": 454
+  },
+  {
+    "uid": 6116957206,
+    "account_id": "16795234977",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTIzNDk3Nywibmlja25hbWUiOiJVd2xjVmtIYS84MmdnWWJuM2FhQThJTT0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjdjNzBkNzNmOTZlNjNiNDI0MWU4YmJjMTkxZmM1NzhlIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNjk1NzIwNiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTgyN30.AW6z4_hKfpgRPDCq5kBJUBMFe0fhGKL_bKP4hfAFArE",
+    "name": "blinx✮¹⁹¹²",
+    "password": "BLINXANDSLVFFY_kKlgCJ05",
+    "date_time": "2026-08-04 21:17:08",
+    "region": "ID",
+    "thread_id": 983
+  },
+  {
+    "uid": 6116996130,
+    "account_id": "16795249796",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI0OTc5Niwibmlja25hbWUiOiJVd2xjVmtIYSsrV0F1ZHlrMXFhSzBMRFQiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6Ijg2NDBjMTg4ZjhiYjE2MTY4NDBjYjUyYjY3M2JhOWI2IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJUSCIsImV4dGVybmFsX3VpZCI6NjExNjk5NjEzMCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTg4NX0.1_iGffjZQC1V4MieJwod7oTnNeFLpCV2Xq0GM1oyaZw",
+    "name": "blinx☆⁸²³⁵",
+    "password": "BLINXANDSLVFFY_B7PdHtFj",
+    "date_time": "2026-08-04 21:18:06",
+    "region": "ID",
+    "thread_id": 999
+  },
+  {
+    "uid": 6116996402,
+    "account_id": "16795249809",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI0OTgwOSwibmlja25hbWUiOiJVd2xjVmtIYSsrYWdpb2JuMHFhQThJZz0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImRiZDU3NWVlNWE4MTM2MTM1ZTU5ZmUyNTZiMWY5MGEyIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJJTiIsImV4dGVybmFsX3VpZCI6NjExNjk5NjQwMiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTg4NX0.Cfe1NgwRpjFdJq-A1lHgy7jql2nb2yODs51IIhfCGZc",
+    "name": "blinx★²⁶¹¹",
+    "password": "BLINXANDSLVFFY_dYvQD26z",
+    "date_time": "2026-08-04 21:18:06",
+    "region": "ID",
+    "thread_id": 29
+  },
+  {
+    "uid": 6116998345,
+    "account_id": "16795250789",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI1MDc4OSwibmlja25hbWUiOiJVd2xjVmtIYSsrYUF1ZEdFNWRQYnM0U0V1TmM9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI3N2FlOTE5MjQ5ZjA1NDIxNDY3N2Y0ZjFlZjEwODM1NyIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTY5OTgzNDUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE4ODd9.b-jF9tiyrLcMOinu-_o0Aj6zCW6Sl7TimBcIFEh4Jm4",
+    "name": "blinx★⁵⁷⁵⁵",
+    "password": "BLINXANDSLVFFY_S2HE6XLr",
+    "date_time": "2026-08-04 21:18:07",
+    "region": "ID",
+    "thread_id": 322
+  },
+  {
+    "uid": 6117036721,
+    "account_id": "16795262550",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2MjU1MCwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZENFNWQzYnM0YUV1Tlk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjMTE3OGY0YWRlNWIwZjhiMTVhNTNiNWQ1MjZmNzQxMCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiTkwiLCJleHRlcm5hbF91aWQiOjYxMTcwMzY3MjEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE5NDJ9.3Iz_B9PUHRBj0QfJ9cFk2__iOMlZr93ggcbsUnp5vX8",
+    "name": "blinx✬⁴⁹⁷⁴",
+    "password": "BLINXANDSLVFFY_5vgLtnpv",
+    "date_time": "2026-08-04 21:19:02",
+    "region": "ID",
+    "thread_id": 494
+  },
+  {
+    "uid": 6117037302,
+    "account_id": "16795262750",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2Mjc1MCwibmlja25hbWUiOiJVd2xjVmtIYS84eUF1ZHlrM2FhSzBMRGYiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImU3MzE3MjhjNzYwZDIzOTNkZDM0MTU5NjM4MTcxOTM4IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJESyIsImV4dGVybmFsX3VpZCI6NjExNzAzNzMwMiwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTk0Mn0.yyYkvT288izffm1Vx8ivz0YSOZuzmyMgsX0X1DCVFxY",
+    "name": "blinx✯⁸¹³⁹",
+    "password": "BLINXANDSLVFFY_JKvH6h50",
+    "date_time": "2026-08-04 21:19:02",
+    "region": "ID",
+    "thread_id": 604
+  },
+  {
+    "uid": 6117035894,
+    "account_id": "16795264031",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2NDAzMSwibmlja25hbWUiOiJVd2xjVmtIYSsrYWdpcWJmaHVXQjhJZz0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6ImM1NjkwZWFjMjJlYzdmZmY0ZTlhMTk4MTllNjZjMGEwIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJFUyIsImV4dGVybmFsX3VpZCI6NjExNzAzNTg5NCwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTk0M30.gyW4Du8Gibi7_qmUKhNFgPcBuWc6PHC_mrkcoB0bRns",
+    "name": "blinx★²¹⁸¹",
+    "password": "BLINXANDSLVFFY_oVWpjLxa",
+    "date_time": "2026-08-04 21:19:04",
+    "region": "ID",
+    "thread_id": 841
+  },
+  {
+    "uid": 6117037459,
+    "account_id": "16795265399",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2NTM5OSwibmlja25hbWUiOiJVd2xjVmtIYTQ5aWdpNGJuM0lhNGh0UG5qUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJkOTY1ZDc5ZDM2MTMwZTJiNWQ2Y2I4ZGNmZjA4NjY5ZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiTUQiLCJleHRlcm5hbF91aWQiOjYxMTcwMzc0NTksInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE5NDV9.6XmXJf8_G-EdFvwEIooNkluhRodQompYoBTVdC-dV_A",
+    "name": "blinx※³⁸⁴⁴",
+    "password": "BLINXANDSLVFFY_sepDgYmx",
+    "date_time": "2026-08-04 21:19:06",
+    "region": "ID",
+    "thread_id": 681
+  },
+  {
+    "uid": 6117039111,
+    "account_id": "16795265621",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2NTYyMSwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZDJrMTRhNGhkUG5qQT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI0MTlhMjViMzY1MmM4YjhjNmMyZDE5NWFlY2QwODdjMiIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxMTcwMzkxMTEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE5NDZ9.qtXJJm2X2VLCRADf9WwCM9dZTIraCxbi9-yPz3dlYF8",
+    "name": "blinx✬⁹³⁷⁵",
+    "password": "BLINXANDSLVFFY_VaiThmn2",
+    "date_time": "2026-08-04 21:19:06",
+    "region": "ID",
+    "thread_id": 962
+  },
+  {
+    "uid": 6117039085,
+    "account_id": "16795265618",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2NTYxOCwibmlja25hbWUiOiJVd2xjVmtIYSsrV0F1ZEtFNWQzN2dkUG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2MmJlMTJkY2VhZTdhNmIwNjllOGZmNzU1NmJkYTUxZSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiREsiLCJleHRlcm5hbF91aWQiOjYxMTcwMzkwODUsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU4ODE5NDZ9.8RUULAVgbaVlGJPlzlPjqjrxvq39wQGHeT73osuqkBg",
+    "name": "blinx☆⁶⁹³⁰",
+    "password": "BLINXANDSLVFFY_vyZGn1EP",
+    "date_time": "2026-08-04 21:19:06",
+    "region": "ID",
+    "thread_id": 1035
+  },
+  {
+    "uid": 6117039321,
+    "account_id": "16795266348",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc5NTI2NjM0OCwibmlja25hbWUiOiJVd2xjVmtIYjQrV0F1ZENrM2FhSzBMRFQiLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6IjI2OTA1MmEwZTJmMTVlMTE5N2QxMTM1MTU2YmM1Y2IyIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjExNzAzOTMyMSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTg4MTk0N30.T5rVOoZRI0Y_WtHlmaGcUFFXlUl83X1KWWfECpTs6_k",
+    "name": "blinx〆⁴¹³⁵",
+    "password": "BLINXANDSLVFFY_QRJR5hvu",
+    "date_time": "2026-08-04 21:19:08",
+    "region": "ID",
+    "thread_id": 759
   }
 ]
