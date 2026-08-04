@@ -745,6 +745,16 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16794000009",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794322222",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16399990123",
     "category": "(URUT)",
     "status": "AVAILABLE"
@@ -12851,6 +12861,61 @@ window.STOCK_DATA = [
   },
   {
     "number": "16793539999",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16793999952",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794064444",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794146666",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794258888",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794305555",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794322224",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794399998",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794400002",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794431111",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794512222",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16794688889",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
