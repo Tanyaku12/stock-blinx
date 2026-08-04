@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Blinx - Katalog ID Cantik & Rare IDs</title>
+    <meta name="description" content="Katalog stock ID cantik Stock Blinx. Temukan ID Cantik, Tier SSS, SS, dan Urut. Order mudah via WhatsApp.">
+
+    <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Custom Neobrutalism CSS -->
+    <link rel="stylesheet" href="styles.css?v=20260803_v2">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">STOCK <span class="highlight">BLINX</span></span>
+                    <span class="brand-sub">Premium ID Cantik &amp; Rare Numbers</span>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <div class="live-status-pill">
+                    <span class="status-dot pulsing"></span>
+                    <span id="header-stock-count">0 Stock Utama Ready</span>
+                </div>
+
+                <button class="btn-wa-header" id="btn-wa-nav" title="Hubungi Admin via WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Hubungi Admin</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-banner">
+                <img src="assets/banner.jpg" alt="Stock Blinx Banner" class="banner-img">
+                <div class="hero-overlay">
+                    <div class="hero-badge">OFFICIAL STOCK BLINX CATALOG</div>
+                    <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare IDs</span></h1>
+                    <p>Temukan ID cantik impianmu dari <strong id="total-hero-stock">0</strong> pilihan stock utama ready. Order langsung terhubung ke WhatsApp Admin.</p>
+
+                    <!-- Quick Stats Cards (Hanya Stock Utama: SSS, SS, URUT) -->
+                    <div class="hero-stats-grid">
+                        <div class="stat-card stat-sss" onclick="filterCategory('SSS TIER (6x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-sss">0</span>
+                                <span class="stat-lbl">SSS Tier · 6x Digit</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-ss" onclick="filterCategory('SS TIER (5x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-gem"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-ss">0</span>
+                                <span class="stat-lbl">SS Tier · 5x Digit</span>
+                            </div>
+                        </div>
+                        <div class="stat-card stat-urut" onclick="filterCategory('(URUT)')">
+                            <div class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-urut">0</span>
+                                <span class="stat-lbl">Urut · Sequential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy 2 Get 1 Free Promo Banner Card -->
+        <section class="promo-banner-section">
+            <div class="promo-banner-card">
+                <div class="promo-banner-content">
+                    <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
+                    <div class="promo-text">
+                        <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
+                        <p>Setiap pembelian <strong>2 ID Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 ID S-Tier GRATIS</strong>!</p>
+                    </div>
+                </div>
+                <button id="btn-open-stier-modal" class="btn-stier-trigger">
+                    <i class="fa-solid fa-eye"></i> Lihat Stock Bonus S-Tier (<span id="stier-total-count">2,250</span>)
+                </button>
+            </div>
+        </section>
+
+        <!-- Search & Control Panel -->
+        <section class="control-panel-wrapper" id="catalog">
+            <div class="control-panel">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Cari digit ID utama (cth: 6666, 888, 123)..." autocomplete="off">
+                    <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Category Tabs (Tanpa S-Tier) -->
+                <div class="category-tabs" id="category-tabs">
+                    <button class="tab-btn active" data-category="ALL">
+                        <i class="fa-solid fa-border-all"></i> Semua (<span id="tab-count-all">0</span>)
+                    </button>
+                    <button class="tab-btn tab-sss" data-category="SSS TIER (6x digit berulang)">
+                        <i class="fa-solid fa-crown"></i> SSS Tier (<span id="tab-count-sss">0</span>)
+                    </button>
+                    <button class="tab-btn tab-ss" data-category="SS TIER (5x digit berulang)">
+                        <i class="fa-solid fa-gem"></i> SS Tier (<span id="tab-count-ss">0</span>)
+                    </button>
+                    <button class="tab-btn tab-urut" data-category="(URUT)">
+                        <i class="fa-solid fa-arrow-trend-up"></i> Urut (<span id="tab-count-urut">0</span>)
+                    </button>
+                    <button class="tab-btn tab-fav" data-category="FAVORITE">
+                        <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
+                    </button>
+                </div>
+
+                <!-- Filter Pattern Quick Chips & Sort -->
+                <div class="filter-toolbar">
+                    <div class="pattern-chips">
+                        <span class="chip-label">Digit Kembar:</span>
+                        <button class="chip" data-digit="">Semua</button>
+                        <button class="chip" data-digit="999">999</button>
+                        <button class="chip" data-digit="888">888</button>
+                        <button class="chip" data-digit="777">777</button>
+                        <button class="chip" data-digit="666">666</button>
+                        <button class="chip" data-digit="555">555</button>
+                        <button class="chip" data-digit="000">000</button>
+                        <button class="chip" data-digit="111">111</button>
+                    </div>
+
+                    <div class="sort-view-group">
+                        <!-- Sort Select -->
+                        <div class="select-wrapper">
+                            <i class="fa-solid fa-arrow-down-short-wide"></i>
+                            <select id="sort-select">
+                                <option value="tier">Prioritas Tier (SSS → SS → URUT)</option>
+                                <option value="num-asc">ID (Terkecil)</option>
+                                <option value="num-desc">ID (Terbesar)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stock Catalog Results Section -->
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <div class="result-info">
+                    <h2>Menampilkan <span id="showing-count">0</span> Stock Utama</h2>
+                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT)</p>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loading-state" class="loading-container hidden">
+                <div class="spinner"></div>
+                <p>Memuat katalog Stock Blinx...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-container hidden">
+                <i class="fa-solid fa-ghost empty-icon"></i>
+                <h3>Tidak Ada Stock Ditemukan</h3>
+                <p>Coba gunakan kata kunci pencarian lain atau ubah filter tier.</p>
+                <button onclick="resetFilters()" class="btn-primary">Reset Filter</button>
+            </div>
+
+            <!-- Stock Container (Default Compact List View) -->
+            <div id="stock-grid" class="stock-grid view-list"></div>
+
+            <!-- Pagination -->
+            <div id="pagination-controls" class="pagination-wrapper hidden">
+                <button id="btn-prev-page" class="btn-page"><i class="fa-solid fa-chevron-left"></i> Sebelumnya</button>
+                <span id="page-info" class="page-info">Halaman 1 dari 10</span>
+                <button id="btn-next-page" class="btn-page">Selanjutnya <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Seluruh S-Tier Bonus -->
+    <div id="stier-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <i class="fa-solid fa-gift text-purple"></i>
+                    <h2>Katalog Stock Bonus S-Tier (<span id="modal-stier-count">2,250</span>)</h2>
+                </div>
+                <button id="btn-close-stier-modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="modal-desc" id="stier-modal-desc">
+                    💡 Pilih ID S-Tier favoritmu sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 ID Utama (SSS/SS/URUT).
+                </p>
+
+                <!-- Search Inside Modal -->
+                <div class="search-box modal-search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="stier-modal-search" placeholder="Cari digit ID S-Tier (cth: 7777, 8888, 0000)..." autocomplete="off">
+                </div>
+
+                <!-- S-Tier Grid List Container -->
+                <div id="stier-modal-grid" class="stock-grid view-list modal-grid-container"></div>
+                
+                <!-- Pagination inside Modal -->
+                <div id="stier-modal-pagination" class="pagination-wrapper hidden">
+                    <button id="btn-stier-prev" class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
+                    <span id="stier-page-info" class="page-info">Halaman 1 dari 10</span>
+                    <button id="btn-stier-next" class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="btn-done-stier-modal" class="btn-primary">
+                    <i class="fa-solid fa-check"></i> Selesai Memilih Bonus
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Bulk Order Bar -->
+    <div id="bulk-bar" class="bulk-bar hidden">
+        <div class="bulk-info">
+            <span class="bulk-badge" id="bulk-count">0</span>
+            <span>ID Dipilih</span>
+            <span id="promo-bonus-badge" class="promo-bonus-badge hidden">🎁 1 S-Tier Gratis!</span>
+        </div>
+        <div class="bulk-actions">
+            <button id="btn-copy-bulk" class="btn-bulk-secondary">
+                <i class="fa-solid fa-copy"></i> Salin List
+            </button>
+            <button id="btn-order-bulk" class="btn-bulk-primary">
+                <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon small"><i class="fa-solid fa-gem"></i></div>
+                <span>STOCK BLINX</span>
+            </div>
+            <p>
+                Hubungi Admin:
+                <button class="wa-link-btn" id="btn-wa-footer">
+                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                </button>
+            </p>
+            <p class="copyright">&copy; 2026 Stock Blinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Pesan toast</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="stock_data.js?v=20260803_v2"></script>
+    <script src="app.js?v=20260803_v5"></script>
+</body>
+</html>

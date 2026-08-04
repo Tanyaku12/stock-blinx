@@ -7,7 +7,7 @@
       "use": "@vercel/python",
       "config": { "includeFiles": "RAPI/**" }
     },
-    { "src": "web/**", "use": "@vercel/static" },
+    { "src": "stock/**", "use": "@vercel/static" },
     { "src": "RAPI/all.txt", "use": "@vercel/static" },
     { "src": "RAPI/sold.txt", "use": "@vercel/static" }
   ],
@@ -15,6 +15,6 @@
     { "source": "/api/stock", "destination": "/api/stock.py" },
     { "source": "/RAPI/all.txt", "destination": "/RAPI/all.txt" },
     { "source": "/RAPI/sold.txt", "destination": "/RAPI/sold.txt" },
-    { "source": "/(.*)", "destination": "/web/$1" }
+    { "source": "/(.*)", "destination": "/stock/$1" }
   ]
 }

@@ -306,7 +306,7 @@ def rebuild_rapi_data_json(sync_spin=None):
     return len(result_list)
 
 def update_web_stock_data():
-    """Generates web/stock_data.js from RAPI/all.txt and RAPI/sold.txt."""
+    """Generates stock/stock_data.js from RAPI/all.txt and RAPI/sold.txt."""
     try:
         api_dir = os.path.join(BASE, "api")
         if api_dir not in sys.path:
@@ -314,13 +314,13 @@ def update_web_stock_data():
         from stock import load_all_stock
         items = load_all_stock()
         js_content = "window.STOCK_DATA = " + json.dumps(items, ensure_ascii=False, indent=2) + ";\n"
-        web_stock_path = os.path.join(BASE, "web", "stock_data.js")
+        web_stock_path = os.path.join(BASE, "stock", "stock_data.js")
         with open(web_stock_path, "w", encoding="utf-8") as f:
             f.write(js_content)
-        print(f"  ✓ Re-generated web/stock_data.js ({len(items)} stock items)")
+        print(f"  ✓ Re-generated stock/stock_data.js ({len(items)} stock items)")
         return True
     except Exception as e:
-        print(f"  ❌ Failed to update web/stock_data.js: {e}")
+        print(f"  ❌ Failed to update stock/stock_data.js: {e}")
         return False
 
 def auto_push_web_stock():
