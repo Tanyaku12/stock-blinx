@@ -650,9 +650,8 @@ function updateSelectionState() {
 
     if (DOM.promoBonusBadge) {
         if (totalSelected >= 2) {
-            const freeBonusCount = Math.floor(totalSelected / 2);
             DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `🎁 Promo Buy 2 Get 1 Free (Berhak ${freeBonusCount} Bonus Tier S via Admin!)`;
+            DOM.promoBonusBadge.textContent = '🎁 Promo Buy 2 Get 1 Free (Tier S)';
         } else {
             DOM.promoBonusBadge.classList.add('hidden');
         }
