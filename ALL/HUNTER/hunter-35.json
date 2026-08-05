@@ -24,5 +24,18 @@
     "date_identified": "2026-08-03 09:49:07",
     "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjc2NTQyMDAwMCwibmlja25hbWUiOiIwK1dPV2xWUkRSdUF1ZE9rM1lhNGd2UFUyLzdOIiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2ZWI5MDRjYWRmZjM5ODY3NGRmOWYyMTVkZDkzOTQ4ZCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiQ04iLCJleHRlcm5hbF91aWQiOjYwMzc4NzA4NzcsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU3NTQxNDZ9.lgzSxkQDNXRmvOZ8P9hM7XZxBtRfdOS8pkYi913LnNA",
     "thread_id": 5
+  },
+  {
+    "uid": 6153412640,
+    "password": "BLINXANDSLVFFYKINGPAINZYUjl9ih1N",
+    "account_id": "16810000005",
+    "name": "blinx⁶⁷⁹²✯✿",
+    "region": "ID",
+    "rarity_type": "LEGENDARY",
+    "rarity_score": 35,
+    "reason": "Score:35|R4+8,R3+5,SPM+2,QD+8,MM+2,QUAD_IDENTICAL+10",
+    "date_identified": "2026-08-05 14:19:01",
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxMDAwMDAwNSwibmlja25hbWUiOiJVd2xjVmtIYTR0V0F1ZE9FNWQzN2dOUDZsb0Q0Mmc9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiNTg5YmVjYWM4ZjJjODU0NTkwNDVmOTIwYjgzM2JmMjIiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IlVBIiwiZXh0ZXJuYWxfdWlkIjo2MTUzNDEyNjQwLCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1OTQzMTQwfQ.7GN-iNkcezPVrjyV5MB-TGHnvL1syZngXy39zVMciC0",
+    "thread_id": 468
   }
 ]
