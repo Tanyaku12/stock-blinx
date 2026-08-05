@@ -3,7 +3,7 @@
   "name": "stock-blinx",
   "builds": [
     {
-      "src": "api/stock.py",
+      "src": "api/*.py",
       "use": "@vercel/python",
       "config": { "includeFiles": "RAPI/**" }
     },
@@ -13,8 +13,12 @@
   ],
   "rewrites": [
     { "source": "/api/stock", "destination": "/api/stock.py" },
+    { "source": "/api/bonus", "destination": "/api/bonus.py" },
+    { "source": "/api/telegram", "destination": "/api/telegram.py" },
     { "source": "/RAPI/all.txt", "destination": "/RAPI/all.txt" },
     { "source": "/RAPI/sold.txt", "destination": "/RAPI/sold.txt" },
+    { "source": "/bonus", "destination": "/stock/bonus.html" },
+    { "source": "/bonus.html", "destination": "/stock/bonus.html" },
     { "source": "/(.*)", "destination": "/stock/$1" }
   ]
 }

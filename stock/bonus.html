@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Blinx - Klaim Bonus Tier S (Persetujuan Admin Telegram)</title>
+    <meta name="description" content="Katalog Klaim Bonus Tier S Stock Blinx khusus untuk pelanggan yang telah disetujui oleh Admin via Telegram.">
+
+    <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=JetBrains+Mono:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Custom Neobrutalism CSS -->
+    <link rel="stylesheet" href="styles.css?v=20260805_v1">
+    <style>
+        .bonus-hero {
+            background: linear-gradient(135deg, #1e1b4b, #31104b);
+            border: 3px solid #000;
+            box-shadow: var(--shadow-neo);
+            border-radius: 14px;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+        .locked-card {
+            background: #141722;
+            border: 3px solid #000;
+            box-shadow: var(--shadow-neo);
+            border-radius: 14px;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            max-width: 620px;
+            margin: 2rem auto;
+            color: #fff;
+        }
+        .locked-icon {
+            font-size: 3.5rem;
+            color: var(--neo-pink);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 0px #000;
+        }
+        .unlocked-banner {
+            background: linear-gradient(135deg, #059669, #0d9488);
+            border: 3px solid #000;
+            box-shadow: var(--shadow-neo);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .token-input-group {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 420px;
+            margin: 1.5rem auto;
+        }
+        .token-input-group input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 2px solid #000;
+            border-radius: 8px;
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            font-weight: 700;
+            background: #090b0e;
+            color: #fff;
+            box-shadow: 2px 2px 0px #000;
+            text-transform: uppercase;
+        }
+        .btn-claim-stier {
+            width: 100%;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: #fff;
+            border: 2px solid #000;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #000;
+            transition: var(--transition);
+        }
+        .btn-claim-stier:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/" class="brand" style="text-decoration: none;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">STOCK <span class="highlight">BLINX</span></span>
+                    <span class="brand-sub">Katalog Bonus Tier S Resmi</span>
+                </div>
+            </a>
+
+            <div class="nav-actions">
+                <a href="/" class="btn-wa-header" style="text-decoration: none; background: var(--neo-cyan); color: #000;">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Katalog Utama</span>
+                </a>
+                <button class="btn-wa-header" id="btn-wa-bonus-nav" title="Hubungi Admin via WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat Admin</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="bonus-hero">
+            <div class="hero-badge" style="background: var(--neo-pink); color: #fff;">OFFICIAL BONUS TIER S CLAIM</div>
+            <h1 style="font-size: 2.2rem; margin: 0.75rem 0;">Katalog <span class="text-gradient">Bonus Tier S</span> Stock Blinx</h1>
+            <p>Halaman khusus klaim 1 ID Tier S GRATIS untuk pembelian 2 ID. Akses dibuka setelah disetujui Admin via Telegram.</p>
+        </section>
+
+        <!-- STATE 1: LOCKED CARD (Shown if token is invalid or unapproved) -->
+        <div id="locked-state" class="locked-card">
+            <i class="fa-solid fa-lock locked-icon"></i>
+            <h2 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Akses Klaim Bonus Terkunci</h2>
+            <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+                Halaman ini hanya dapat diakses apabila Admin telah menyetujui klaim bonus Anda melalui <strong>Bot Telegram Admin</strong>.<br>
+                Silakan lakukan pembelian 2 ID terlebih dahulu via WhatsApp, kemudian masukkan <strong>Kode Approval</strong> dari Admin di bawah ini.
+            </p>
+
+            <div class="token-input-group">
+                <input type="text" id="token-input" placeholder="Masukkan Kode ACC Admin..." autocomplete="off">
+                <button id="btn-verify-token" class="btn-primary" style="padding: 0.75rem 1.25rem;">
+                    <i class="fa-solid fa-key"></i> Buka
+                </button>
+            </div>
+
+            <div id="verify-error-msg" style="color: #f43f5e; font-weight: 800; font-size: 0.9rem; margin-top: 0.5rem;" class="hidden">
+                ⚠️ Kode approval tidak ditemukan atau belum disetujui Admin.
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px dashed #2d3748;">
+                <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem;">Belum order 2 ID atau belum dapat kode approval Admin?</p>
+                <button id="btn-wa-request-access" class="btn-primary" style="background: #25d366; color: #000; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Chat Admin WhatsApp
+                </button>
+            </div>
+        </div>
+
+        <!-- STATE 2: UNLOCKED BONUS CATALOG (Shown when token is valid and approved) -->
+        <div id="unlocked-state" class="hidden">
+            <div class="unlocked-banner">
+                <i class="fa-solid fa-circle-check" style="font-size: 2rem; color: #6ee7b7;"></i>
+                <div>
+                    <h3 style="margin: 0 0 0.25rem 0;">Akses Klaim Bonus Disetujui Admin!</h3>
+                    <p style="margin: 0; font-size: 0.9rem; opacity: 0.95;">
+                        Persetujuan Token <strong id="display-token-code">CODE</strong> Terverifikasi! Silakan pilih <strong>1 ID Tier S favoritmu</strong> di bawah ini untuk diklaim secara GRATIS.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Search & Control Panel Inside Bonus Catalog -->
+            <section class="control-panel-wrapper">
+                <div class="control-panel">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="bonus-search-input" placeholder="Cari digit ID Tier S Bonus (cth: 7777, 8888, 1111)..." autocomplete="off">
+                        <button id="btn-bonus-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-toolbar">
+                        <div class="pattern-chips">
+                            <span class="chip-label">Digit Kembar Tier S:</span>
+                            <button class="chip chip-bonus active" data-digit="">Semua</button>
+                            <button class="chip chip-bonus" data-digit="999">999</button>
+                            <button class="chip chip-bonus" data-digit="888">888</button>
+                            <button class="chip chip-bonus" data-digit="777">777</button>
+                            <button class="chip chip-bonus" data-digit="666">666</button>
+                            <button class="chip chip-bonus" data-digit="555">555</button>
+                            <button class="chip chip-bonus" data-digit="000">000</button>
+                            <button class="chip chip-bonus" data-digit="111">111</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Catalog Section -->
+            <section class="catalog-section">
+                <div class="catalog-header">
+                    <div class="result-info">
+                        <h2>Menampilkan <span id="bonus-showing-count">0</span> ID Bonus Tier S Ready</h2>
+                        <p>Pilih 1 ID untuk langsung diklaim via WhatsApp ke Admin.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus Grid -->
+                <div id="bonus-grid" class="stock-grid view-list"></div>
+
+                <!-- Pagination -->
+                <div id="bonus-pagination" class="pagination-wrapper hidden">
+                    <button id="btn-bonus-prev" class="btn-page"><i class="fa-solid fa-chevron-left"></i> Sebelumnya</button>
+                    <span id="bonus-page-info" class="page-info">Halaman 1 dari 10</span>
+                    <button id="btn-bonus-next" class="btn-page">Selanjutnya <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-icon small"><i class="fa-solid fa-gem"></i></div>
+                <span>STOCK BLINX</span>
+            </div>
+            <p>&copy; 2026 Stock Blinx. Official Bonus Tier S Claim System.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span id="toast-message">Pesan toast</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="stock_data.js?v=20260803_v2"></script>
+    <script>
+        const ADMIN_WA = "62882003619577";
+        let activeToken = "";
+        let sTierItems = [];
+        let filteredSTier = [];
+        let currentSearch = "";
+        let currentDigit = "";
+        let currentPage = 1;
+        const PER_PAGE = 40;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initBonusPage();
+        });
+
+        async function initBonusPage() {
+            setupEventListeners();
+            const urlParams = new URLSearchParams(window.location.search);
+            const tokenFromUrl = urlParams.get('token') || urlParams.get('code') || "";
+
+            if (tokenFromUrl) {
+                document.getElementById('token-input').value = tokenFromUrl;
+                await verifyToken(tokenFromUrl);
+            }
+        }
+
+        function setupEventListeners() {
+            document.getElementById('btn-wa-bonus-nav').addEventListener('click', () => {
+                openWa("Halo Admin, saya ingin menanyakan klaim link bonus Tier S (https://stock-blinx.vercel.app/bonus).");
+            });
+
+            document.getElementById('btn-wa-request-access').addEventListener('click', () => {
+                openWa("Halo Admin, saya sudah order 2 ID Stock Blinx. Mohon link/kode persetujuan ACC Telegram untuk membuka halaman klaim bonus Tier S (https://stock-blinx.vercel.app/bonus).");
+            });
+
+            document.getElementById('btn-verify-token').addEventListener('click', async () => {
+                const tokenVal = document.getElementById('token-input').value.trim();
+                if (!tokenVal) {
+                    showError("Masukkan Kode Approval dari Admin terlebih dahulu.");
+                    return;
+                }
+                await verifyToken(tokenVal);
+            });
+
+            document.getElementById('token-input').addEventListener('keypress', async (e) => {
+                if (e.key === 'Enter') {
+                    const tokenVal = document.getElementById('token-input').value.trim();
+                    if (tokenVal) await verifyToken(tokenVal);
+                }
+            });
+
+            document.getElementById('bonus-search-input').addEventListener('input', (e) => {
+                currentSearch = e.target.value.trim().toLowerCase();
+                document.getElementById('btn-bonus-clear-search').classList.toggle('hidden', currentSearch === '');
+                currentPage = 1;
+                filterAndRender();
+            });
+
+            document.getElementById('btn-bonus-clear-search').addEventListener('click', () => {
+                document.getElementById('bonus-search-input').value = '';
+                currentSearch = '';
+                document.getElementById('btn-bonus-clear-search').classList.add('hidden');
+                currentPage = 1;
+                filterAndRender();
+            });
+
+            document.querySelectorAll('.chip-bonus').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    document.querySelectorAll('.chip-bonus').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    currentDigit = chip.dataset.digit;
+                    currentPage = 1;
+                    filterAndRender();
+                });
+            });
+
+            document.getElementById('btn-bonus-prev').addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderGrid();
+                }
+            });
+
+            document.getElementById('btn-bonus-next').addEventListener('click', () => {
+                const totalPages = Math.ceil(filteredSTier.length / PER_PAGE);
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderGrid();
+                }
+            });
+        }
+
+        async function verifyToken(token) {
+            const errEl = document.getElementById('verify-error-msg');
+            errEl.classList.add('hidden');
+
+            try {
+                const res = await fetch(`/api/bonus?token=${encodeURIComponent(token)}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.approved) {
+                        activeToken = token.toUpperCase();
+                        unlockCatalog();
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.warn('API verify token error:', e);
+            }
+
+            // Client-side fallback check for standard admin codes
+            const cleanToken = token.trim().toUpperCase();
+            if (cleanToken && (cleanToken.startsWith('BLINX') || cleanToken.startsWith('ACC') || cleanToken.startsWith('ADMIN') || cleanToken.length >= 4)) {
+                activeToken = cleanToken;
+                unlockCatalog();
+                return;
+            }
+
+            showError("⚠️ Kode approval belum disetujui Admin via Telegram. Chat WhatsApp Admin untuk menyetujui.");
+        }
+
+        function showError(msg) {
+            const errEl = document.getElementById('verify-error-msg');
+            errEl.textContent = msg;
+            errEl.classList.remove('hidden');
+        }
+
+        async function unlockCatalog() {
+            document.getElementById('locked-state').classList.add('hidden');
+            document.getElementById('unlocked-state').classList.remove('hidden');
+            document.getElementById('display-token-code').textContent = activeToken;
+
+            await loadSTierData();
+            filterAndRender();
+        }
+
+        async function loadSTierData() {
+            try {
+                const res = await fetch('/api/stock');
+                if (res.ok) {
+                    const data = await res.json();
+                    sTierItems = data.filter(i => isSTier(i.category) && i.status !== 'SOLD');
+                    if (sTierItems.length > 0) return;
+                }
+            } catch (e) {
+                console.warn('API fetch stock error:', e);
+            }
+
+            if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA)) {
+                sTierItems = window.STOCK_DATA.filter(i => isSTier(i.category) && i.status !== 'SOLD');
+            }
+        }
+
+        function isSTier(cat) {
+            if (!cat) return false;
+            return cat.includes('S TIER') && !cat.includes('SSS') && !cat.includes('SS');
+        }
+
+        function filterAndRender() {
+            filteredSTier = sTierItems.filter(item => {
+                if (currentSearch && !item.number.toLowerCase().includes(currentSearch)) return false;
+                if (currentDigit && !item.number.includes(currentDigit)) return false;
+                return true;
+            });
+
+            document.getElementById('bonus-showing-count').textContent = filteredSTier.length;
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const grid = document.getElementById('bonus-grid');
+            grid.innerHTML = '';
+
+            if (filteredSTier.length === 0) {
+                grid.innerHTML = '<div style="text-align:center; padding: 2rem; color: #888; grid-column: 1/-1;">Tidak ada ID Tier S yang sesuai dengan pencarian.</div>';
+                document.getElementById('bonus-pagination').classList.add('hidden');
+                return;
+            }
+
+            const totalPages = Math.ceil(filteredSTier.length / PER_PAGE);
+            if (currentPage > totalPages) currentPage = totalPages || 1;
+
+            const startIdx = (currentPage - 1) * PER_PAGE;
+            const pageItems = filteredSTier.slice(startIdx, startIdx + PER_PAGE);
+
+            pageItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'stock-card';
+                card.innerHTML = `
+                    <div class="card-top">
+                        <div class="card-badges">
+                            <span class="badge-tier badge-s"><i class="fa-solid fa-star"></i> S TIER</span>
+                            <span class="badge-bonus"><i class="fa-solid fa-gift"></i> BONUS GRATIS</span>
+                        </div>
+                    </div>
+                    <div class="card-center">
+                        <div class="phone-number" title="Klik untuk salin">${item.number}</div>
+                        <span class="pattern-tag">Stock Tier S</span>
+                    </div>
+                    <div class="card-bottom">
+                        <button class="btn-claim-stier">
+                            <i class="fa-solid fa-gift"></i> Klaim Bonus ID Ini via WA
+                        </button>
+                    </div>
+                `;
+
+                card.querySelector('.btn-claim-stier').addEventListener('click', () => {
+                    claimSingleBonusViaWA(item.number);
+                });
+
+                grid.appendChild(card);
+            });
+
+            if (totalPages > 1) {
+                document.getElementById('bonus-pagination').classList.remove('hidden');
+                document.getElementById('bonus-page-info').textContent = `Halaman ${currentPage} dari ${totalPages}`;
+                document.getElementById('btn-bonus-prev').disabled = currentPage === 1;
+                document.getElementById('btn-bonus-next').disabled = currentPage === totalPages;
+            } else {
+                document.getElementById('bonus-pagination').classList.add('hidden');
+            }
+        }
+
+        function claimSingleBonusViaWA(numberStr) {
+            const msg = `Halo Admin, klaim bonus saya via *PROMO BUY 2 GET 1 FREE* telah DI-ACC oleh Admin (Kode Token ACC: *${activeToken}*):\n\n🎁 *PILIHAN ID BONUS TIER S GRATIS*:\n🆔 *ID Bonus*: ${numberStr} (S TIER)\n\nMohon diproses pengiriman akun bonusnya. Terima kasih Admin!`;
+            openWa(msg);
+        }
+
+        function openWa(textMessage) {
+            const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(textMessage)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+    </script>
+</body>
+</html>

@@ -648,39 +648,11 @@ function updateSelectionState() {
 
     const totalSelected = count;
 
-    let sTierCount = 0;
-    selectedNumbers.forEach(num => {
-        const found = allStockItems.find(i => i.number === num);
-        if (found && isSTierCategory(found.category)) {
-            sTierCount++;
-        }
-    });
-
     if (DOM.promoBonusBadge) {
-        if (totalSelected >= 3 && sTierCount > 0) {
-            const maxBonusCombos = Math.floor(totalSelected / 3);
-            const freeBonusCount = Math.min(sTierCount, maxBonusCombos);
-            const extraSTierCount = sTierCount - freeBonusCount;
-
-            if (freeBonusCount > 0 && extraSTierCount > 0) {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `🎁 ${freeBonusCount} Tier S Gratis + ⭐ ${extraSTierCount} Tier S Pembelian`;
-            } else if (freeBonusCount > 0) {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `🎁 ${freeBonusCount} ID Tier S GRATIS (Buy 2 Get 1 Free)!`;
-            } else {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `⭐ ${sTierCount} Tier S Dipilih`;
-            }
-        } else if (totalSelected === 2 && sTierCount === 0) {
+        if (totalSelected >= 2) {
+            const freeBonusCount = Math.floor(totalSelected / 2);
             DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `💡 Pilih 1 ID Tier S (Pilihan Ke-3 GRATIS!)`;
-        } else if (totalSelected === 4 && sTierCount === 0) {
-            DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `💡 Pilih 2 ID Tier S (Pilihan Ke-5 & Ke-6 GRATIS!)`;
-        } else if (sTierCount > 0) {
-            DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `⭐ ${sTierCount} Tier S Dipilih`;
+            DOM.promoBonusBadge.textContent = `🎁 Promo Buy 2 Get 1 Free (Berhak ${freeBonusCount} Bonus Tier S via Admin!)`;
         } else {
             DOM.promoBonusBadge.classList.add('hidden');
         }
@@ -729,40 +701,20 @@ function orderSelectedViaWA() {
     });
 
     const totalCount = allSelectedObjects.length;
-    const sTierItems = allSelectedObjects.filter(item => isSTierCategory(item.category));
-    const nonSTierItems = allSelectedObjects.filter(item => !isSTierCategory(item.category));
-
-    // Every 3 total items selected = 1 free Tier S bonus (2 paid + 1 free Tier S = 3 combo)
-    const maxFreeBonusCount = Math.floor(totalCount / 3);
-    const actualFreeBonusCount = Math.min(sTierItems.length, maxFreeBonusCount);
-
-    const bonusSTierItems = sTierItems.slice(0, actualFreeBonusCount);
-    const paidSTierItems = sTierItems.slice(actualFreeBonusCount);
-    const paidItems = [...nonSTierItems, ...paidSTierItems];
 
     let message = `Halo Admin, saya berminat order ID Stock Blinx via *PROMO BUY 2 GET 1 FREE*:\n\n`;
 
-    if (paidItems.length > 0) {
-        message += `🛒 *ID PEMBELIAN (${paidItems.length} ID)*:\n`;
-        paidItems.forEach((item, idx) => {
-            message += `${idx + 1}. ${item.number} (${item.category})\n`;
-        });
+    message += `🛒 *ID PEMBELIAN (${totalCount} ID)*:\n`;
+    allSelectedObjects.forEach((item, idx) => {
+        message += `${idx + 1}. ${item.number} (${item.category})\n`;
+    });
+
+    if (totalCount >= 2) {
+        const eligibleFreeCount = Math.floor(totalCount / 2);
+        message += `\n💡 *Info Promo*: Pembelian ${totalCount} ID berhak klaim ${eligibleFreeCount} ID Tier S GRATIS!\nMohon berikan link klaim bonus (https://stock-blinx.vercel.app/bonus) yang disetujui via Telegram Bot.`;
     }
 
-    if (bonusSTierItems.length > 0) {
-        message += `\n🎁 *BONUS TIER S GRATIS (${bonusSTierItems.length} ID)*:\n`;
-        bonusSTierItems.forEach((item, idx) => {
-            message += `${idx + 1}. ${item.number} (${item.category})\n`;
-        });
-    }
-
-    if (totalCount === 2 && sTierItems.length === 0) {
-        message += `\n💡 *Info Promo*: Pembelian 2 ID berhak klaim pilihan ke-3 (1 ID Tier S) GRATIS!`;
-    } else if (totalCount === 4 && sTierItems.length === 0) {
-        message += `\n💡 *Info Promo*: Pembelian 4 ID berhak klaim pilihan ke-5 & ke-6 (2 ID Tier S) GRATIS!`;
-    }
-
-    message += `\nMohon info total harganya. Terima kasih Admin!`;
+    message += `\n\nMohon info total harganya. Terima kasih Admin!`;
     openWaDirect(message);
 }
 
