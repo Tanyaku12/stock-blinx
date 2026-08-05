@@ -240,6 +240,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16817777776",
+    "category": "SSS TIER (6x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16363588888",
     "category": "SS TIER (5x digit berulang)",
     "status": "AVAILABLE"
@@ -1615,6 +1620,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16816556787",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16816901230",
     "category": "(URUT)",
     "status": "AVAILABLE"
@@ -1631,6 +1641,11 @@ window.STOCK_DATA = [
   },
   {
     "number": "16816946789",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16818012301",
     "category": "(URUT)",
     "status": "AVAILABLE"
   },
@@ -14015,7 +14030,22 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16817186666",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16817578888",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16817777054",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16817777868",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
@@ -14036,6 +14066,11 @@ window.STOCK_DATA = [
   },
   {
     "number": "16818323333",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16818566664",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
@@ -14145,12 +14180,22 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16818888995",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16818999981",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
   {
     "number": "16819000050",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16819048888",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
   },
