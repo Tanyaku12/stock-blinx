@@ -762,8 +762,8 @@ function showToast(msg) {
 }
 
 function updateLiveClock() {
-    const clockEl = document.getElementById('live-clock');
-    if (!clockEl) return;
+    const clockElements = document.querySelectorAll('.live-clock-target, #live-clock');
+    if (!clockElements.length) return;
 
     const now = new Date();
     const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
@@ -781,7 +781,11 @@ function updateLiveClock() {
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
 
-    clockEl.textContent = `${dayName}, ${dateNum} ${monthName} ${yearNum} • ${hours}:${minutes}:${seconds} WIB`;
+    const formattedText = `${dayName}, ${dateNum} ${monthName} ${yearNum} • ${hours}:${minutes}:${seconds} WIB`;
+
+    clockElements.forEach(el => {
+        el.textContent = formattedText;
+    });
 }
 
 setInterval(updateLiveClock, 1000);

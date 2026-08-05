@@ -79,6 +79,10 @@
             </a>
 
             <div class="nav-actions">
+                <div class="header-datetime-pill">
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="live-clock-target">--</span>
+                </div>
                 <a href="/" class="btn-wa-header" style="text-decoration: none; background: var(--neo-cyan); color: #000;">
                     <i class="fa-solid fa-store"></i>
                     <span>Katalog Utama</span>
@@ -412,8 +416,8 @@
         }
 
         function updateLiveClock() {
-            const clockEl = document.getElementById('live-clock-bonus');
-            if (!clockEl) return;
+            const clockElements = document.querySelectorAll('.live-clock-target, #live-clock-bonus');
+            if (!clockElements.length) return;
 
             const now = new Date();
             const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
@@ -431,7 +435,11 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
 
-            clockEl.textContent = `${dayName}, ${dateNum} ${monthName} ${yearNum} • ${hours}:${minutes}:${seconds} WIB`;
+            const formattedText = `${dayName}, ${dateNum} ${monthName} ${yearNum} • ${hours}:${minutes}:${seconds} WIB`;
+
+            clockElements.forEach(el => {
+                el.textContent = formattedText;
+            });
         }
 
         setInterval(updateLiveClock, 1000);
