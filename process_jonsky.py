@@ -32,6 +32,10 @@ def save_json(path, data):
 # Import RAPI logic from merge_and_scan
 from merge_and_scan import extract_all_ids_from_src, update_rapi_files, get_rapi_ids, scan_duplicates_in_all, save_scan_report
 
+def get_date_str(item):
+    d = item.get("date_identified") or item.get("date_time") or ""
+    return str(d).split(".")[0]
+
 def main():
     print("=" * 60)
     print("[STEP 1] PARSING & CONSOLIDATING JONSKY-ACC DATA")
@@ -47,19 +51,31 @@ def main():
     for fpath in jonsky_files:
         print(f"Reading {fpath}...")
         with open(fpath, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
+            content = f.read().strip()
+            if not content:
+                continue
+            items = []
+            if content.startswith("["):
                 try:
-                    obj = json.loads(line)
-                    uid = obj.get("uid")
+                    items = json.loads(content)
+                except Exception as e:
+                    print(f"Error parsing json array in {fpath}: {e}")
+            else:
+                for line in content.splitlines():
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        items.append(json.loads(line))
+                    except Exception as e:
+                        print(f"Error parsing line in {fpath}: {e}")
+            for obj in items:
+                uid = obj.get("uid")
+                if uid is not None:
                     if uid not in all_by_uid:
                         all_by_uid[uid] = dict(obj)
                     else:
                         all_by_uid[uid].update(obj)
-                except Exception as e:
-                    print(f"Error parsing line in {fpath}: {e}")
 
     print(f"Total consolidated unique accounts from JONSKY-ACC: {len(all_by_uid)}")
 
@@ -81,7 +97,7 @@ def main():
                 "account_id": str(item.get("account_id", "")),
                 "name": item.get("name", ""),
                 "region": item.get("region", "ID"),
-                "date_created": item.get("date_time", item.get("date_identified", "")).split(".")[0],
+                "date_created": get_date_str(item),
                 "thread_id": item.get("thread_id", 0)
             }
             existing_accs.append(std_acc)
@@ -105,7 +121,7 @@ def main():
                 "jwt_token": item.get("jwt_token", ""),
                 "name": item.get("name", ""),
                 "password": item.get("password", ""),
-                "date_time": item.get("date_time", item.get("date_identified", "")).split(".")[0],
+                "date_time": get_date_str(item),
                 "region": item.get("region", "ID"),
                 "thread_id": item.get("thread_id", 0)
             }
@@ -138,7 +154,7 @@ def main():
                 "rarity_type": item.get("rarity_level", "RARE"),
                 "rarity_score": item.get("rarity_score", 0),
                 "reason": item.get("reason", ""),
-                "date_identified": item.get("date_identified", item.get("date_time", "")).split(".")[0],
+                "date_identified": get_date_str(item),
                 "jwt_token": item.get("jwt_token", ""),
                 "thread_id": item.get("thread_id", 0)
             }
@@ -169,7 +185,7 @@ def main():
                 "rarity_type": item.get("rarity_level", "RARE"),
                 "rarity_score": item.get("rarity_score", 0),
                 "reason": item.get("reason", ""),
-                "date_identified": item.get("date_identified", item.get("date_time", "")).split(".")[0],
+                "date_identified": get_date_str(item),
                 "jwt_token": item.get("jwt_token", ""),
                 "thread_id": item.get("thread_id", 0)
             }

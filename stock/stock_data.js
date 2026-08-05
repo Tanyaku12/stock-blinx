@@ -13950,6 +13950,36 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16815800006",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16815800009",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16816016666",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16816048888",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16816100001",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16816404444",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16555655555",
     "category": "SS TIER (5x digit berulang)",
     "status": "SOLD"
