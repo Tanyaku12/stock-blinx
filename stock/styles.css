@@ -281,6 +281,7 @@ input, select { font-family: inherit; }
 .tab-btn.tab-ss.active   { background: var(--neo-cyan);   color: #000; }
 .tab-btn.tab-urut.active { background: var(--neo-green);  color: #000; }
 .tab-btn.tab-s.active    { background: var(--neo-purple); color: #fff; }
+.tab-btn.tab-bonus.active{ background: linear-gradient(135deg, #a855f7, #ec4899); color: #fff; }
 .tab-btn.tab-fav.active  { background: var(--neo-pink);   color: #fff; }
 
 .filter-toolbar {
@@ -432,6 +433,7 @@ input, select { font-family: inherit; }
 .badge-ss   { background: var(--neo-cyan);   color: #000; }
 .badge-urut { background: var(--neo-green);  color: #000; }
 .badge-s    { background: var(--neo-purple); color: #fff; }
+.badge-bonus{ background: linear-gradient(135deg, #a855f7, #ec4899); color: #fff; }
 
 .badge-bonus-stier {
     display: inline-flex; align-items: center; gap: 0.35rem;

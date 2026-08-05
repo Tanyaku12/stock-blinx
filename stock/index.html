@@ -103,11 +103,11 @@
                     <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
                     <div class="promo-text">
                         <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
-                        <p>Setiap pembelian <strong>2 ID (Semua Tier: SSS, SS, URUT, atau S-Tier)</strong>, Kamu berhak mendapatkan <strong>1 ID S-Tier GRATIS</strong>! Promo berlaku untuk seluruh pilihan stok.</p>
+                        <p>Setiap pembelian <strong>2 ID (SSS, SS, URUT, atau S-Tier)</strong>, Kamu berhak mendapatkan <strong>1 ID Bonus GRATIS</strong> dari Tabel Bonus!</p>
                     </div>
                 </div>
                 <button id="btn-open-stier-modal" class="btn-stier-trigger">
-                    <i class="fa-solid fa-eye"></i> Lihat Stock Bonus S-Tier (<span id="stier-total-count">2,250</span>)
+                    <i class="fa-solid fa-gift"></i> Lihat Tabel Stock Bonus (<span id="stier-total-count">0</span>)
                 </button>
             </div>
         </section>
@@ -141,6 +141,9 @@
                     <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
                         <i class="fa-solid fa-star"></i> S Tier (<span id="tab-count-s">0</span>)
                     </button>
+                    <button class="tab-btn tab-bonus" data-category="BONUS TIER">
+                        <i class="fa-solid fa-gift"></i> Bonus (<span id="tab-count-bonus">0</span>)
+                    </button>
                     <button class="tab-btn tab-fav" data-category="FAVORITE">
                         <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
                     </button>
@@ -165,7 +168,7 @@
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
-                                <option value="tier">Prioritas Tier (SSS → SS → URUT → S)</option>
+                                <option value="tier">Prioritas Tier (SSS → SS → URUT → S → Bonus)</option>
                                 <option value="num-asc">ID (Terkecil)</option>
                                 <option value="num-desc">ID (Terbesar)</option>
                             </select>
@@ -180,7 +183,7 @@
             <div class="catalog-header">
                 <div class="result-info">
                     <h2>Menampilkan <span id="showing-count">0</span> Stock Ready</h2>
-                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT, S)</p>
+                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT, S, BONUS)</p>
                 </div>
             </div>
 
@@ -210,29 +213,29 @@
         </section>
     </main>
 
-    <!-- Modal Seluruh S-Tier Bonus -->
+    <!-- Modal Seluruh Stock Bonus -->
     <div id="stier-modal" class="modal-overlay hidden">
         <div class="modal-card">
             <div class="modal-header">
                 <div class="modal-title">
                     <i class="fa-solid fa-gift text-purple"></i>
-                    <h2>Katalog Stock Bonus S-Tier (<span id="modal-stier-count">2,250</span>)</h2>
+                    <h2>Katalog Stock Bonus (<span id="modal-stier-count">0</span>)</h2>
                 </div>
                 <button id="btn-close-stier-modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
             <div class="modal-body">
                 <p class="modal-desc" id="stier-modal-desc">
-                    💡 Pilih ID S-Tier favoritmu sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 ID Utama (SSS/SS/URUT).
+                    💡 Pilih ID pilihanmu dari <strong>Tabel Stock Bonus</strong> sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 ID.
                 </p>
 
                 <!-- Search Inside Modal -->
                 <div class="search-box modal-search">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="stier-modal-search" placeholder="Cari digit ID S-Tier (cth: 7777, 8888, 0000)..." autocomplete="off">
+                    <input type="text" id="stier-modal-search" placeholder="Cari digit ID Bonus (cth: 7777, 8888, 0000)..." autocomplete="off">
                 </div>
 
-                <!-- S-Tier Grid List Container -->
+                <!-- Bonus Grid List Container -->
                 <div id="stier-modal-grid" class="stock-grid view-list modal-grid-container"></div>
                 
                 <!-- Pagination inside Modal -->
