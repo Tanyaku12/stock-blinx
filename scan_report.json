@@ -1,10 +1,10 @@
 {
   "total_duplicate_categories": 5,
   "summary": {
-    "ACCOUNTS": 2144,
-    "RARE": 2619,
-    "TOKENS": 2271,
-    "HUNTER": 2441,
+    "ACCOUNTS": 2145,
+    "RARE": 2620,
+    "TOKENS": 2272,
+    "HUNTER": 2442,
     "COUPLES": 34
   },
   "details": {
@@ -19304,6 +19304,15 @@
         "region": "ID",
         "date_created": "2026-08-05 20:36:01",
         "thread_id": 359
+      },
+      {
+        "uid": 6169984502,
+        "password": "BLINXANDSLVFFY_CSx08oVz",
+        "account_id": "16815888840",
+        "name": "blinx★⁷²⁷⁰",
+        "region": "ID",
+        "date_created": "2026-08-05 20:05:08",
+        "thread_id": 572
       }
     ],
     "RARE": [
@@ -53529,6 +53538,19 @@
         "date_identified": "2026-08-05 20:36:01",
         "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxNjQwNDQ0NCwibmlja25hbWUiOiIwL2lSMnFHK0FROExWaHlFNWRMYnM0V0V1TnFHNU5UYXFKTT0iLCJub3RpX3JlZ2lvbiI6IlNHIiwibG9ja19yZWdpb24iOiIiLCJleHRlcm5hbF9pZCI6Ijg3NDFkODUwZWIyNjAwNWNlNTg1ZTAwNDZkZmQ5MjI5IiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MSwiY2xpZW50X3ZlcnNpb24iOiIxLjExNC4xMyIsImVtdWxhdG9yX3Njb3JlIjoxMDAsImlzX2VtdWxhdG9yIjp0cnVlLCJjb3VudHJ5X2NvZGUiOiJVUyIsImV4dGVybmFsX3VpZCI6NjE3MTEzMzA2OSwicmVnX2F2YXRhciI6MTAyMDAwMDA3LCJzb3VyY2UiOjAsImxvY2tfcmVnaW9uX3RpbWUiOjAsImNsaWVudF90eXBlIjoyLCJzaWduYXR1cmVfbWQ1IjoiNzQyOGIyNTNkZWZjMTY0MDE4YzYwNGExZWJiZmViZGYiLCJ1c2luZ192ZXJzaW9uIjoxLCJyZWxlYXNlX2NoYW5uZWwiOiJhbmRyb2lkIiwicmVsZWFzZV92ZXJzaW9uIjoiT0I1NCIsImV4cCI6MTc4NTk2NTc2MH0._NhYBvYbqyZn1uNEy_y0ThSyd8W539vzFnfktjPQUKA",
         "thread_id": 359
+      },
+      {
+        "uid": 6169984502,
+        "password": "BLINXANDSLVFFY_CSx08oVz",
+        "account_id": "16815888840",
+        "name": "blinx★⁷²⁷⁰",
+        "region": "ID",
+        "rarity_type": "LEGENDARY",
+        "rarity_score": 30,
+        "reason": "ID:16815888840 | Score:30 | R4,SPM,QD,CLEAN_DIGIT,TRIPLE_EIGHT_NINE,SUPER_RARE_BONUS,ULTRA_RARE_BONUS",
+        "date_identified": "2026-08-05 20:05:08",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxNTg4ODg0MCwibmlja25hbWUiOiJVd2xjVmtIYSsrYUF1ZE9rMW9hNGhkUG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJiMDdlMGQyNjJhZTllYjIxNmMzMjAyYWU5NjQ4MjAyNCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxNjk5ODQ1MDIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5NjM5MDh9.yrT_7wdB7kHQcDhN8nsbeszNuy1Uy2rvW8n8wYawrZ0",
+        "thread_id": 572
       }
     ],
     "TOKENS": [
@@ -76417,6 +76439,16 @@
         "date_time": "2026-08-05 20:36:01",
         "region": "ID",
         "thread_id": 359
+      },
+      {
+        "uid": 6169984502,
+        "account_id": "16815888840",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxNTg4ODg0MCwibmlja25hbWUiOiJVd2xjVmtIYSsrYUF1ZE9rMW9hNGhkUG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJiMDdlMGQyNjJhZTllYjIxNmMzMjAyYWU5NjQ4MjAyNCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxNjk5ODQ1MDIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5NjM5MDh9.yrT_7wdB7kHQcDhN8nsbeszNuy1Uy2rvW8n8wYawrZ0",
+        "name": "blinx★⁷²⁷⁰",
+        "password": "BLINXANDSLVFFY_CSx08oVz",
+        "date_time": "2026-08-05 20:05:08",
+        "region": "ID",
+        "thread_id": 572
       }
     ],
     "HUNTER": [
@@ -96887,6 +96919,20 @@
         "date_identified": "2026-08-05 20:13:02",
         "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxNjAxNjY2Niwibmlja25hbWUiOiJVd2xjVmtINjBZSGppSWJuMUlhNGhkUDZsSURsOUE9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiMTgwNzFkNmRlYmNmN2RiOWUxMjY5ZjUwNzllNWYwNzMiLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IkpQIiwiZXh0ZXJuYWxfdWlkIjo2MTcwMjg0Njc2LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1OTY0MzgxfQ.9WwqFEw8OYDVhmDWuHfVNg-Z5K2oL28vGd2tPwkk9Ss",
         "thread_id": 221
+      },
+      {
+        "file": "hunter-30.json",
+        "uid": 6169984502,
+        "password": "BLINXANDSLVFFY_CSx08oVz",
+        "account_id": "16815888840",
+        "name": "blinx★⁷²⁷⁰",
+        "region": "ID",
+        "rarity_type": "LEGENDARY",
+        "rarity_score": 30,
+        "reason": "ID:16815888840 | Score:30 | R4,SPM,QD,CLEAN_DIGIT,TRIPLE_EIGHT_NINE,SUPER_RARE_BONUS,ULTRA_RARE_BONUS",
+        "date_identified": "2026-08-05 20:05:08",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgxNTg4ODg0MCwibmlja25hbWUiOiJVd2xjVmtIYSsrYUF1ZE9rMW9hNGhkUG5pUT09Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJiMDdlMGQyNjJhZTllYjIxNmMzMjAyYWU5NjQ4MjAyNCIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiVVMiLCJleHRlcm5hbF91aWQiOjYxNjk5ODQ1MDIsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5NjM5MDh9.yrT_7wdB7kHQcDhN8nsbeszNuy1Uy2rvW8n8wYawrZ0",
+        "thread_id": 572
       },
       {
         "file": "hunter-19.json",
