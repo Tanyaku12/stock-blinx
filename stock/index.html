@@ -61,7 +61,7 @@
                     <h1>Katalog Stock <span class="text-gradient">Blinx &amp; Rare IDs</span></h1>
                     <p>Temukan ID cantik impianmu dari <strong id="total-hero-stock">0</strong> pilihan stock utama ready. Order langsung terhubung ke WhatsApp Admin.</p>
 
-                    <!-- Quick Stats Cards (Hanya Stock Utama: SSS, SS, URUT) -->
+                    <!-- Quick Stats Cards (SSS, SS, URUT, S TIER) -->
                     <div class="hero-stats-grid">
                         <div class="stat-card stat-sss" onclick="filterCategory('SSS TIER (6x digit berulang)')">
                             <div class="stat-icon"><i class="fa-solid fa-crown"></i></div>
@@ -84,6 +84,13 @@
                                 <span class="stat-lbl">Urut · Sequential</span>
                             </div>
                         </div>
+                        <div class="stat-card stat-s" onclick="filterCategory('S TIER (4x digit berulang)')">
+                            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-val" id="count-s">0</span>
+                                <span class="stat-lbl">S Tier · 4x Digit</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,7 +103,7 @@
                     <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
                     <div class="promo-text">
                         <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
-                        <p>Setiap pembelian <strong>2 ID Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 ID S-Tier GRATIS</strong>!</p>
+                        <p>Setiap pembelian <strong>2 ID Utama</strong> (SSS, SS, atau URUT), Kamu berhak mendapatkan <strong>1 ID S-Tier GRATIS</strong>! S-Tier juga dapat dibeli secara eceran.</p>
                     </div>
                 </div>
                 <button id="btn-open-stier-modal" class="btn-stier-trigger">
@@ -111,13 +118,13 @@
                 <!-- Search Box -->
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Cari digit ID utama (cth: 6666, 888, 123)..." autocomplete="off">
+                    <input type="text" id="search-input" placeholder="Cari digit ID (cth: 6666, 888, 123)..." autocomplete="off">
                     <button id="btn-clear-search" class="btn-clear hidden" title="Bersihkan pencarian">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
 
-                <!-- Category Tabs (Tanpa S-Tier) -->
+                <!-- Category Tabs -->
                 <div class="category-tabs" id="category-tabs">
                     <button class="tab-btn active" data-category="ALL">
                         <i class="fa-solid fa-border-all"></i> Semua (<span id="tab-count-all">0</span>)
@@ -130,6 +137,9 @@
                     </button>
                     <button class="tab-btn tab-urut" data-category="(URUT)">
                         <i class="fa-solid fa-arrow-trend-up"></i> Urut (<span id="tab-count-urut">0</span>)
+                    </button>
+                    <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
+                        <i class="fa-solid fa-star"></i> S Tier (<span id="tab-count-s">0</span>)
                     </button>
                     <button class="tab-btn tab-fav" data-category="FAVORITE">
                         <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
@@ -155,7 +165,7 @@
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
-                                <option value="tier">Prioritas Tier (SSS → SS → URUT)</option>
+                                <option value="tier">Prioritas Tier (SSS → SS → URUT → S)</option>
                                 <option value="num-asc">ID (Terkecil)</option>
                                 <option value="num-desc">ID (Terbesar)</option>
                             </select>
@@ -169,8 +179,8 @@
         <section class="catalog-section">
             <div class="catalog-header">
                 <div class="result-info">
-                    <h2>Menampilkan <span id="showing-count">0</span> Stock Utama</h2>
-                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT)</p>
+                    <h2>Menampilkan <span id="showing-count">0</span> Stock Ready</h2>
+                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT, S)</p>
                 </div>
             </div>
 
