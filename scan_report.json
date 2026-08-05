@@ -1,10 +1,10 @@
 {
   "total_duplicate_categories": 5,
   "summary": {
-    "ACCOUNTS": 2038,
-    "RARE": 2514,
-    "TOKENS": 2165,
-    "HUNTER": 2336,
+    "ACCOUNTS": 2039,
+    "RARE": 2515,
+    "TOKENS": 2166,
+    "HUNTER": 2337,
     "COUPLES": 34
   },
   "details": {
@@ -18350,6 +18350,15 @@
         "region": "ID",
         "date_created": "2026-08-05 05:32:01",
         "thread_id": 347
+      },
+      {
+        "uid": 6150554983,
+        "password": "BLINXANDSLVFFY_e9eXjE6q",
+        "account_id": "16809022222",
+        "name": "blinx✬⁴⁸⁹⁹",
+        "region": "ID",
+        "date_created": "2026-08-05 13:21:09",
+        "thread_id": 22
       }
     ],
     "RARE": [
@@ -51210,6 +51219,19 @@
         "date_identified": "2026-08-05 05:23:02",
         "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgwMjIwMDAwOCwibmlja25hbWUiOiJVd2xjVmtIYTR0cWdnWWJuMDRhNGhOUG5xSUQ0ekE9PSIsIm5vdGlfcmVnaW9uIjoiU0ciLCJsb2NrX3JlZ2lvbiI6IiIsImV4dGVybmFsX2lkIjoiYzdmNWFmMzliMTdhYzI2MzBjMjI0ZWY4Mzk1NzI1YzciLCJleHRlcm5hbF90eXBlIjo0LCJwbGF0X2lkIjoxLCJjbGllbnRfdmVyc2lvbiI6IjEuMTE0LjEzIiwiZW11bGF0b3Jfc2NvcmUiOjEwMCwiaXNfZW11bGF0b3IiOnRydWUsImNvdW50cnlfY29kZSI6IklMIiwiZXh0ZXJuYWxfdWlkIjo2MTMzMDIxNTQ5LCJyZWdfYXZhdGFyIjoxMDIwMDAwMDcsInNvdXJjZSI6MCwibG9ja19yZWdpb25fdGltZSI6MCwiY2xpZW50X3R5cGUiOjIsInNpZ25hdHVyZV9tZDUiOiI3NDI4YjI1M2RlZmMxNjQwMThjNjA0YTFlYmJmZWJkZiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImFuZHJvaWQiLCJyZWxlYXNlX3ZlcnNpb24iOiJPQjU0IiwiZXhwIjoxNzg1OTEwOTgxfQ.IoT2s8pPAIjm0EtLW6kUsj48DLjYHcD48UhpZJxagq0",
         "thread_id": 258
+      },
+      {
+        "uid": 6150554983,
+        "password": "BLINXANDSLVFFY_e9eXjE6q",
+        "account_id": "16809022222",
+        "name": "blinx✬⁴⁸⁹⁹",
+        "region": "ID",
+        "rarity_type": "RARE",
+        "rarity_score": 13,
+        "reason": "ID:16809022222 | Score:13 | R4,QD,CLEAN_DIGIT",
+        "date_identified": "2026-08-05 13:21:09",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgwOTAyMjIyMiwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZENFNWR6YnM0aUV1TnM9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjMDI4MjI0ZGQ2OGUzZTViYTY5Yjc5NGVhMTVhOGFkMSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiU0UiLCJleHRlcm5hbF91aWQiOjYxNTA1NTQ5ODMsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5Mzk2Njl9.n1rPNeK-dq1r9TOCm2b5dYnIcccvCF_XtlhsV2DHJi0",
+        "thread_id": 22
       }
     ],
     "TOKENS": [
@@ -73038,6 +73060,16 @@
         "date_time": "2026-08-05 05:32:01",
         "region": "ID",
         "thread_id": 347
+      },
+      {
+        "uid": 6150554983,
+        "account_id": "16809022222",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgwOTAyMjIyMiwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZENFNWR6YnM0aUV1TnM9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjMDI4MjI0ZGQ2OGUzZTViYTY5Yjc5NGVhMTVhOGFkMSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiU0UiLCJleHRlcm5hbF91aWQiOjYxNTA1NTQ5ODMsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5Mzk2Njl9.n1rPNeK-dq1r9TOCm2b5dYnIcccvCF_XtlhsV2DHJi0",
+        "name": "blinx✬⁴⁸⁹⁹",
+        "password": "BLINXANDSLVFFY_e9eXjE6q",
+        "date_time": "2026-08-05 13:21:09",
+        "region": "ID",
+        "thread_id": 22
       }
     ],
     "HUNTER": [
@@ -88958,6 +88990,20 @@
         "date_identified": "2026-08-05 04:13:08",
         "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgwMTIzNzY5NSwibmlja25hbWUiOiJVd2xjVmtIYSsrV0F1ZDJFNWR6YnM0bUV1Tlk9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiI2YmJjNzBiNmM1ZWJmMDZjMGI2YWJmZjNiMDIxMzcyOSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiUlUiLCJleHRlcm5hbF91aWQiOjYxMzA2MDkxNjQsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5MDY3ODh9.LLE_7UfAMBKPm5BGWNi-8kIDzlrzxl3wosBKRdgd5gQ",
         "thread_id": 804
+      },
+      {
+        "file": "hunter-13.json",
+        "uid": 6150554983,
+        "password": "BLINXANDSLVFFY_e9eXjE6q",
+        "account_id": "16809022222",
+        "name": "blinx✬⁴⁸⁹⁹",
+        "region": "ID",
+        "rarity_type": "RARE",
+        "rarity_score": 13,
+        "reason": "ID:16809022222 | Score:13 | R4,QD,CLEAN_DIGIT",
+        "date_identified": "2026-08-05 13:21:09",
+        "jwt_token": "eyJhbGciOiJIUzI1NiIsInN2ciI6IiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoxNjgwOTAyMjIyMiwibmlja25hbWUiOiJVd2xjVmtIYS84K0F1ZENFNWR6YnM0aUV1TnM9Iiwibm90aV9yZWdpb24iOiJTRyIsImxvY2tfcmVnaW9uIjoiIiwiZXh0ZXJuYWxfaWQiOiJjMDI4MjI0ZGQ2OGUzZTViYTY5Yjc5NGVhMTVhOGFkMSIsImV4dGVybmFsX3R5cGUiOjQsInBsYXRfaWQiOjEsImNsaWVudF92ZXJzaW9uIjoiMS4xMTQuMTMiLCJlbXVsYXRvcl9zY29yZSI6MTAwLCJpc19lbXVsYXRvciI6dHJ1ZSwiY291bnRyeV9jb2RlIjoiU0UiLCJleHRlcm5hbF91aWQiOjYxNTA1NTQ5ODMsInJlZ19hdmF0YXIiOjEwMjAwMDAwNywic291cmNlIjowLCJsb2NrX3JlZ2lvbl90aW1lIjowLCJjbGllbnRfdHlwZSI6Miwic2lnbmF0dXJlX21kNSI6Ijc0MjhiMjUzZGVmYzE2NDAxOGM2MDRhMWViYmZlYmRmIiwidXNpbmdfdmVyc2lvbiI6MSwicmVsZWFzZV9jaGFubmVsIjoiYW5kcm9pZCIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNTQiLCJleHAiOjE3ODU5Mzk2Njl9.n1rPNeK-dq1r9TOCm2b5dYnIcccvCF_XtlhsV2DHJi0",
+        "thread_id": 22
       },
       {
         "file": "hunter-36.json",
