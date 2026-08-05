@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Blinx - Klaim Bonus Tier S (Persetujuan Admin Telegram)</title>
-    <meta name="description" content="Katalog Klaim Bonus Tier S Stock Blinx khusus untuk pelanggan yang telah disetujui oleh Admin via Telegram.">
+    <title>Stock Blinx - Katalog Bonus Tier S (Buy 2 Get 1 Free)</title>
+    <meta name="description" content="Katalog Stok Bonus Tier S Stock Blinx untuk klaim ID Gratis Promo Buy 2 Get 1 Free.">
 
     <!-- Google Fonts — Neobrutalism & High Contrast Mono Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
     <meta http-equiv="Expires" content="0">
 
     <!-- Custom Neobrutalism CSS -->
-    <link rel="stylesheet" href="styles.css?v=20260805_v1">
+    <link rel="stylesheet" href="styles.css?v=20260805_v2">
     <style>
         .bonus-hero {
             background: linear-gradient(135deg, #1e1b4b, #31104b);
@@ -31,24 +31,7 @@
             margin-bottom: 2rem;
             color: #fff;
         }
-        .locked-card {
-            background: #141722;
-            border: 3px solid #000;
-            box-shadow: var(--shadow-neo);
-            border-radius: 14px;
-            padding: 3rem 1.5rem;
-            text-align: center;
-            max-width: 620px;
-            margin: 2rem auto;
-            color: #fff;
-        }
-        .locked-icon {
-            font-size: 3.5rem;
-            color: var(--neo-pink);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 0px #000;
-        }
-        .unlocked-banner {
+        .promo-info-banner {
             background: linear-gradient(135deg, #059669, #0d9488);
             border: 3px solid #000;
             box-shadow: var(--shadow-neo);
@@ -59,25 +42,6 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-        }
-        .token-input-group {
-            display: flex;
-            gap: 0.5rem;
-            max-width: 420px;
-            margin: 1.5rem auto;
-        }
-        .token-input-group input {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            border: 2px solid #000;
-            border-radius: 8px;
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            font-weight: 700;
-            background: #090b0e;
-            color: #fff;
-            box-shadow: 2px 2px 0px #000;
-            text-transform: uppercase;
         }
         .btn-claim-stier {
             width: 100%;
@@ -110,7 +74,7 @@
                 </div>
                 <div class="brand-text">
                     <span class="brand-name">STOCK <span class="highlight">BLINX</span></span>
-                    <span class="brand-sub">Katalog Bonus Tier S Resmi</span>
+                    <span class="brand-sub">Katalog Bonus Tier S</span>
                 </div>
             </a>
 
@@ -131,47 +95,19 @@
     <main class="main-content">
         <!-- Hero Section -->
         <section class="bonus-hero">
-            <div class="hero-badge" style="background: var(--neo-pink); color: #fff;">OFFICIAL BONUS TIER S CLAIM</div>
+            <div class="hero-badge" style="background: var(--neo-pink); color: #fff;">PROMO BUY 2 GET 1 FREE</div>
             <h1 style="font-size: 2.2rem; margin: 0.75rem 0;">Katalog <span class="text-gradient">Bonus Tier S</span> Stock Blinx</h1>
-            <p>Halaman khusus klaim 1 ID Tier S GRATIS untuk pembelian 2 ID. Akses dibuka setelah disetujui Admin via Telegram.</p>
+            <p>Pilih ID Tier S favoritmu di bawah ini sebagai <strong>1 ID Bonus GRATIS</strong> untuk setiap pembelian 2 ID!</p>
         </section>
 
-        <!-- STATE 1: LOCKED CARD (Shown if token is invalid or unapproved) -->
-        <div id="locked-state" class="locked-card">
-            <i class="fa-solid fa-lock locked-icon"></i>
-            <h2 style="font-size: 1.6rem; margin-bottom: 0.75rem;">Akses Klaim Bonus Terkunci</h2>
-            <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
-                Halaman ini hanya dapat diakses apabila Admin telah menyetujui klaim bonus Anda melalui <strong>Bot Telegram Admin</strong>.<br>
-                Silakan lakukan pembelian 2 ID terlebih dahulu via WhatsApp, kemudian masukkan <strong>Kode Approval</strong> dari Admin di bawah ini.
-            </p>
-
-            <div class="token-input-group">
-                <input type="text" id="token-input" placeholder="Masukkan Kode ACC Admin..." autocomplete="off">
-                <button id="btn-verify-token" class="btn-primary" style="padding: 0.75rem 1.25rem;">
-                    <i class="fa-solid fa-key"></i> Buka
-                </button>
-            </div>
-
-            <div id="verify-error-msg" style="color: #f43f5e; font-weight: 800; font-size: 0.9rem; margin-top: 0.5rem;" class="hidden">
-                ⚠️ Kode approval tidak ditemukan atau belum disetujui Admin.
-            </div>
-
-            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px dashed #2d3748;">
-                <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem;">Belum order 2 ID atau belum dapat kode approval Admin?</p>
-                <button id="btn-wa-request-access" class="btn-primary" style="background: #25d366; color: #000; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Chat Admin WhatsApp
-                </button>
-            </div>
-        </div>
-
-        <!-- STATE 2: UNLOCKED BONUS CATALOG (Shown when token is valid and approved) -->
-        <div id="unlocked-state" class="hidden">
-            <div class="unlocked-banner">
-                <i class="fa-solid fa-circle-check" style="font-size: 2rem; color: #6ee7b7;"></i>
+        <!-- UNLOCKED BONUS CATALOG -->
+        <div>
+            <div class="promo-info-banner">
+                <i class="fa-solid fa-gift" style="font-size: 2.2rem; color: #fef08a;"></i>
                 <div>
-                    <h3 style="margin: 0 0 0.25rem 0;">Akses Klaim Bonus Disetujui Admin!</h3>
+                    <h3 style="margin: 0 0 0.25rem 0;">Pilih Bonus Tier S Kamu!</h3>
                     <p style="margin: 0; font-size: 0.9rem; opacity: 0.95;">
-                        Persetujuan Token <strong id="display-token-code">CODE</strong> Terverifikasi! Silakan pilih <strong>1 ID Tier S favoritmu</strong> di bawah ini untuk diklaim secara GRATIS.
+                        Setiap order 2 ID di katalog utama berhak klaim 1 ID Tier S di bawah ini secara <strong>GRATIS</strong>. Klik tombol klaim untuk mengirim pilihan ke WhatsApp Admin.
                     </p>
                 </div>
             </div>
@@ -232,7 +168,7 @@
                 <div class="logo-icon small"><i class="fa-solid fa-gem"></i></div>
                 <span>STOCK BLINX</span>
             </div>
-            <p>&copy; 2026 Stock Blinx. Official Bonus Tier S Claim System.</p>
+            <p>&copy; 2026 Stock Blinx. Official Bonus Tier S Claim Catalog.</p>
         </div>
     </footer>
 
@@ -246,7 +182,6 @@
     <script src="stock_data.js?v=20260803_v2"></script>
     <script>
         const ADMIN_WA = "62882003619577";
-        let activeToken = "";
         let sTierItems = [];
         let filteredSTier = [];
         let currentSearch = "";
@@ -260,38 +195,13 @@
 
         async function initBonusPage() {
             setupEventListeners();
-            const urlParams = new URLSearchParams(window.location.search);
-            const tokenFromUrl = urlParams.get('token') || urlParams.get('code') || "";
-
-            if (tokenFromUrl) {
-                document.getElementById('token-input').value = tokenFromUrl;
-                await verifyToken(tokenFromUrl);
-            }
+            await loadSTierData();
+            filterAndRender();
         }
 
         function setupEventListeners() {
             document.getElementById('btn-wa-bonus-nav').addEventListener('click', () => {
-                openWa("Halo Admin, saya ingin menanyakan klaim link bonus Tier S (https://stock-blinx.vercel.app/bonus).");
-            });
-
-            document.getElementById('btn-wa-request-access').addEventListener('click', () => {
-                openWa("Halo Admin, saya sudah order 2 ID Stock Blinx. Mohon link/kode persetujuan ACC Telegram untuk membuka halaman klaim bonus Tier S (https://stock-blinx.vercel.app/bonus).");
-            });
-
-            document.getElementById('btn-verify-token').addEventListener('click', async () => {
-                const tokenVal = document.getElementById('token-input').value.trim();
-                if (!tokenVal) {
-                    showError("Masukkan Kode Approval dari Admin terlebih dahulu.");
-                    return;
-                }
-                await verifyToken(tokenVal);
-            });
-
-            document.getElementById('token-input').addEventListener('keypress', async (e) => {
-                if (e.key === 'Enter') {
-                    const tokenVal = document.getElementById('token-input').value.trim();
-                    if (tokenVal) await verifyToken(tokenVal);
-                }
+                openWa("Halo Admin, saya ingin menanyakan klaim bonus Tier S (https://stock-blinx.vercel.app/bonus).");
             });
 
             document.getElementById('bonus-search-input').addEventListener('input', (e) => {
@@ -333,50 +243,6 @@
                     renderGrid();
                 }
             });
-        }
-
-        async function verifyToken(token) {
-            const errEl = document.getElementById('verify-error-msg');
-            errEl.classList.add('hidden');
-
-            try {
-                const res = await fetch(`/api/bonus?token=${encodeURIComponent(token)}`);
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data.approved) {
-                        activeToken = token.toUpperCase();
-                        unlockCatalog();
-                        return;
-                    }
-                }
-            } catch (e) {
-                console.warn('API verify token error:', e);
-            }
-
-            // Client-side fallback check for standard admin codes
-            const cleanToken = token.trim().toUpperCase();
-            if (cleanToken && (cleanToken.startsWith('BLINX') || cleanToken.startsWith('ACC') || cleanToken.startsWith('ADMIN') || cleanToken.length >= 4)) {
-                activeToken = cleanToken;
-                unlockCatalog();
-                return;
-            }
-
-            showError("⚠️ Kode approval belum disetujui Admin via Telegram. Chat WhatsApp Admin untuk menyetujui.");
-        }
-
-        function showError(msg) {
-            const errEl = document.getElementById('verify-error-msg');
-            errEl.textContent = msg;
-            errEl.classList.remove('hidden');
-        }
-
-        async function unlockCatalog() {
-            document.getElementById('locked-state').classList.add('hidden');
-            document.getElementById('unlocked-state').classList.remove('hidden');
-            document.getElementById('display-token-code').textContent = activeToken;
-
-            await loadSTierData();
-            filterAndRender();
         }
 
         async function loadSTierData() {
@@ -467,7 +333,7 @@
         }
 
         function claimSingleBonusViaWA(numberStr) {
-            const msg = `Halo Admin, klaim bonus saya via *PROMO BUY 2 GET 1 FREE* telah DI-ACC oleh Admin (Kode Token ACC: *${activeToken}*):\n\n🎁 *PILIHAN ID BONUS TIER S GRATIS*:\n🆔 *ID Bonus*: ${numberStr} (S TIER)\n\nMohon diproses pengiriman akun bonusnya. Terima kasih Admin!`;
+            const msg = `Halo Admin, saya mau klaim Bonus ID Tier S gratis via *PROMO BUY 2 GET 1 FREE*:\n\n🎁 *PILIHAN ID BONUS TIER S*: ${numberStr} (S TIER)\n\nApakah ID bonus ini masih ready? Terima kasih Admin!`;
             openWa(msg);
         }
 
