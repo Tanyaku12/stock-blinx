@@ -61,6 +61,14 @@
             transform: translate(-2px, -2px);
             box-shadow: 4px 4px 0px #000;
         }
+        .btn-claim-stier.disabled {
+            background: #333 !important;
+            color: #888 !important;
+            box-shadow: none !important;
+            cursor: not-allowed;
+            border-color: #000 !important;
+            transform: none !important;
+        }
     </style>
 </head>
 <body>
@@ -295,9 +303,8 @@
                 allStockItems = window.STOCK_DATA;
             }
 
-            // Exclude ALL items with status === 'SOLD'
-            // Any Tier S item marked as SOLD or listed in sold.txt is automatically HIDDEN/REMOVED from the bonus catalog
-            sTierItems = allStockItems.filter(i => isSTier(i.category) && i.status !== 'SOLD');
+            // Include ALL items (both AVAILABLE and SOLD) so SOLD status matches main catalog
+            sTierItems = allStockItems.filter(i => isSTier(i.category));
         }
 
         function parseAllTxt(rawText) {
@@ -365,13 +372,27 @@
             const pageItems = filteredSTier.slice(startIdx, startIdx + PER_PAGE);
 
             pageItems.forEach(item => {
+                const isSold = item.status === 'SOLD';
                 const card = document.createElement('div');
-                card.className = 'stock-card';
+                card.className = `stock-card ${isSold ? 'sold' : ''}`;
+
+                const statusBadgeHtml = isSold
+                    ? `<span class="badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
+                    : `<span class="badge-bonus"><i class="fa-solid fa-gift"></i> BONUS GRATIS</span>`;
+
+                const claimBtnHtml = isSold
+                    ? `<button class="btn-claim-stier disabled" disabled title="ID ini sudah terjual">
+                        <i class="fa-solid fa-ban"></i> Terjual
+                       </button>`
+                    : `<button class="btn-claim-stier">
+                        <i class="fa-solid fa-gift"></i> Klaim Bonus ID Ini via WA
+                       </button>`;
+
                 card.innerHTML = `
                     <div class="card-top">
                         <div class="card-badges">
                             <span class="badge-tier badge-s"><i class="fa-solid fa-star"></i> S TIER</span>
-                            <span class="badge-bonus"><i class="fa-solid fa-gift"></i> BONUS GRATIS</span>
+                            ${statusBadgeHtml}
                         </div>
                     </div>
                     <div class="card-center">
@@ -379,15 +400,15 @@
                         <span class="pattern-tag">Stock Tier S</span>
                     </div>
                     <div class="card-bottom">
-                        <button class="btn-claim-stier">
-                            <i class="fa-solid fa-gift"></i> Klaim Bonus ID Ini via WA
-                        </button>
+                        ${claimBtnHtml}
                     </div>
                 `;
 
-                card.querySelector('.btn-claim-stier').addEventListener('click', () => {
-                    claimSingleBonusViaWA(item.number);
-                });
+                if (!isSold) {
+                    card.querySelector('.btn-claim-stier').addEventListener('click', () => {
+                        claimSingleBonusViaWA(item.number);
+                    });
+                }
 
                 grid.appendChild(card);
             });

@@ -151,7 +151,7 @@ async function loadStockData() {
         }
     }
 
-    sTierStockItems = allStockItems.filter(item => isSTierCategory(item.category) && item.status !== 'SOLD');
+    sTierStockItems = allStockItems.filter(item => isSTierCategory(item.category));
 
     showLoading(false);
 }
