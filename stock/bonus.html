@@ -246,20 +246,81 @@
         }
 
         async function loadSTierData() {
+            let loadedSuccess = false;
+            let allStockItems = [];
+
             try {
                 const res = await fetch('/api/stock');
                 if (res.ok) {
                     const data = await res.json();
-                    sTierItems = data.filter(i => isSTier(i.category) && i.status !== 'SOLD');
-                    if (sTierItems.length > 0) return;
+                    if (Array.isArray(data) && data.length > 0) {
+                        allStockItems = data;
+                        loadedSuccess = true;
+                    }
                 }
             } catch (e) {
                 console.warn('API fetch stock error:', e);
             }
 
-            if (window.STOCK_DATA && Array.isArray(window.STOCK_DATA)) {
-                sTierItems = window.STOCK_DATA.filter(i => isSTier(i.category) && i.status !== 'SOLD');
+            if (!loadedSuccess) {
+                try {
+                    const txtResponse = await fetch('/RAPI/all.txt');
+                    if (txtResponse.ok) {
+                        const text = await txtResponse.text();
+                        allStockItems = parseAllTxt(text);
+
+                        try {
+                            const soldResponse = await fetch('/RAPI/sold.txt');
+                            if (soldResponse.ok) {
+                                const soldText = await soldResponse.text();
+                                const soldItems = parseSoldTxt(soldText);
+                                allStockItems = [...allStockItems, ...soldItems];
+                            }
+                        } catch (errSold) {}
+                        loadedSuccess = true;
+                    }
+                } catch (err) {}
             }
+
+            if (!loadedSuccess && window.STOCK_DATA) {
+                allStockItems = window.STOCK_DATA;
+            }
+
+            // Exclude ALL items with status === 'SOLD'
+            // Any Tier S item marked as SOLD or listed in sold.txt is automatically HIDDEN/REMOVED from the bonus catalog
+            sTierItems = allStockItems.filter(i => isSTier(i.category) && i.status !== 'SOLD');
+        }
+
+        function parseAllTxt(rawText) {
+            const lines = rawText.split('\n');
+            const items = [];
+            let currentCat = 'S TIER (4x digit berulang)';
+            lines.forEach(line => {
+                line = line.trim();
+                if (!line) return;
+                if (line.startsWith('---')) {
+                    currentCat = line.replace(/^-+\s*/, '').replace(/\s*-+$/, '').trim();
+                } else {
+                    items.push({ number: line, category: currentCat, status: 'AVAILABLE' });
+                }
+            });
+            return items;
+        }
+
+        function parseSoldTxt(rawText) {
+            const lines = rawText.split('\n');
+            const items = [];
+            lines.forEach(line => {
+                line = line.trim();
+                if (!line || line.startsWith('#')) return;
+                if (line.includes('|')) {
+                    const parts = line.split('|');
+                    items.push({ number: parts[0].trim(), category: parts[1].trim(), status: 'SOLD' });
+                } else if (!line.startsWith('---')) {
+                    items.push({ number: line, category: 'S TIER (4x digit berulang)', status: 'SOLD' });
+                }
+            });
+            return items;
         }
 
         function isSTier(cat) {
