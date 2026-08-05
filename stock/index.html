@@ -103,12 +103,9 @@
                     <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
                     <div class="promo-text">
                         <h3>PROMO SPESIAL BUY 2 GET 1 FREE!</h3>
-                        <p>Setiap pembelian <strong>2 ID (SSS, SS, URUT, atau S-Tier)</strong>, Kamu berhak mendapatkan <strong>1 ID Bonus GRATIS</strong> dari Tabel Bonus!</p>
+                        <p>Setiap pembelian <strong>2 ID (SSS, SS, URUT, atau S-Tier)</strong>, Kamu berhak mendapatkan <strong>1 ID GRATIS</strong>! Promo berlaku untuk seluruh pilihan stok.</p>
                     </div>
                 </div>
-                <button id="btn-open-stier-modal" class="btn-stier-trigger">
-                    <i class="fa-solid fa-gift"></i> Lihat Tabel Stock Bonus (<span id="stier-total-count">0</span>)
-                </button>
             </div>
         </section>
 
@@ -141,9 +138,6 @@
                     <button class="tab-btn tab-s" data-category="S TIER (4x digit berulang)">
                         <i class="fa-solid fa-star"></i> S Tier (<span id="tab-count-s">0</span>)
                     </button>
-                    <button class="tab-btn tab-bonus" data-category="BONUS TIER">
-                        <i class="fa-solid fa-gift"></i> Bonus (<span id="tab-count-bonus">0</span>)
-                    </button>
                     <button class="tab-btn tab-fav" data-category="FAVORITE">
                         <i class="fa-solid fa-heart"></i> Favorit (<span id="tab-count-fav">0</span>)
                     </button>
@@ -168,7 +162,7 @@
                         <div class="select-wrapper">
                             <i class="fa-solid fa-arrow-down-short-wide"></i>
                             <select id="sort-select">
-                                <option value="tier">Prioritas Tier (SSS → SS → URUT → S → Bonus)</option>
+                                <option value="tier">Prioritas Tier (SSS → SS → URUT → S)</option>
                                 <option value="num-asc">ID (Terkecil)</option>
                                 <option value="num-desc">ID (Terbesar)</option>
                             </select>
@@ -183,7 +177,7 @@
             <div class="catalog-header">
                 <div class="result-info">
                     <h2>Menampilkan <span id="showing-count">0</span> Stock Ready</h2>
-                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT, S, BONUS)</p>
+                    <p id="active-filter-text">Semua Kategori (SSS, SS, URUT, S)</p>
                 </div>
             </div>
 
@@ -212,47 +206,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Modal Seluruh Stock Bonus -->
-    <div id="stier-modal" class="modal-overlay hidden">
-        <div class="modal-card">
-            <div class="modal-header">
-                <div class="modal-title">
-                    <i class="fa-solid fa-gift text-purple"></i>
-                    <h2>Katalog Stock Bonus (<span id="modal-stier-count">0</span>)</h2>
-                </div>
-                <button id="btn-close-stier-modal" class="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            
-            <div class="modal-body">
-                <p class="modal-desc" id="stier-modal-desc">
-                    💡 Pilih ID pilihanmu dari <strong>Tabel Stock Bonus</strong> sebagai <strong>Bonus GRATIS</strong> untuk setiap pembelian 2 ID.
-                </p>
-
-                <!-- Search Inside Modal -->
-                <div class="search-box modal-search">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="stier-modal-search" placeholder="Cari digit ID Bonus (cth: 7777, 8888, 0000)..." autocomplete="off">
-                </div>
-
-                <!-- Bonus Grid List Container -->
-                <div id="stier-modal-grid" class="stock-grid view-list modal-grid-container"></div>
-                
-                <!-- Pagination inside Modal -->
-                <div id="stier-modal-pagination" class="pagination-wrapper hidden">
-                    <button id="btn-stier-prev" class="btn-page"><i class="fa-solid fa-chevron-left"></i></button>
-                    <span id="stier-page-info" class="page-info">Halaman 1 dari 10</span>
-                    <button id="btn-stier-next" class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-            </div>
-
-            <div class="modal-footer">
-                <button id="btn-done-stier-modal" class="btn-primary">
-                    <i class="fa-solid fa-check"></i> Selesai Memilih Bonus
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Floating Bulk Order Bar -->
     <div id="bulk-bar" class="bulk-bar hidden">

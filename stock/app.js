@@ -32,20 +32,13 @@ const TIER_ORDER = {
     'SSS TIER (6x digit berulang)': 1,
     'SS TIER (5x digit berulang)': 2,
     '(URUT)': 3,
-    'S TIER (4x digit berulang)': 4,
-    'BONUS TIER': 5
+    'S TIER (4x digit berulang)': 4
 };
 
 // Helper: Strictly check if a category is S-TIER (and not SSS or SS)
 function isSTierCategory(cat) {
     if (!cat) return false;
     return cat.includes('S TIER') && !cat.includes('SSS') && !cat.includes('SS');
-}
-
-// Helper: Strictly check if a category is BONUS TIER
-function isBonusCategory(cat) {
-    if (!cat) return false;
-    return cat.includes('BONUS');
 }
 
 // DOM Elements
@@ -56,8 +49,6 @@ const DOM = {
     countSS: document.getElementById('count-ss'),
     countUrut: document.getElementById('count-urut'),
     countS: document.getElementById('count-s'),
-    stierTotalCount: document.getElementById('stier-total-count'),
-    modalSTierCount: document.getElementById('modal-stier-count'),
 
     btnWaNav: document.getElementById('btn-wa-nav'),
     btnWaFooter: document.getElementById('btn-wa-footer'),
@@ -73,7 +64,6 @@ const DOM = {
     tabCountSS: document.getElementById('tab-count-ss'),
     tabCountUrut: document.getElementById('tab-count-urut'),
     tabCountS: document.getElementById('tab-count-s'),
-    tabCountBonus: document.getElementById('tab-count-bonus'),
     tabCountFav: document.getElementById('tab-count-fav'),
 
     showingCount: document.getElementById('showing-count'),
@@ -86,19 +76,6 @@ const DOM = {
     btnPrevPage: document.getElementById('btn-prev-page'),
     btnNextPage: document.getElementById('btn-next-page'),
     pageInfo: document.getElementById('page-info'),
-
-    // Promo & S-Tier Modal DOM
-    btnOpenSTierModal: document.getElementById('btn-open-stier-modal'),
-    stierModal: document.getElementById('stier-modal'),
-    btnCloseSTierModal: document.getElementById('btn-close-stier-modal'),
-    btnDoneSTierModal: document.getElementById('btn-done-stier-modal'),
-    stierModalSearch: document.getElementById('stier-modal-search'),
-    stierModalGrid: document.getElementById('stier-modal-grid'),
-    stierModalPagination: document.getElementById('stier-modal-pagination'),
-    btnSTierPrev: document.getElementById('btn-stier-prev'),
-    btnSTierNext: document.getElementById('btn-stier-next'),
-    stierPageInfo: document.getElementById('stier-page-info'),
-    stierModalDesc: document.getElementById('stier-modal-desc'),
 
     bulkBar: document.getElementById('bulk-bar'),
     bulkCount: document.getElementById('bulk-count'),
@@ -174,14 +151,7 @@ async function loadStockData() {
         }
     }
 
-    // Separate S-Tier items and Bonus items from main stock
     sTierStockItems = allStockItems.filter(item => isSTierCategory(item.category) && item.status !== 'SOLD');
-    bonusStockItems = allStockItems.filter(item => isBonusCategory(item.category) && item.status !== 'SOLD');
-
-    // Fallback: If no explicit BONUS TIER items exist in the loaded data, use sTierStockItems as bonus pool
-    if (bonusStockItems.length === 0) {
-        bonusStockItems = sTierStockItems;
-    }
 
     showLoading(false);
 }
@@ -298,17 +268,14 @@ function renderStats() {
     animateCounter(DOM.headerStockCount, totalReady, { duration: 1000, suffix: ' Stock Ready' });
     animateCounter(DOM.totalHeroStock, totalReady, 1000);
 
-    const counts = { sss: 0, ss: 0, urut: 0, s: 0, bonus: 0 };
+    const counts = { sss: 0, ss: 0, urut: 0, s: 0 };
 
     availableItems.forEach(item => {
         if (item.category.includes('SSS TIER')) counts.sss++;
         else if (item.category.includes('SS TIER')) counts.ss++;
         else if (item.category.includes('URUT')) counts.urut++;
-        else if (isBonusCategory(item.category)) counts.bonus++;
         else if (isSTierCategory(item.category)) counts.s++;
     });
-
-    if (counts.bonus === 0) counts.bonus = bonusStockItems.length;
 
     // Stats cards
     animateCounter(DOM.countSSS, counts.sss, 900);
@@ -322,12 +289,7 @@ function renderStats() {
     animateCounter(DOM.tabCountSS, counts.ss, 800);
     animateCounter(DOM.tabCountUrut, counts.urut, 800);
     if (DOM.tabCountS) animateCounter(DOM.tabCountS, counts.s, 800);
-    if (DOM.tabCountBonus) animateCounter(DOM.tabCountBonus, counts.bonus, 800);
     animateCounter(DOM.tabCountFav, favoriteNumbers.size, 500);
-
-    // Stock bonus promo counts
-    if (DOM.stierTotalCount) animateCounter(DOM.stierTotalCount, counts.bonus, 1000);
-    if (DOM.modalSTierCount) animateCounter(DOM.modalSTierCount, counts.bonus, 1000);
 }
 
 function setupEventListeners() {
@@ -487,7 +449,7 @@ function applyFiltersAndSort() {
 }
 
 function getFilterDescriptionText() {
-    let catText = currentCategory === 'ALL' ? 'Semua Kategori (SSS, SS, URUT, S, BONUS)' : currentCategory;
+    let catText = currentCategory === 'ALL' ? 'Semua Kategori (SSS, SS, URUT, S)' : currentCategory;
     if (currentDigitFilter) catText += ` • Pattern '${currentDigitFilter}'`;
     if (currentSearchQuery) catText += ` • Cari: "${currentSearchQuery}"`;
     return catText;
@@ -527,77 +489,6 @@ function renderGrid() {
     updateSelectionState();
 }
 
-// Bonus Modal Logic
-function openSTierModal() {
-    DOM.stierModal.classList.remove('hidden');
-    stierModalSearchQuery = '';
-    if (DOM.stierModalSearch) DOM.stierModalSearch.value = '';
-    stierModalPage = 1;
-    renderSTierModalGrid();
-}
-
-function closeSTierModal() {
-    DOM.stierModal.classList.add('hidden');
-    renderGrid(); // Refresh main grid selection checkboxes
-}
-
-function renderSTierModalGrid() {
-    const totalSelected = selectedNumbers.size;
-    const bonusSelectedCount = getBonusSelectedCount();
-    
-    let eligibleBonus = 0;
-    if (totalSelected >= 3) {
-        eligibleBonus = Math.floor(totalSelected / 3);
-    } else if (totalSelected === 2) {
-        eligibleBonus = 1;
-    }
-
-    if (DOM.stierModalDesc) {
-        if (totalSelected < 2) {
-            DOM.stierModalDesc.className = 'modal-desc modal-warning';
-            DOM.stierModalDesc.innerHTML = `💡 <strong>Info Promo:</strong> Pilih <strong>minimal 2 ID (Semua Tier)</strong> untuk mendapatkan <strong>1 Bonus GRATIS</strong> dari Tabel Stock Bonus!`;
-        } else {
-            DOM.stierModalDesc.className = 'modal-desc';
-            DOM.stierModalDesc.innerHTML = `🎁 <strong>Promo Aktif:</strong> Setiap 2 ID berhak klaim 1 Bonus GRATIS (${Math.min(bonusSelectedCount, eligibleBonus)}/${eligibleBonus} bonus dipilih).`;
-        }
-    }
-
-    filteredSTierItems = bonusStockItems.filter(item => {
-        if (stierModalSearchQuery) {
-            return item.number.toLowerCase().includes(stierModalSearchQuery.toLowerCase());
-        }
-        return true;
-    });
-
-    DOM.stierModalGrid.innerHTML = '';
-
-    if (filteredSTierItems.length === 0) {
-        DOM.stierModalGrid.innerHTML = '<div style="text-align:center; padding: 2rem; color: #888;">Tidak ada stok Bonus yang cocok dengan pencarian.</div>';
-        DOM.stierModalPagination.classList.add('hidden');
-        return;
-    }
-
-    const totalPages = Math.ceil(filteredSTierItems.length / STIER_PER_PAGE);
-    if (stierModalPage > totalPages) stierModalPage = totalPages || 1;
-
-    const startIndex = (stierModalPage - 1) * STIER_PER_PAGE;
-    const pageItems = filteredSTierItems.slice(startIndex, startIndex + STIER_PER_PAGE);
-
-    pageItems.forEach(item => {
-        const card = createStockCard(item);
-        DOM.stierModalGrid.appendChild(card);
-    });
-
-    if (totalPages > 1) {
-        DOM.stierModalPagination.classList.remove('hidden');
-        DOM.stierPageInfo.textContent = `Halaman ${stierModalPage} dari ${totalPages}`;
-        DOM.btnSTierPrev.disabled = stierModalPage === 1;
-        DOM.btnSTierNext.disabled = stierModalPage === totalPages;
-    } else {
-        DOM.stierModalPagination.classList.add('hidden');
-    }
-}
-
 function createStockCard(item) {
     const isSold = item.status === 'SOLD';
     const card = document.createElement('div');
@@ -624,11 +515,6 @@ function createStockCard(item) {
         tierBadgeClass = 'badge-urut';
         tierIcon = 'fa-arrow-trend-up';
         tierLabel = 'URUT';
-    } else if (isBonusCategory(item.category)) {
-        tierType = 'BONUS';
-        tierBadgeClass = 'badge-bonus';
-        tierIcon = 'fa-gift';
-        tierLabel = 'BONUS TIER';
     } else if (isSTierCategory(item.category)) {
         tierType = 'S';
         tierBadgeClass = 'badge-s';
@@ -638,16 +524,12 @@ function createStockCard(item) {
 
     card.setAttribute('data-tier-type', tierType);
 
-    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter || stierModalSearchQuery);
+    const formattedNumber = formatNumberDisplay(item.number, currentSearchQuery || currentDigitFilter);
     const patternTag = getPatternDescription(item.number, tierType);
     const isFav = favoriteNumbers.has(item.number);
 
     const statusBadgeHtml = isSold
         ? `<span class="badge-sold"><i class="fa-solid fa-lock"></i> TERJUAL</span>`
-        : '';
-
-    const promoBadgeHtml = (isBonusCategory(item.category) && !isSold)
-        ? `<span class="badge-bonus-stier"><i class="fa-solid fa-gift"></i> BONUS</span>`
         : '';
 
     const checkboxHtml = isSold
@@ -673,7 +555,6 @@ function createStockCard(item) {
                 <span class="badge-tier ${tierBadgeClass}">
                     <i class="fa-solid ${tierIcon}"></i> ${tierLabel}
                 </span>
-                ${promoBadgeHtml}
                 ${statusBadgeHtml}
             </div>
         </div>
@@ -761,60 +642,17 @@ function getPatternDescription(numStr, tierType) {
     return `Stock Blinx`;
 }
 
-function getMainStockCount() {
-    let count = 0;
-    selectedNumbers.forEach(num => {
-        const found = allStockItems.find(i => i.number === num);
-        if (found && !isSTierCategory(found.category)) count++;
-    });
-    return count;
-}
-
-function getBonusSelectedCount() {
-    let count = 0;
-    selectedNumbers.forEach(num => {
-        const found = allStockItems.find(i => i.number === num);
-        if (found && isBonusCategory(found.category)) count++;
-    });
-    return count;
-}
-
 function updateSelectionState() {
     const count = selectedNumbers.size;
     animateCounter(DOM.bulkCount, count, 400);
 
-    let bonusCount = 0;
-    selectedNumbers.forEach(num => {
-        const found = allStockItems.find(i => i.number === num);
-        if (found && (isBonusCategory(found.category) || isSTierCategory(found.category))) {
-            bonusCount++;
-        }
-    });
-
     const totalSelected = count;
 
     if (DOM.promoBonusBadge) {
-        if (totalSelected >= 3 && bonusCount > 0) {
-            const maxBonusCombos = Math.floor(totalSelected / 3);
-            const freeBonusCount = Math.min(bonusCount, maxBonusCombos);
-            const extraBonusCount = bonusCount - freeBonusCount;
-
-            if (freeBonusCount > 0 && extraBonusCount > 0) {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `🎁 ${freeBonusCount} Bonus Gratis + 🏷️ ${extraBonusCount} Extra ID`;
-            } else if (freeBonusCount > 0) {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `🎁 ${freeBonusCount} Bonus Gratis!`;
-            } else {
-                DOM.promoBonusBadge.classList.remove('hidden');
-                DOM.promoBonusBadge.textContent = `🏷️ ${bonusCount} ID Dipilih`;
-            }
-        } else if (totalSelected === 2) {
+        if (totalSelected >= 2) {
+            const freeBonusCount = Math.floor(totalSelected / 2);
             DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `💡 Klaim 1 Bonus GRATIS! (Pilih 1 ID Bonus lagi)`;
-        } else if (bonusCount > 0) {
-            DOM.promoBonusBadge.classList.remove('hidden');
-            DOM.promoBonusBadge.textContent = `🏷️ ${bonusCount} ID Bonus Dipilih`;
+            DOM.promoBonusBadge.textContent = `🎁 Promo Buy 2 Get 1 Free (Berhak ${freeBonusCount} ID Gratis!)`;
         } else {
             DOM.promoBonusBadge.classList.add('hidden');
         }
@@ -863,37 +701,17 @@ function orderSelectedViaWA() {
     });
 
     const totalCount = allSelectedObjects.length;
-    const bonusCategoryItems = allSelectedObjects.filter(item => isBonusCategory(item.category) || isSTierCategory(item.category));
-    const mainItems = allSelectedObjects.filter(item => !isBonusCategory(item.category) && !isSTierCategory(item.category));
-
-    // Every 3 total items selected = 1 free Bonus item
-    const maxFreeBonusCount = Math.floor(totalCount / 3);
-    const actualFreeBonusCount = Math.min(bonusCategoryItems.length, maxFreeBonusCount);
-
-    const bonusFreeItems = bonusCategoryItems.slice(0, actualFreeBonusCount);
-    const extraItems = bonusCategoryItems.slice(actualFreeBonusCount);
-    const paidItems = [...mainItems, ...extraItems];
 
     let message = `Halo Admin, saya berminat order ID Stock Blinx via *PROMO BUY 2 GET 1 FREE*:\n\n`;
 
-    if (paidItems.length > 0) {
-        message += `🛒 *ID PEMBELIAN (${paidItems.length} ID)*:\n`;
-        paidItems.forEach((item, idx) => {
-            message += `${idx + 1}. ${item.number} (${item.category})\n`;
-        });
-    }
+    message += `🛒 *ID PEMBELIAN (${totalCount} ID)*:\n`;
+    allSelectedObjects.forEach((item, idx) => {
+        message += `${idx + 1}. ${item.number} (${item.category})\n`;
+    });
 
-    if (bonusFreeItems.length > 0) {
-        message += `\n🎁 *BONUS GRATIS (${bonusFreeItems.length} ID)*:\n`;
-        bonusFreeItems.forEach((item, idx) => {
-            message += `${idx + 1}. ${item.number}\n`;
-        });
-    }
-
-    if (totalCount === 2 && bonusCategoryItems.length === 0) {
-        message += `\n💡 *Info Promo*: Pembelian 2 ID berhak klaim 1 ID Bonus GRATIS!`;
-    } else if (totalCount === 2 && bonusCategoryItems.length > 0) {
-        message += `\n💡 *Info Promo*: Tambah 1 ID lagi agar 1 Bonus menjadi GRATIS!`;
+    if (totalCount >= 2) {
+        const eligibleFreeCount = Math.floor(totalCount / 2);
+        message += `\n💡 *Info Promo*: Pembelian ${totalCount} ID berhak klaim ${eligibleFreeCount} ID GRATIS (Buy 2 Get 1 Free)!`;
     }
 
     message += `\nMohon info total harganya. Terima kasih Admin!`;
