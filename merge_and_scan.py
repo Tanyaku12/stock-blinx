@@ -11,6 +11,7 @@ import os
 import sys
 import shutil
 import re
+from purge_sold import purge_sold_accounts, get_sold_info
 
 BASE   = "/root/max"
 SRC    = os.path.join(BASE, "CGU-GEN-JAWA")
@@ -39,7 +40,8 @@ def classify_rapi_id(account_id):
     - S TIER  : 4x digit berulang berturut-turut (misal 1111, 2222, 3333, 4444, 5555, 7777, 8888, 9999, 0000)
     """
     s = str(account_id)
-    if s in EXCLUDED_RAPI_IDS or len(s) < 10:
+    sold_ids, _ = get_sold_info()
+    if s in EXCLUDED_RAPI_IDS or s in sold_ids or len(s) < 10:
         return None
 
     # Check 6x repeat (SSS)
@@ -292,7 +294,7 @@ def rebuild_rapi_data_json(sync_spin=None):
         sync_spin = os.environ.get("SYNC_SPIN", "").lower() in ["1", "true", "y", "yes"]
 
     if sync_spin:
-        for spin_dst in ["/root/spin/gajah", "/root/spin/dark"]:
+        for spin_dst in ["/root/spin/gajah", "/root/spin/dark", "/root/spin/spin-gajah"]:
             if os.path.exists(spin_dst):
                 dst_file = os.path.join(spin_dst, "data.json")
                 save_json(dst_file, result_list)
@@ -463,6 +465,9 @@ def save_scan_report(duplicates):
 # ─── Main ────────────────────────────────────────────────────────────────────
 
 def main():
+    # Selalu jalankan purge akun sold di awal
+    purge_sold_accounts()
+
     if not os.path.exists(SRC):
         print(f"⚠ Folder {SRC} tidak ditemukan.")
         print("Silakan taruh/upload folder CGU-GEN-JAWA di /root/max/ terlebih dahulu.")
