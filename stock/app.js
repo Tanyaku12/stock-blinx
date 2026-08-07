@@ -710,7 +710,7 @@ function orderSelectedViaWA() {
 
     if (totalCount >= 2) {
         const eligibleFreeCount = Math.floor(totalCount / 2);
-        message += `\n💡 *Info Promo*: Pembelian ${totalCount} ID berhak klaim ${eligibleFreeCount} ID Tier S GRATIS!\nPilihan bonus diambil dari link: https://stock-blinx.vercel.app/bonus`;
+        message += `\n💡 *Info Promo*: Pembelian ${totalCount} ID berhak klaim ${eligibleFreeCount} ID Tier S GRATIS!\nPilihan bonus diambil dari link: https://stock.blinx.my.id/bonus`;
     }
 
     message += `\n\nMohon info total harganya. Terima kasih Admin!`;
