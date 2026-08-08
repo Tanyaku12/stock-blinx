@@ -14240,6 +14240,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16868155559",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16555655555",
     "category": "SS TIER (5x digit berulang)",
     "status": "SOLD"
