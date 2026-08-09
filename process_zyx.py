@@ -7,7 +7,13 @@ import os
 import shutil
 import sys
 
+BLINX_DIR = "/root/zyx/BLINX-ULTRA"
 ZYX_DIR = "/root/zyx/ZYXX-ULTRA"
+if os.path.exists(BLINX_DIR):
+    TARGET_DATA_DIR = BLINX_DIR
+else:
+    TARGET_DATA_DIR = ZYX_DIR
+
 MAX_DIR = "/root/max"
 ALL_DIR = os.path.join(MAX_DIR, "ALL")
 RAPI_DIR = os.path.join(MAX_DIR, "RAPI")
@@ -30,24 +36,24 @@ from merge_and_scan import (
 )
 
 def main():
-    if not os.path.exists(ZYX_DIR):
-        print(f"⚠ Folder {ZYX_DIR} tidak ditemukan.")
+    if not os.path.exists(TARGET_DATA_DIR):
+        print(f"⚠ Folder {TARGET_DATA_DIR} tidak ditemukan.")
         return
 
     print("=" * 60)
-    print("[STEP 1] PARSING & CONSOLIDATING ZYXX-ULTRA DATA")
+    print(f"[STEP 1] PARSING & CONSOLIDATING {os.path.basename(TARGET_DATA_DIR)} DATA TO /root/max")
     print("=" * 60)
 
     zyx_files = []
-    for root, dirs, files in os.walk(ZYX_DIR):
+    for root, dirs, files in os.walk(TARGET_DATA_DIR):
         for f in files:
             if f.endswith(".json"):
                 zyx_files.append(os.path.join(root, f))
 
     if not zyx_files:
-        print("  ℹ Tidak ada file json baru ditemukan di ZYXX-ULTRA.")
+        print(f"  ℹ Tidak ada file json baru ditemukan di {TARGET_DATA_DIR}.")
         print("=" * 60)
-        print("PROSES ZYXX-ULTRA SELESAI (0 FILE BARU).")
+        print("PROSES SELESAI (0 FILE BARU).")
         print("=" * 60)
         return
 
