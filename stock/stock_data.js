@@ -14260,6 +14260,26 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16895617777",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16895673333",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16895754444",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16895773333",
+    "category": "S TIER (4x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16555555111",
     "category": "SS TIER (5x digit berulang)",
     "status": "SOLD"
