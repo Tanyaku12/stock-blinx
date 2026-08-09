@@ -830,6 +830,16 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16899966666",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900677777",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16399990123",
     "category": "(URUT)",
     "status": "AVAILABLE"
@@ -1696,6 +1706,976 @@ window.STOCK_DATA = [
   },
   {
     "number": "16869012390",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899876912",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899876915",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899876940",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899876947",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899876992",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899932100",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16899945673",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900023459",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900063456",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900065678",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900078902",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900087659",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900098708",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900098724",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900098733",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900098761",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900098764",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900265435",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900412342",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900432143",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900432172",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900432175",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900432177",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900532102",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900532105",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900551234",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900567824",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900567876",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900676546",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900678901",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900678953",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900928765",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900945678",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16900998763",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901123210",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901123406",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901123416",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901123448",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901123459",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232600",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232635",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232643",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232651",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232655",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232683",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232685",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232688",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232704",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232714",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232718",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232720",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232741",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232747",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232763",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232764",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232769",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232790",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232793",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232799",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901232819",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901233382",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901233481",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901233489",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901233494",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901233533",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234175",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234189",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234208",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234212",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234366",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234385",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234466",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234659",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234661",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234689",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234696",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234698",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234705",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234742",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234768",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234771",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234774",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234914",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234925",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234926",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901234984",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235058",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235095",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235156",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235191",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235263",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235376",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235734",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901235950",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236154",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236289",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236308",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236334",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236346",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236391",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236400",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236404",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236407",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236413",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236423",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236428",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236516",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236619",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236690",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236853",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236872",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236879",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236884",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901236989",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237186",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237719",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237726",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237753",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237811",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237861",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237866",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237950",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237953",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237977",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237978",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237985",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901237993",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238016",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238098",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238175",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238189",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238191",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238355",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238371",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238453",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238537",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238563",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238615",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238679",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238681",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238692",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238694",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238717",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238721",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238727",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238740",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238769",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238787",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238788",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238794",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238802",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238814",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238816",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238844",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238875",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238907",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238962",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901238975",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239001",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239033",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239048",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239123",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239144",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239176",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239203",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239205",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239211",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239214",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239251",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239338",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239357",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239393",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239410",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239424",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239426",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239520",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239563",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239600",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239626",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239637",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239653",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239655",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239678",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901239681",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901331234",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16901345655",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903321007",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903365438",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903423210",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903424321",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903463210",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903464321",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903465438",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "16903481234",
     "category": "(URUT)",
     "status": "AVAILABLE"
   },
