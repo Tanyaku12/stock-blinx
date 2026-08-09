@@ -36,8 +36,8 @@ def classify_rapi_id(account_id):
     Kategori ID Cantik:
     - SSS TIER: 6x digit berulang berturut-turut (misal 666666, 888888, 333333)
     - SS TIER : 5x digit berulang berturut-turut (misal 88888, 00000, 77777, 99999)
-    - URUT    : Digit berurutan (misal 0123, 1234, 2345, 3456, 4567, 5678, 6789)
-    - S TIER  : 4x digit berulang berturut-turut (misal 1111, 2222, 3333, 4444, 5555, 7777, 8888, 9999, 0000)
+    - URUT    : Digit berurutan min 4 angka (misal 0123, 1234, 2345, 4567, 6789, 9876, 8765, 4321, dll) -> STOK
+    - S TIER  : 4x digit berulang berturut-turut (misal 1111, 2222) ATAU 3 angka urut (misal 123, 234, 789, 987, 321, dll) -> BONUS
     """
     s = str(account_id)
     sold_ids, _ = get_sold_info()
@@ -52,15 +52,31 @@ def classify_rapi_id(account_id):
     if re.search(r"(\d)\1{4}", s):
         return "SS"
 
-    # Check URUT (misal 45678, 0123, 1234, 5678, dll)
-    sequences = ["01234", "12345", "23456", "34567", "45678", "56789", "0123", "1234", "2345", "3456", "4567", "5678", "6789"]
-    for seq in sequences:
+    # Check URUT min 4 angka (naik & turun/kebalikannya) -> STOK
+    seqs_4plus = [
+        "0123456", "012345", "123456", "234567", "345678", "456789", "567890",
+        "01234", "12345", "23456", "34567", "45678", "56789", "67890",
+        "0123", "1234", "2345", "3456", "4567", "5678", "6789", "7890",
+        "6543210", "543210", "654321", "765432", "876543", "987654",
+        "98765", "87654", "76543", "65432", "54321", "43210",
+        "9876", "8765", "7654", "6543", "5432", "4321", "3210", "0987"
+    ]
+    for seq in seqs_4plus:
         if seq in s:
             return "URUT"
 
     # Check 4x repeat (S)
     if re.search(r"(\d)\1{3}", s):
         return "S"
+
+    # Check 3 angka urut (naik & turun/kebalikannya) -> BONUS
+    seqs_3only = [
+        "012", "123", "234", "345", "456", "567", "678", "789", "890",
+        "987", "876", "765", "654", "543", "432", "321", "210", "098"
+    ]
+    for seq in seqs_3only:
+        if seq in s:
+            return "S"
 
     return None
 
@@ -129,49 +145,61 @@ def update_rapi_files(new_ids, sync_spin=None):
         for cat, acc_id in added_blinx:
             print(f"   + [{cat}] {acc_id}")
             blinx_lines.append(acc_id)
-
-        # Re-sort blinx sections numerically
-        sss_list, ss_list, urut_list = [], [], []
-        seqs = [
-            "012345", "123456", "234567", "345678", "456789", "567890",
-            "01234", "12345", "23456", "34567", "45678", "56789",
-            "0123", "1234", "2345", "3456", "4567", "5678", "6789"
-        ]
-        for line in blinx_lines:
-            s = line.strip()
-            if s in EXCLUDED_RAPI_IDS:
-                continue
-            if re.match(r"^\d{10,}$", s):
-                if re.search(r"(\d)\1{5}", s):
-                    if s not in sss_list: sss_list.append(s)
-                elif re.search(r"(\d)\1{4}", s):
-                    if s not in ss_list: ss_list.append(s)
-                elif any(sq in s for sq in seqs):
-                    if s not in urut_list: urut_list.append(s)
-
-        out = []
-        out.append("--- SSS TIER (6x digit berulang) ---")
-        out.extend(sorted(list(set(sss_list))))
-        out.append("")
-        out.append("")
-        out.append("--- SS TIER (5x digit berulang) ---")
-        out.extend(sorted(list(set(ss_list))))
-        out.append("")
-        out.append("")
-        out.append("--- (URUT) ---")
-        out.extend(sorted(list(set(urut_list))))
-
-        write_rapi_txt(blinx_path, out)
     else:
         print("\n  ✓ Tidak ada ID cantik SSS/SS/URUT baru untuk blinx.txt")
 
-    # Insert added_rare to rare.txt
-    if added_rare:
-        print(f"\n✨ Menambahkan {len(added_rare)} ID cantik baru (Tier S) ke rare.txt:")
-        for acc_id in added_rare:
-            print(f"   + [S] {acc_id}")
-            rare_lines.append(acc_id)
+    seqs_4plus = [
+        "0123456", "012345", "123456", "234567", "345678", "456789", "567890",
+        "01234", "12345", "23456", "34567", "45678", "56789", "67890",
+        "0123", "1234", "2345", "3456", "4567", "5678", "6789", "7890",
+        "6543210", "543210", "654321", "765432", "876543", "987654",
+        "98765", "87654", "76543", "65432", "54321", "43210",
+        "9876", "8765", "7654", "6543", "5432", "4321", "3210", "0987"
+    ]
+    seqs_3only = [
+        "012", "123", "234", "345", "456", "567", "678", "789", "890",
+        "987", "876", "765", "654", "543", "432", "321", "210", "098"
+    ]
 
+    # Re-sort blinx sections numerically & move 3-digit-only urut to rare.txt
+    sss_list, ss_list, urut_list = [], [], []
+    moved_from_blinx = []
+    for line in blinx_lines:
+        s = line.strip()
+        if s in EXCLUDED_RAPI_IDS or not re.match(r"^\d{10,}$", s):
+            continue
+        if re.search(r"(\d)\1{5}", s):
+            if s not in sss_list: sss_list.append(s)
+        elif re.search(r"(\d)\1{4}", s):
+            if s not in ss_list: ss_list.append(s)
+        elif any(sq in s for sq in seqs_4plus):
+            if s not in urut_list: urut_list.append(s)
+        elif any(sq in s for sq in seqs_3only):
+            if s not in moved_from_blinx: moved_from_blinx.append(s)
+
+    if moved_from_blinx:
+        print(f"  ℹ Memindahkan {len(moved_from_blinx)} ID urut 3 digit dari blinx.txt ke rare.txt (Bonus)")
+        for m_id in moved_from_blinx:
+            if m_id not in rare_lines:
+                rare_lines.append(m_id)
+
+    out = []
+    out.append("--- SSS TIER (6x digit berulang) ---")
+    out.extend(sorted(list(set(sss_list))))
+    out.append("")
+    out.append("")
+    out.append("--- SS TIER (5x digit berulang) ---")
+    out.extend(sorted(list(set(ss_list))))
+    out.append("")
+    out.append("")
+    out.append("--- (URUT) ---")
+    out.extend(sorted(list(set(urut_list))))
+
+    write_rapi_txt(blinx_path, out)
+
+    # Insert added_rare to rare.txt
+    if added_rare or moved_from_blinx:
+        print(f"\n✨ Updating rare.txt (Tier S / Bonus):")
         rare_ids = [line.strip() for line in rare_lines if re.match(r"^\d{10,}$", line.strip())]
         rare_sorted = sorted(list(set(rare_ids)))
         write_rapi_txt(rare_path, rare_sorted)
@@ -183,11 +211,6 @@ def update_rapi_files(new_ids, sync_spin=None):
     all_rare_lines  = read_rapi_txt(rare_path)
 
     sss_list, ss_list, urut_list, s_list = [], [], [], []
-    seqs = [
-        "012345", "123456", "234567", "345678", "456789", "567890",
-        "01234", "12345", "23456", "34567", "45678", "56789",
-        "0123", "1234", "2345", "3456", "4567", "5678", "6789"
-    ]
 
     for line in all_blinx_lines:
         s = line.strip()
@@ -198,14 +221,14 @@ def update_rapi_files(new_ids, sync_spin=None):
                 if s not in sss_list: sss_list.append(s)
             elif re.search(r"(\d)\1{4}", s):
                 if s not in ss_list: ss_list.append(s)
-            elif any(sq in s for sq in seqs):
+            elif any(sq in s for sq in seqs_4plus):
                 if s not in urut_list: urut_list.append(s)
 
     for line in all_rare_lines:
         s = line.strip()
         if re.match(r"^\d{10,}$", s):
-            if re.search(r"(\d)\1{3}", s):
-                if s not in s_list and s not in sss_list and s not in ss_list:
+            if re.search(r"(\d)\1{3}", s) or any(sq in s for sq in seqs_3only):
+                if s not in s_list and s not in sss_list and s not in ss_list and s not in urut_list:
                     s_list.append(s)
 
     all_out = []
