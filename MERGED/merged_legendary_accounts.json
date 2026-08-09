@@ -1,0 +1,19 @@
+[
+  {
+    "uid": "6324685717",
+    "password": "PASS",
+    "account_id": "6324685717",
+    "name": "TEST_TIER_ACC",
+    "region": "ID",
+    "region_name": "ID",
+    "tier": "S+ TIER",
+    "rarity_level": "LEGENDARY",
+    "rarity_score": 25,
+    "reason": "Pattern test",
+    "date_identified": "2026-08-09 18:30:41",
+    "jwt_token": "",
+    "thread_id": "N/A",
+    "_source_category": "LEGENDARY ACCOUNTS",
+    "_file_path": "/root/zyx/BLINX-ULTRA/LEGENDARY ACCOUNTS/ID/6324685717.json"
+  }
+]

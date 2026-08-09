@@ -1,0 +1,25 @@
+{
+  "couple_id": "6324847377_6324847376",
+  "account1": {
+    "uid": 6324847377,
+    "password": "BLINXANDSLVFFY-TXKIF4",
+    "name": "blinx⁹⁴⁷⁹",
+    "region": "ID",
+    "status": "success",
+    "account_id": "6324847377",
+    "jwt_token": "",
+    "thread_id": 492
+  },
+  "account2": {
+    "uid": 6324847376,
+    "account_id": "6324847376",
+    "name": "blinx⁶⁵⁸³",
+    "password": "BLINXANDSLVFFY-BJA7YL",
+    "region": "ID",
+    "thread_id": 488
+  },
+  "reason": "Seq:6324847377&6324847376",
+  "region": "ID",
+  "region_name": "ID",
+  "date_matched": "2026-08-09 18:10:00"
+}
