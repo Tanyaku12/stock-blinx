@@ -695,7 +695,7 @@ function copySelectedNumbers() {
 
 function openWaDirect(textMessage) {
     const waUrl = `https://wa.me/${ADMIN_WA}?text=${encodeURIComponent(textMessage)}`;
-    window.open(waUrl, '_blank');
+    window.location.href = waUrl;
 }
 
 function orderSingleViaWA(item) {
