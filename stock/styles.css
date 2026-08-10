@@ -1024,22 +1024,26 @@ input, select { font-family: inherit; }
 
 /* ======== FULL SCREEN MAINTENANCE LOCK OVERLAY ======== */
 .maintenance-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999999;
-    background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    overflow: hidden;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 2147483647 !important;
+    background: #0b0f19 !important;
+    background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 2rem !important;
+    overflow: hidden !important;
 }
 
 body.maint-locked {
     overflow: hidden !important;
+    height: 100vh !important;
 }
 
 .maintenance-card {
