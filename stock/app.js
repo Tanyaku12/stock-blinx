@@ -151,7 +151,7 @@ async function loadStockData() {
         }
     }
 
-    sTierStockItems = allStockItems.filter(item => isSTierCategory(item.category));
+    sTierStockItems = allStockItems.filter(item => item.status !== 'SOLD' && isSTierCategory(item.category));
 
     showLoading(false);
 }
@@ -408,6 +408,8 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
+        if (item.status === 'SOLD') return false;
+
         if (currentCategory === 'FAVORITE') {
             if (!favoriteNumbers.has(item.number)) return false;
         } else if (currentCategory !== 'ALL') {

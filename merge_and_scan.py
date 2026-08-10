@@ -342,7 +342,8 @@ def update_web_stock_data():
         web_stock_path = os.path.join(BASE, "stock", "stock_data.js")
         with open(web_stock_path, "w", encoding="utf-8") as f:
             f.write(js_content)
-        print(f"  ✓ Re-generated stock/stock_data.js ({len(items)} stock items)")
+        avail_count = len([i for i in items if i.get("status") != "SOLD"])
+        print(f"  ✓ Re-generated stock/stock_data.js ({avail_count} stock items ready)")
         return True
     except Exception as e:
         print(f"  ❌ Failed to update stock/stock_data.js: {e}")
