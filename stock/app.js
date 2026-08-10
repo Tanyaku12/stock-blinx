@@ -68,6 +68,7 @@ const DOM = {
     tabCountSold: document.getElementById('tab-count-sold'),
 
     showingCount: document.getElementById('showing-count'),
+    showingLabel: document.getElementById('showing-label'),
     activeFilterText: document.getElementById('active-filter-text'),
 
     stockGrid: document.getElementById('stock-grid'),
@@ -451,7 +452,14 @@ function applyFiltersAndSort() {
         return 0;
     });
 
-    animateCounter(DOM.showingCount, filteredItems.length, 500);
+    const readyItemsCount = currentCategory === 'SOLD' 
+        ? filteredItems.length 
+        : filteredItems.filter(item => item.status !== 'SOLD').length;
+
+    animateCounter(DOM.showingCount, readyItemsCount, 500);
+    if (DOM.showingLabel) {
+        DOM.showingLabel.textContent = currentCategory === 'SOLD' ? 'Stock Terjual (SOLD)' : 'Stock Ready';
+    }
     DOM.activeFilterText.textContent = getFilterDescriptionText();
 
     renderGrid();
