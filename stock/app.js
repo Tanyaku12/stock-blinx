@@ -116,6 +116,8 @@ function initMaintenanceCountdown() {
     const cdHours = document.getElementById('cd-hours');
     const cdMinutes = document.getElementById('cd-minutes');
     const cdSeconds = document.getElementById('cd-seconds');
+    const maintScreen = document.getElementById('maintenance-screen');
+    const mainContent = document.querySelector('.main-content');
 
     function updateTimer() {
         const now = Date.now();
@@ -123,7 +125,15 @@ function initMaintenanceCountdown() {
 
         if (diff <= 0) {
             diff = 0;
+            // Maintenance Selesai (Setelah 7 hari) - Buka kembali katalog!
+            if (maintScreen) maintScreen.style.display = 'none';
+            if (mainContent) mainContent.classList.remove('locked');
+            return;
         }
+
+        // Dalam masa perbaikan (7 hari) - Kunci halaman katalog
+        if (maintScreen) maintScreen.style.display = 'block';
+        if (mainContent) mainContent.classList.add('locked');
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

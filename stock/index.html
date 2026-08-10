@@ -19,7 +19,7 @@
     <meta http-equiv="Expires" content="0">
 
     <!-- Custom Neobrutalism CSS -->
-    <link rel="stylesheet" href="styles.css?v=20260810_v11">
+    <link rel="stylesheet" href="styles.css?v=20260810_v12">
 </head>
 <body>
 
@@ -58,16 +58,16 @@
         </div>
     </div>
 
-    <!-- Maintenance Banner & 7-Day Countdown Timer -->
-    <div class="maintenance-banner-container">
+    <!-- Maintenance Screen (Locked during 7-Day Countdown) -->
+    <div id="maintenance-screen" class="maintenance-overlay">
         <div class="maintenance-card">
             <div class="maintenance-badge">
-                <i class="fa-solid fa-screwdriver-wrench pulsing"></i> WEBSITE SEDANG DALAM PERBAIKAN
+                <i class="fa-solid fa-lock pulsing"></i> WEBSITE SEDANG DALAM PERBAIKAN
             </div>
             <h2 class="maintenance-title">PEMELIHARAAN &amp; UPDATE SISTEM</h2>
             <p class="maintenance-desc">
-                Website Stock Blinx saat ini sedang dalam proses perbaikan &amp; pembaharuan database stok.
-                Sistem akan kembali normal secara penuh dalam:
+                Mohon maaf, website Stock Blinx saat ini dikunci sementara untuk perbaikan &amp; pembaruan sistem.
+                Katalog website akan dibuka kembali secara otomatis dalam:
             </p>
             <div class="countdown-timer" id="countdown-timer">
                 <div class="time-box">
@@ -89,6 +89,11 @@
                     <span class="time-num" id="cd-seconds">00</span>
                     <span class="time-label">DETIK</span>
                 </div>
+            </div>
+            <div class="maintenance-action">
+                <button class="btn-wa-maint" onclick="openWaDirect('Halo Admin, saya ingin bertanya seputar Perbaikan Website Stock Blinx.')">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Admin via WhatsApp
+                </button>
             </div>
         </div>
     </div>
@@ -303,7 +308,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="stock_data.js?v=20260810_v11"></script>
-    <script src="app.js?v=20260810_v11"></script>
+    <script src="stock_data.js?v=20260810_v12"></script>
+    <script src="app.js?v=20260810_v12"></script>
 </body>
 </html>
