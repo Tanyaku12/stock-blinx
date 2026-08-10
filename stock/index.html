@@ -233,6 +233,84 @@
         </div>
     </div>
 
+    <style>
+        /* ======== TEMA KEMERDEKAAN 17 AGUSTUS (MERAH PUTIH) ======== */
+        body.kemerdekaan-theme {
+            background-color: #110507 !important;
+            background-image: radial-gradient(rgba(239, 68, 68, 0.12) 1.5px, transparent 1.5px) !important;
+        }
+
+        body.kemerdekaan-theme .navbar {
+            background: linear-gradient(90deg, #991b1b 0%, #b91c1c 50%, #dc2626 100%) !important;
+            border-bottom: 3px solid #ffffff !important;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4) !important;
+        }
+
+        body.kemerdekaan-theme .logo-icon {
+            background: #ffffff !important;
+            color: #dc2626 !important;
+            border: 2px solid #000000 !important;
+        }
+
+        body.kemerdekaan-theme .brand-name .highlight {
+            background: #ffffff !important;
+            color: #dc2626 !important;
+            border-radius: 4px;
+            padding: 0 4px;
+        }
+
+        body.kemerdekaan-theme .hero-badge {
+            background: #dc2626 !important;
+            color: #ffffff !important;
+            border: 2px solid #ffffff !important;
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.6) !important;
+        }
+
+        body.kemerdekaan-theme .text-gradient {
+            background: linear-gradient(90deg, #ff4d4d 0%, #ffffff 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        body.kemerdekaan-theme .btn-wa-header,
+        body.kemerdekaan-theme .btn-order-wa {
+            background: #dc2626 !important;
+            color: #ffffff !important;
+            border: 2px solid #ffffff !important;
+            box-shadow: 3px 3px 0px #000000 !important;
+        }
+
+        body.kemerdekaan-theme .btn-wa-header:hover,
+        body.kemerdekaan-theme .btn-order-wa:hover {
+            background: #ef4444 !important;
+            box-shadow: 5px 5px 0px #000000 !important;
+        }
+
+        .kemerdekaan-banner-badge {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: linear-gradient(90deg, #dc2626, #991b1b);
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+            margin: 1rem auto;
+            max-width: 1200px;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        body.kemerdekaan-theme .kemerdekaan-banner-badge {
+            display: flex !important;
+        }
+    </style>
+
     <script>
         (function() {
             // Target persis: 17 Agustus jam 19:45:00
@@ -242,7 +320,8 @@
                 // Month is 0-indexed (7 = August)
                 let target = new Date(year, 7, 17, 19, 45, 0, 0);
                 if (now.getTime() >= target.getTime()) {
-                    target = new Date(year + 1, 7, 17, 19, 45, 0, 0);
+                    // Jika tahun ini tanggal 17 Agustus jam 19:45 sudah lewat, tetap aktifkan tema kemerdekaan!
+                    return target.getTime();
                 }
                 return target.getTime();
             }
@@ -252,18 +331,29 @@
             const hoursEl = document.getElementById('maint-hours');
             const minsEl = document.getElementById('maint-mins');
             const secsEl = document.getElementById('maint-secs');
-            const containerEl = document.getElementById('maint-timer-container');
+            const overlayEl = document.getElementById('maint-overlay-el');
+
+            function applyKemerdekaanTheme() {
+                document.body.classList.remove('maint-locked');
+                document.body.classList.add('kemerdekaan-theme');
+                if (overlayEl) {
+                    overlayEl.style.display = 'none';
+                }
+            }
 
             function updateMaintTimer() {
                 const nowMs = Date.now();
                 const diff = targetMs - nowMs;
 
+                // Jika countdown sudah selesai (17 Agustus 19:45 WIB tercapai)
                 if (diff <= 0) {
-                    if (containerEl) {
-                        containerEl.innerHTML = '<div style="font-size: 1.5rem; font-weight: 800; color: #FFD600; text-shadow: 0 0 15px rgba(255,214,0,0.5);">Maintenance Telah Dimulai</div>';
-                    }
+                    applyKemerdekaanTheme();
                     return;
                 }
+
+                // Masih dalam masa maintenance (Overlay Tetap Aktif)
+                document.body.classList.add('maint-locked');
+                if (overlayEl) overlayEl.style.display = 'flex';
 
                 const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -320,6 +410,11 @@
 
     <!-- Main Container -->
     <main class="main-content">
+        <!-- Banner Kemerdekaan 17 Agustus -->
+        <div class="kemerdekaan-banner-badge">
+            <i class="fa-solid fa-flag"></i> SPECIAL EDITION 17 AGUSTUS — DIRGAHAYU REPUBLIK INDONESIA! <i class="fa-solid fa-flag"></i>
+        </div>
+
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-banner">
