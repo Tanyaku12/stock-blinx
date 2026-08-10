@@ -95,55 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initApp() {
     setupEventListeners();
-    initMaintenanceCountdown();
     await loadStockData();
     renderStats();
     applyFiltersAndSort();
-}
-
-function initMaintenanceCountdown() {
-    const DAYS_7_MS = 7 * 24 * 60 * 60 * 1000;
-    // Reset timer ke 7 hari dari sekarang
-    const targetTime = Date.now() + DAYS_7_MS;
-    localStorage.setItem('blinx_maint_end_time', targetTime);
-
-
-    const cdDays = document.getElementById('cd-days');
-    const cdHours = document.getElementById('cd-hours');
-    const cdMinutes = document.getElementById('cd-minutes');
-    const cdSeconds = document.getElementById('cd-seconds');
-    const maintScreen = document.getElementById('maintenance-screen');
-    const mainContent = document.querySelector('.main-content');
-
-    function updateTimer() {
-        const now = Date.now();
-        let diff = targetTime - now;
-
-        if (diff <= 0) {
-            diff = 0;
-            // Maintenance Selesai (Setelah 7 hari) - Buka kembali seluruh akses website!
-            if (maintScreen) maintScreen.style.display = 'none';
-            document.body.classList.remove('maint-locked');
-            return;
-        }
-
-        // Dalam masa perbaikan (7 hari) - Kunci seluruh layar & fungsi website
-        if (maintScreen) maintScreen.style.display = 'flex';
-        document.body.classList.add('maint-locked');
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        if (cdDays) cdDays.textContent = String(days).padStart(2, '0');
-        if (cdHours) cdHours.textContent = String(hours).padStart(2, '0');
-        if (cdMinutes) cdMinutes.textContent = String(minutes).padStart(2, '0');
-        if (cdSeconds) cdSeconds.textContent = String(seconds).padStart(2, '0');
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
 }
 
 async function loadStockData() {
