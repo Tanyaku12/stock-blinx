@@ -21,7 +21,262 @@
     <!-- Custom Neobrutalism CSS -->
     <link rel="stylesheet" href="styles.css?v=20260810_v13">
 </head>
-<body>
+<body class="maint-locked">
+
+    <!-- Full Screen Maintenance Overlay -->
+    <style>
+        body.maint-locked {
+            overflow: hidden !important;
+            height: 100vh !important;
+            pointer-events: none !important;
+        }
+
+        .maint-overlay {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 2147483647 !important;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 1.5rem !important;
+            box-sizing: border-box !important;
+            pointer-events: auto !important;
+            animation: maintFadeIn 0.8s ease-out forwards;
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-align: center;
+        }
+
+        @keyframes maintFadeIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .maint-card {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 229, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .maint-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 214, 0, 0.15);
+            color: #FFD600;
+            border: 1px solid rgba(255, 214, 0, 0.4);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 0 15px rgba(255, 214, 0, 0.2);
+        }
+
+        .maint-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin: 0 0 0.8rem 0;
+            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            line-height: 1.1;
+        }
+
+        .maint-desc {
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            color: #cbd5e1;
+            margin: 0 0 2rem 0;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .maint-timer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .maint-time-box {
+            background: rgba(15, 23, 42, 0.85);
+            border: 2px solid rgba(0, 229, 255, 0.5);
+            border-radius: 16px;
+            padding: 1rem 1.25rem;
+            min-width: 105px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.25), inset 0 0 15px rgba(0, 229, 255, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .maint-time-box:hover {
+            transform: translateY(-3px);
+            border-color: #00E5FF;
+        }
+
+        .maint-time-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: #00E5FF;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.8), 0 0 30px rgba(0, 229, 255, 0.4);
+            line-height: 1;
+        }
+
+        .maint-time-lbl {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 0.5rem;
+        }
+
+        .maint-colon {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #00E5FF;
+            text-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+            margin-bottom: 1.2rem;
+        }
+
+        .maint-btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #00E676;
+            color: #052e16;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.4);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .maint-btn-wa:hover {
+            background: #5cff9d;
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(0, 230, 118, 0.6);
+        }
+
+        @media (max-width: 640px) {
+            .maint-card { padding: 1.8rem 1.2rem; }
+            .maint-time-box { min-width: 68px; padding: 0.6rem 0.5rem; }
+            .maint-time-val { font-size: 1.8rem; }
+            .maint-colon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+            .maint-timer-grid { gap: 0.4rem; }
+        }
+    </style>
+
+    <div id="maint-overlay-el" class="maint-overlay">
+        <div class="maint-card">
+            <div class="maint-badge">
+                <i class="fa-solid fa-triangle-exclamation"></i> Pemeliharaan Sistem
+            </div>
+            <h1 class="maint-title">🛠️ MAINTENANCE</h1>
+            <p class="maint-desc">
+                Website <strong>stock.blinx.my.id</strong> sedang dalam pemeliharaan. Kami akan kembali dalam waktu dekat.
+            </p>
+
+            <div class="maint-timer-grid" id="maint-timer-container">
+                <div class="maint-time-box">
+                    <span class="maint-time-val" id="maint-days">00</span>
+                    <span class="maint-time-lbl">Hari</span>
+                </div>
+                <div class="maint-colon">:</div>
+                <div class="maint-time-box">
+                    <span class="maint-time-val" id="maint-hours">00</span>
+                    <span class="maint-time-lbl">Jam</span>
+                </div>
+                <div class="maint-colon">:</div>
+                <div class="maint-time-box">
+                    <span class="maint-time-val" id="maint-mins">00</span>
+                    <span class="maint-time-lbl">Menit</span>
+                </div>
+                <div class="maint-colon">:</div>
+                <div class="maint-time-box">
+                    <span class="maint-time-val" id="maint-secs">00</span>
+                    <span class="maint-time-lbl">Detik</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/62882003619577?text=Halo%20Admin,%20saya%20ingin%20bertanya%20seputar%20Maintenance%20Stock%20Blinx." target="_blank" class="maint-btn-wa">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Hubungi Admin WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            function getTargetTime() {
+                const now = new Date();
+                let target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, 17, 0, 0, 0);
+                if (now.getTime() >= target.getTime()) {
+                    target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 14, 17, 0, 0, 0);
+                }
+                return target.getTime();
+            }
+
+            const targetMs = getTargetTime();
+            const daysEl = document.getElementById('maint-days');
+            const hoursEl = document.getElementById('maint-hours');
+            const minsEl = document.getElementById('maint-mins');
+            const secsEl = document.getElementById('maint-secs');
+            const containerEl = document.getElementById('maint-timer-container');
+
+            function updateMaintTimer() {
+                const nowMs = Date.now();
+                const diff = targetMs - nowMs;
+
+                if (diff <= 0) {
+                    if (containerEl) {
+                        containerEl.innerHTML = '<div style="font-size: 1.5rem; font-weight: 800; color: #FFD600; text-shadow: 0 0 15px rgba(255,214,0,0.5);">Maintenance Telah Dimulai</div>';
+                    }
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                if (minsEl) minsEl.textContent = String(mins).padStart(2, '0');
+                if (secsEl) secsEl.textContent = String(secs).padStart(2, '0');
+            }
+
+            updateMaintTimer();
+            setInterval(updateMaintTimer, 1000);
+        })();
+    </script>
 
     <!-- Header Navigation -->
     <header class="navbar">
