@@ -1022,10 +1022,36 @@ input, select { font-family: inherit; }
     .time-colon { font-size: 1.4rem; }
 }
 
+/* ======== FULL SCREEN MAINTENANCE LOCK OVERLAY ======== */
 .maintenance-overlay {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999;
+    background: #0b0f19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+body.maint-locked {
+    overflow: hidden !important;
+}
+
+.maintenance-card {
+    background: #161b26;
+    border: 3px solid #f59e0b;
+    box-shadow: 8px 8px 0px #000;
+    border-radius: var(--radius-neo);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
 }
 
 .maintenance-action {
@@ -1041,7 +1067,7 @@ input, select { font-family: inherit; }
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 800;
-    padding: 0.8rem 1.8rem;
+    padding: 0.85rem 1.8rem;
     border-radius: var(--radius-neo);
     border: 2px solid #000;
     box-shadow: 4px 4px 0px #000;
@@ -1053,8 +1079,4 @@ input, select { font-family: inherit; }
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px #000;
     background: #16a34a;
-}
-
-.main-content.locked {
-    display: none !important;
 }

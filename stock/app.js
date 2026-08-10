@@ -125,15 +125,15 @@ function initMaintenanceCountdown() {
 
         if (diff <= 0) {
             diff = 0;
-            // Maintenance Selesai (Setelah 7 hari) - Buka kembali katalog!
+            // Maintenance Selesai (Setelah 7 hari) - Buka kembali seluruh akses website!
             if (maintScreen) maintScreen.style.display = 'none';
-            if (mainContent) mainContent.classList.remove('locked');
+            document.body.classList.remove('maint-locked');
             return;
         }
 
-        // Dalam masa perbaikan (7 hari) - Kunci halaman katalog
-        if (maintScreen) maintScreen.style.display = 'block';
-        if (mainContent) mainContent.classList.add('locked');
+        // Dalam masa perbaikan (7 hari) - Kunci seluruh layar & fungsi website
+        if (maintScreen) maintScreen.style.display = 'flex';
+        document.body.classList.add('maint-locked');
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
