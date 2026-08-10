@@ -202,7 +202,7 @@
             </div>
             <h1 class="maint-title">🛠️ MAINTENANCE</h1>
             <p class="maint-desc">
-                Website <strong>stock.blinx.my.id</strong> sedang dalam pemeliharaan. Kami akan kembali dalam waktu dekat.
+                Mohon maaf, website Stock Blinx saat ini <strong>DITUTUP SEMENTARA</strong> untuk perbaikan. Akses katalog website akan dibuka kembali secara otomatis dalam:
             </p>
 
             <div class="maint-timer-grid" id="maint-timer-container">
@@ -231,11 +231,14 @@
 
     <script>
         (function() {
+            // Target persis: 17 Agustus jam 17:00:00
             function getTargetTime() {
                 const now = new Date();
-                let target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, 17, 0, 0, 0);
+                let year = now.getFullYear();
+                // Month is 0-indexed (7 = August)
+                let target = new Date(year, 7, 17, 17, 0, 0, 0);
                 if (now.getTime() >= target.getTime()) {
-                    target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 14, 17, 0, 0, 0);
+                    target = new Date(year + 1, 7, 17, 17, 0, 0, 0);
                 }
                 return target.getTime();
             }
