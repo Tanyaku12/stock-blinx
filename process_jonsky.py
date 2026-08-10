@@ -15,7 +15,7 @@ import json
 import os
 import re
 
-JONSKY_DIR = "/root/decode/JONSKY-ACC"
+JONSKY_DIRS = ["/root/jon/JONSKY-ACC", "/root/decode/JONSKY-ACC"]
 MAX_DIR = "/root/max"
 ALL_DIR = os.path.join(MAX_DIR, "ALL")
 RAPI_DIR = os.path.join(MAX_DIR, "RAPI")
@@ -42,10 +42,18 @@ def main():
     print("=" * 60)
 
     jonsky_files = []
-    for root, dirs, files in os.walk(JONSKY_DIR):
-        for f in files:
-            if f.endswith(".json"):
-                jonsky_files.append(os.path.join(root, f))
+    found_dirs = []
+    for j_dir in JONSKY_DIRS:
+        if os.path.exists(j_dir):
+            found_dirs.append(j_dir)
+            for root, dirs, files in os.walk(j_dir):
+                for f in files:
+                    if f.endswith(".json"):
+                        jonsky_files.append(os.path.join(root, f))
+
+    if not jonsky_files:
+        print("No JONSKY-ACC files found in /root/jon or /root/decode.")
+        return
 
     all_by_uid = {}
     for fpath in jonsky_files:
@@ -226,11 +234,12 @@ def main():
     print("PROSES GABUNG & UPDATE JONSKY-ACC SELESAI!")
     print("=" * 60)
 
-    # Clean up JONSKY-ACC directory after successful merge
-    if os.path.exists(JONSKY_DIR):
-        import shutil
-        shutil.rmtree(JONSKY_DIR)
-        print(f"  ✓ Folder {JONSKY_DIR} berhasil dihapus setelah merge!")
+    # Clean up JONSKY-ACC directories after successful merge
+    import shutil
+    for j_dir in found_dirs:
+        if os.path.exists(j_dir):
+            shutil.rmtree(j_dir)
+            print(f"  ✓ Folder {j_dir} berhasil dihapus setelah merge!")
 
 if __name__ == "__main__":
     main()
