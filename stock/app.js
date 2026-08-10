@@ -95,9 +95,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initApp() {
     setupEventListeners();
+    initMaintenanceCountdown();
     await loadStockData();
     renderStats();
     applyFiltersAndSort();
+}
+
+function initMaintenanceCountdown() {
+    const DAYS_7_MS = 7 * 24 * 60 * 60 * 1000;
+    let targetTime = localStorage.getItem('blinx_maint_end_time');
+
+    if (!targetTime || isNaN(targetTime)) {
+        targetTime = Date.now() + DAYS_7_MS;
+        localStorage.setItem('blinx_maint_end_time', targetTime);
+    } else {
+        targetTime = parseInt(targetTime, 10);
+    }
+
+    const cdDays = document.getElementById('cd-days');
+    const cdHours = document.getElementById('cd-hours');
+    const cdMinutes = document.getElementById('cd-minutes');
+    const cdSeconds = document.getElementById('cd-seconds');
+
+    function updateTimer() {
+        const now = Date.now();
+        let diff = targetTime - now;
+
+        if (diff <= 0) {
+            diff = 0;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (cdDays) cdDays.textContent = String(days).padStart(2, '0');
+        if (cdHours) cdHours.textContent = String(hours).padStart(2, '0');
+        if (cdMinutes) cdMinutes.textContent = String(minutes).padStart(2, '0');
+        if (cdSeconds) cdSeconds.textContent = String(seconds).padStart(2, '0');
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
 }
 
 async function loadStockData() {

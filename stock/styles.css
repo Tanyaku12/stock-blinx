@@ -914,3 +914,110 @@ input, select { font-family: inherit; }
     font-weight: 900;
     color: var(--neo-yellow);
 }
+
+/* ======== MAINTENANCE BANNER & 7-DAY COUNTDOWN TIMER ======== */
+.maintenance-banner-container {
+    max-width: 1200px;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 1rem;
+}
+
+.maintenance-card {
+    background: #181c26;
+    border: 3px solid #f59e0b;
+    box-shadow: 6px 6px 0px #000;
+    border-radius: var(--radius-neo);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.maintenance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f59e0b;
+    color: #000;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-neo);
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px #000;
+    margin-bottom: 1rem;
+}
+
+.maintenance-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.maintenance-desc {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    max-width: 650px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.5;
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0f172a;
+    border: 2px solid var(--neo-yellow);
+    box-shadow: 4px 4px 0px #000;
+    border-radius: var(--radius-neo);
+    padding: 0.75rem 1.25rem;
+    min-width: 85px;
+}
+
+.time-num {
+    font-family: var(--font-mono);
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--neo-yellow);
+    line-height: 1;
+}
+
+.time-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-top: 0.35rem;
+    letter-spacing: 1px;
+}
+
+.time-colon {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 900;
+    color: #f59e0b;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+    .maintenance-title { font-size: 1.3rem; }
+    .maintenance-card { padding: 1.25rem 1rem; }
+    .time-box { min-width: 65px; padding: 0.5rem 0.75rem; }
+    .time-num { font-size: 1.5rem; }
+    .time-colon { font-size: 1.4rem; }
+}

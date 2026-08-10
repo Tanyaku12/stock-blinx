@@ -19,7 +19,7 @@
     <meta http-equiv="Expires" content="0">
 
     <!-- Custom Neobrutalism CSS -->
-    <link rel="stylesheet" href="styles.css?v=20260810_v10">
+    <link rel="stylesheet" href="styles.css?v=20260810_v11">
 </head>
 <body>
 
@@ -55,6 +55,41 @@
         <div class="clock-bar-container">
             <i class="fa-solid fa-clock text-cyan"></i>
             <span class="live-clock-target">--</span>
+        </div>
+    </div>
+
+    <!-- Maintenance Banner & 7-Day Countdown Timer -->
+    <div class="maintenance-banner-container">
+        <div class="maintenance-card">
+            <div class="maintenance-badge">
+                <i class="fa-solid fa-screwdriver-wrench pulsing"></i> WEBSITE SEDANG DALAM PERBAIKAN
+            </div>
+            <h2 class="maintenance-title">PEMELIHARAAN &amp; UPDATE SISTEM</h2>
+            <p class="maintenance-desc">
+                Website Stock Blinx saat ini sedang dalam proses perbaikan &amp; pembaharuan database stok.
+                Sistem akan kembali normal secara penuh dalam:
+            </p>
+            <div class="countdown-timer" id="countdown-timer">
+                <div class="time-box">
+                    <span class="time-num" id="cd-days">07</span>
+                    <span class="time-label">HARI</span>
+                </div>
+                <div class="time-colon">:</div>
+                <div class="time-box">
+                    <span class="time-num" id="cd-hours">00</span>
+                    <span class="time-label">JAM</span>
+                </div>
+                <div class="time-colon">:</div>
+                <div class="time-box">
+                    <span class="time-num" id="cd-minutes">00</span>
+                    <span class="time-label">MENIT</span>
+                </div>
+                <div class="time-colon">:</div>
+                <div class="time-box">
+                    <span class="time-num" id="cd-seconds">00</span>
+                    <span class="time-label">DETIK</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -268,7 +303,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="stock_data.js?v=20260810_v10"></script>
-    <script src="app.js?v=20260810_v10"></script>
+    <script src="stock_data.js?v=20260810_v11"></script>
+    <script src="app.js?v=20260810_v11"></script>
 </body>
 </html>
