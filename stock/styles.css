@@ -283,6 +283,7 @@ input, select { font-family: inherit; }
 .tab-btn.tab-s.active    { background: var(--neo-purple); color: #fff; }
 .tab-btn.tab-bonus.active{ background: linear-gradient(135deg, #a855f7, #ec4899); color: #fff; }
 .tab-btn.tab-fav.active  { background: var(--neo-pink);   color: #fff; }
+.tab-btn.tab-sold.active { background: #ef4444;          color: #fff; }
 
 .filter-toolbar {
     display: flex; align-items: center; justify-content: space-between;

@@ -65,6 +65,7 @@ const DOM = {
     tabCountUrut: document.getElementById('tab-count-urut'),
     tabCountS: document.getElementById('tab-count-s'),
     tabCountFav: document.getElementById('tab-count-fav'),
+    tabCountSold: document.getElementById('tab-count-sold'),
 
     showingCount: document.getElementById('showing-count'),
     activeFilterText: document.getElementById('active-filter-text'),
@@ -290,6 +291,8 @@ function renderStats() {
     animateCounter(DOM.tabCountUrut, counts.urut, 800);
     if (DOM.tabCountS) animateCounter(DOM.tabCountS, counts.s, 800);
     animateCounter(DOM.tabCountFav, favoriteNumbers.size, 500);
+    const soldCount = allStockItems.filter(item => item.status === 'SOLD').length;
+    if (DOM.tabCountSold) animateCounter(DOM.tabCountSold, soldCount, 800);
 }
 
 function setupEventListeners() {
@@ -408,12 +411,16 @@ function setupEventListeners() {
 
 function applyFiltersAndSort() {
     filteredItems = allStockItems.filter(item => {
-        if (item.status === 'SOLD') return false;
+        if (currentCategory === 'SOLD') {
+            if (item.status !== 'SOLD') return false;
+        } else {
+            if (item.status === 'SOLD') return false;
 
-        if (currentCategory === 'FAVORITE') {
-            if (!favoriteNumbers.has(item.number)) return false;
-        } else if (currentCategory !== 'ALL') {
-            if (item.category !== currentCategory) return false;
+            if (currentCategory === 'FAVORITE') {
+                if (!favoriteNumbers.has(item.number)) return false;
+            } else if (currentCategory !== 'ALL') {
+                if (item.category !== currentCategory) return false;
+            }
         }
 
         if (currentSearchQuery) {
@@ -451,7 +458,7 @@ function applyFiltersAndSort() {
 }
 
 function getFilterDescriptionText() {
-    let catText = currentCategory === 'ALL' ? 'Semua Kategori (SSS, SS, URUT, S)' : currentCategory;
+    let catText = currentCategory === 'ALL' ? 'Semua Kategori (SSS, SS, URUT, S)' : (currentCategory === 'SOLD' ? 'Stok Terjual (SOLD)' : currentCategory);
     if (currentDigitFilter) catText += ` • Pattern '${currentDigitFilter}'`;
     if (currentSearchQuery) catText += ` • Cari: "${currentSearchQuery}"`;
     return catText;
