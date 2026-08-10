@@ -235,14 +235,14 @@
 
     <script>
         (function() {
-            // Target persis: 17 Agustus jam 17:00:00
+            // Target persis: 17 Agustus jam 19:45:00
             function getTargetTime() {
                 const now = new Date();
                 let year = now.getFullYear();
                 // Month is 0-indexed (7 = August)
-                let target = new Date(year, 7, 17, 17, 0, 0, 0);
+                let target = new Date(year, 7, 17, 19, 45, 0, 0);
                 if (now.getTime() >= target.getTime()) {
-                    target = new Date(year + 1, 7, 17, 17, 0, 0, 0);
+                    target = new Date(year + 1, 7, 17, 19, 45, 0, 0);
                 }
                 return target.getTime();
             }
