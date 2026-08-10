@@ -103,14 +103,10 @@ async function initApp() {
 
 function initMaintenanceCountdown() {
     const DAYS_7_MS = 7 * 24 * 60 * 60 * 1000;
-    let targetTime = localStorage.getItem('blinx_maint_end_time');
+    // Reset timer ke 7 hari dari sekarang
+    const targetTime = Date.now() + DAYS_7_MS;
+    localStorage.setItem('blinx_maint_end_time', targetTime);
 
-    if (!targetTime || isNaN(targetTime)) {
-        targetTime = Date.now() + DAYS_7_MS;
-        localStorage.setItem('blinx_maint_end_time', targetTime);
-    } else {
-        targetTime = parseInt(targetTime, 10);
-    }
 
     const cdDays = document.getElementById('cd-days');
     const cdHours = document.getElementById('cd-hours');
