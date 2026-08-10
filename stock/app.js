@@ -414,7 +414,7 @@ function applyFiltersAndSort() {
         if (currentCategory === 'SOLD') {
             if (item.status !== 'SOLD') return false;
         } else {
-            if (item.status === 'SOLD') return false;
+            if (item.status === 'SOLD' && !currentSearchQuery) return false;
 
             if (currentCategory === 'FAVORITE') {
                 if (!favoriteNumbers.has(item.number)) return false;
