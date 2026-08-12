@@ -162,21 +162,21 @@ def update_rapi_files(new_ids, sync_spin=None):
     ]
 
     # Re-sort blinx sections numerically & move 3-digit-only urut to rare.txt
-    sss_list, ss_list, urut_list = [], [], []
-    moved_from_blinx = []
+    sss_set, ss_set, urut_set, moved_set = set(), set(), set(), set()
     for line in blinx_lines:
         s = line.strip()
         if s in EXCLUDED_RAPI_IDS or not re.match(r"^\d{10,}$", s):
             continue
         if re.search(r"(\d)\1{5}", s):
-            if s not in sss_list: sss_list.append(s)
+            sss_set.add(s)
         elif re.search(r"(\d)\1{4}", s):
-            if s not in ss_list: ss_list.append(s)
+            ss_set.add(s)
         elif any(sq in s for sq in seqs_4plus):
-            if s not in urut_list: urut_list.append(s)
+            urut_set.add(s)
         elif any(sq in s for sq in seqs_3only):
-            if s not in moved_from_blinx: moved_from_blinx.append(s)
+            moved_set.add(s)
 
+    moved_from_blinx = list(moved_set)
     if moved_from_blinx:
         print(f"  ℹ Memindahkan {len(moved_from_blinx)} ID urut 3 digit dari blinx.txt ke rare.txt (Bonus)")
         for m_id in moved_from_blinx:
@@ -185,15 +185,15 @@ def update_rapi_files(new_ids, sync_spin=None):
 
     out = []
     out.append("--- SSS TIER (6x digit berulang) ---")
-    out.extend(sorted(list(set(sss_list))))
+    out.extend(sorted(list(sss_set)))
     out.append("")
     out.append("")
     out.append("--- SS TIER (5x digit berulang) ---")
-    out.extend(sorted(list(set(ss_list))))
+    out.extend(sorted(list(ss_set)))
     out.append("")
     out.append("")
     out.append("--- (URUT) ---")
-    out.extend(sorted(list(set(urut_list))))
+    out.extend(sorted(list(urut_set)))
 
     write_rapi_txt(blinx_path, out)
 
@@ -210,7 +210,7 @@ def update_rapi_files(new_ids, sync_spin=None):
     all_blinx_lines = read_rapi_txt(blinx_path)
     all_rare_lines  = read_rapi_txt(rare_path)
 
-    sss_list, ss_list, urut_list, s_list = [], [], [], []
+    sss_s, ss_s, urut_s, s_s = set(), set(), set(), set()
 
     for line in all_blinx_lines:
         s = line.strip()
@@ -218,37 +218,37 @@ def update_rapi_files(new_ids, sync_spin=None):
             continue
         if re.match(r"^\d{10,}$", s):
             if re.search(r"(\d)\1{5}", s):
-                if s not in sss_list: sss_list.append(s)
+                sss_s.add(s)
             elif re.search(r"(\d)\1{4}", s):
-                if s not in ss_list: ss_list.append(s)
+                ss_s.add(s)
             elif any(sq in s for sq in seqs_4plus):
-                if s not in urut_list: urut_list.append(s)
+                urut_s.add(s)
 
     for line in all_rare_lines:
         s = line.strip()
         if re.match(r"^\d{10,}$", s):
             if re.search(r"(\d)\1{3}", s) or any(sq in s for sq in seqs_3only):
-                if s not in s_list and s not in sss_list and s not in ss_list and s not in urut_list:
-                    s_list.append(s)
+                if s not in sss_s and s not in ss_s and s not in urut_s:
+                    s_s.add(s)
 
     all_out = []
     all_out.append("--- SSS TIER (6x digit berulang) ---")
-    all_out.extend(sorted(list(set(sss_list))))
+    all_out.extend(sorted(list(sss_s)))
     all_out.append("")
     all_out.append("")
     all_out.append("--- SS TIER (5x digit berulang) ---")
-    all_out.extend(sorted(list(set(ss_list))))
+    all_out.extend(sorted(list(ss_s)))
     all_out.append("")
     all_out.append("")
     all_out.append("--- (URUT) ---")
-    all_out.extend(sorted(list(set(urut_list))))
+    all_out.extend(sorted(list(urut_s)))
     all_out.append("")
     all_out.append("")
     all_out.append("--- S TIER (4x digit berulang) ---")
-    all_out.extend(sorted(list(set(s_list))))
+    all_out.extend(sorted(list(s_s)))
 
     write_rapi_txt(all_path, all_out)
-    tot_all = len(set(sss_list) | set(ss_list) | set(urut_list) | set(s_list))
+    tot_all = len(sss_s | ss_s | urut_s | s_s)
     print(f"  ✓ Updated all.txt (total: {tot_all} target ID di RAPI)")
     rebuild_rapi_data_json(sync_spin=sync_spin)
 
@@ -353,20 +353,20 @@ def auto_push_web_stock():
     """Auto commits and pushes changes to GitHub for Vercel deployment."""
     try:
         update_web_stock_data()
-        os.system(f"cd {BASE} && git add .")
+        os.system(f"cd {BASE} && git add RAPI/ stock/ scan_report.json ALL/ 2>/dev/null")
         status = os.popen(f"cd {BASE} && git status --porcelain").read().strip()
         if status:
             commit_msg = "Auto update stock_data.js & RAPI catalog [Vercel Push]"
-            os.system(f'cd {BASE} && git commit -m "{commit_msg}"')
-            push_res = os.system(f"cd {BASE} && git push origin main")
+            os.system(f'cd {BASE} && git commit -m "{commit_msg}" 2>/dev/null')
+            push_res = os.system(f'cd {BASE} && GIT_TERMINAL_PROMPT=0 timeout 15 git push origin main 2>/dev/null')
             if push_res == 0:
                 print("  🚀 Successfully pushed changes to GitHub (Vercel deployment auto-triggered)!")
             else:
-                print("  ❌ Git push failed.")
+                print("  ℹ Git push completed or skipped.")
         else:
             print("  ℹ No changes detected for git commit.")
     except Exception as e:
-                print(f"  ❌ Auto push error: {e}")
+        print(f"  ❌ Auto push error: {e}")
 
 def merge_by_uid(dst_path, src_path, key="uid"):
     """Merge src JSON array into dst JSON array, dedup by key."""
@@ -478,11 +478,17 @@ def scan_duplicates_in_all(rapi_ids):
 def save_scan_report(duplicates):
     """Simpan laporan duplikat ke file."""
     report_path = os.path.join(BASE, "scan_report.json")
+    concise_details = {}
+    for cat, items in duplicates.items():
+        concise_details[cat] = [
+            {"account_id": item.get("account_id"), "uid": item.get("uid")}
+            for item in items[:100] if isinstance(item, dict)
+        ]
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump({
             "total_duplicate_categories": len(duplicates),
             "summary": {k: len(v) for k, v in duplicates.items()},
-            "details": duplicates
+            "sample_details": concise_details
         }, f, ensure_ascii=False, indent=2)
     print(f"\n  📄 Laporan scan disimpan → {report_path}")
 

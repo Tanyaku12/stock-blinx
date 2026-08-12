@@ -15,7 +15,7 @@ import json
 import os
 import re
 
-JONSKY_DIRS = ["/root/jon/JONSKY-ACC", "/root/decode/JONSKY-ACC"]
+JONSKY_DIRS = ["/root/jon/JONSKY-ACC", "/root/decode/JONSKY-ACC", "/root/jonn/JONSKY-ACC"]
 MAX_DIR = "/root/max"
 ALL_DIR = os.path.join(MAX_DIR, "ALL")
 RAPI_DIR = os.path.join(MAX_DIR, "RAPI")
