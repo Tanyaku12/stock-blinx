@@ -233,6 +233,64 @@
         </div>
     </div>
 
+    <script>
+        // SCRIPT AUTO REMOVE MAINTENANCE SAAT MENCAPAI TARGET WAKTU (16 Agustus 2026 19:45:00 WIB)
+        (function() {
+            // Target waktu maintenance selesai: 16 Agustus 2026 jam 19:45:00 WIB
+            const targetTime = new Date('2026-08-16T19:45:00+07:00').getTime();
+
+            function checkAndRemoveMaintenance() {
+                const now = new Date().getTime();
+                const diff = targetTime - now;
+
+                const overlay = document.getElementById('maint-overlay-el');
+
+                // Jika hitung mundur telah mencapai 00:00:00 atau waktu sudah lewat
+                if (diff <= 0) {
+                    if (overlay) {
+                        overlay.style.transition = 'opacity 0.5s ease';
+                        overlay.style.opacity = '0';
+                        setTimeout(() => {
+                            overlay.remove();
+                            document.body.classList.remove('maint-locked');
+                        }, 500);
+                    } else {
+                        document.body.classList.remove('maint-locked');
+                    }
+                    return true;
+                }
+
+                // Hitung sisa waktu
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // Update tampilan angka countdown di layar
+                const elDays = document.getElementById('maint-days');
+                const elHours = document.getElementById('maint-hours');
+                const elMins = document.getElementById('maint-mins');
+                const elSecs = document.getElementById('maint-secs');
+
+                if (elDays) elDays.textContent = String(days).padStart(2, '0');
+                if (elHours) elHours.textContent = String(hours).padStart(2, '0');
+                if (elMins) elMins.textContent = String(mins).padStart(2, '0');
+                if (elSecs) elSecs.textContent = String(secs).padStart(2, '0');
+
+                return false;
+            }
+
+            const isFinished = checkAndRemoveMaintenance();
+            if (!isFinished) {
+                const interval = setInterval(() => {
+                    if (checkAndRemoveMaintenance()) {
+                        clearInterval(interval);
+                    }
+                }, 1000);
+            }
+        })();
+    </script>
+
     <style>
         /* ======== TEMA KEMERDEKAAN 17 AGUSTUS (MERAH PUTIH) ======== */
         body.kemerdekaan-theme {
