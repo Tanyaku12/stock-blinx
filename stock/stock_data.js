@@ -4500,6 +4500,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "17042078765",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16363588881",
     "category": "S TIER (4x digit berulang)",
     "status": "AVAILABLE"
