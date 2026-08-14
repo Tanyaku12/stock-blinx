@@ -240,6 +240,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "17023333331",
+    "category": "SSS TIER (6x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "16363588888",
     "category": "SS TIER (5x digit berulang)",
     "status": "AVAILABLE"
@@ -896,6 +901,191 @@ window.STOCK_DATA = [
   },
   {
     "number": "16938277777",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17021177777",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17021244444",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222124",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222380",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222435",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222503",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222558",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222588",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222623",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222666",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222669",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222722",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222747",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222788",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222900",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022222971",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023111112",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023333306",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023333319",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023333323",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023333341",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023333346",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023511111",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023766666",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17025133333",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17027777721",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028888828",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028888832",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028888840",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028888854",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029888883",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029888886",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029999911",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029999937",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17030000063",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17030000090",
+    "category": "SS TIER (5x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17030000098",
     "category": "SS TIER (5x digit berulang)",
     "status": "AVAILABLE"
   },
@@ -4086,6 +4276,226 @@ window.STOCK_DATA = [
   },
   {
     "number": "16939023454",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17021354321",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17021543212",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17021543215",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022201238",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17022765444",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023455506",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023455548",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023455565",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456203",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456410",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456488",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456545",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456555",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456608",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456623",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456630",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456689",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456691",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456695",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456749",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456758",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456776",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456796",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456807",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456876",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456888",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456947",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456950",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023456977",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023457666",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023457774",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023656789",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17023765469",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17024023456",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17026937654",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17027776540",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17027890999",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028254321",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17028444567",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029012345",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029523456",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17029543212",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17030001238",
+    "category": "(URUT)",
+    "status": "AVAILABLE"
+  },
+  {
+    "number": "17030234561",
     "category": "(URUT)",
     "status": "AVAILABLE"
   },
