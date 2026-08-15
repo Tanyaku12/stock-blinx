@@ -240,6 +240,11 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
+    "number": "16940000007",
+    "category": "SSS TIER (6x digit berulang)",
+    "status": "AVAILABLE"
+  },
+  {
     "number": "17023333331",
     "category": "SSS TIER (6x digit berulang)",
     "status": "AVAILABLE"

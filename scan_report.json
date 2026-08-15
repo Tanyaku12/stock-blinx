@@ -1,10 +1,10 @@
 {
   "total_duplicate_categories": 5,
   "summary": {
-    "ACCOUNTS": 2685,
-    "RARE": 2678,
-    "TOKENS": 2807,
-    "HUNTER": 2544,
+    "ACCOUNTS": 2767,
+    "RARE": 2716,
+    "TOKENS": 2889,
+    "HUNTER": 2589,
     "COUPLES": 34
   },
   "sample_details": {
@@ -1216,6 +1216,10 @@
     ],
     "HUNTER": [
       {
+        "account_id": "17023456888",
+        "uid": 6562501868
+      },
+      {
         "account_id": "16399944442",
         "uid": 5567797365
       },
@@ -1610,10 +1614,6 @@
       {
         "account_id": "16566669540",
         "uid": 5731136987
-      },
-      {
-        "account_id": "16566669555",
-        "uid": 5731137018
       }
     ],
     "COUPLES": [
