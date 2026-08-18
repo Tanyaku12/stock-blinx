@@ -267,44 +267,52 @@
             let allStockItems = [];
 
             try {
-                const res = await fetch('/api/stock');
-                if (res.ok) {
-                    const data = await res.json();
-                    if (Array.isArray(data) && data.length > 0) {
-                        allStockItems = data;
-                        loadedSuccess = true;
-                    }
+                const txtResponse = await fetch('/RAPI/rare.txt');
+                if (txtResponse.ok) {
+                    const text = await txtResponse.text();
+                    allStockItems = parseRareTxt(text);
+
+                    try {
+                        const soldResponse = await fetch('/RAPI/sold.txt');
+                        if (soldResponse.ok) {
+                            const soldText = await soldResponse.text();
+                            const soldItems = parseSoldTxt(soldText);
+                            allStockItems = [...allStockItems, ...soldItems];
+                        }
+                    } catch (errSold) {}
+                    loadedSuccess = true;
                 }
-            } catch (e) {
-                console.warn('API fetch stock error:', e);
-            }
+            } catch (err) {}
 
             if (!loadedSuccess) {
                 try {
-                    const txtResponse = await fetch('/RAPI/all.txt');
-                    if (txtResponse.ok) {
-                        const text = await txtResponse.text();
-                        allStockItems = parseAllTxt(text);
-
-                        try {
-                            const soldResponse = await fetch('/RAPI/sold.txt');
-                            if (soldResponse.ok) {
-                                const soldText = await soldResponse.text();
-                                const soldItems = parseSoldTxt(soldText);
-                                allStockItems = [...allStockItems, ...soldItems];
-                            }
-                        } catch (errSold) {}
-                        loadedSuccess = true;
+                    const res = await fetch('/api/stock');
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (Array.isArray(data) && data.length > 0) {
+                            allStockItems = data;
+                            loadedSuccess = true;
+                        }
                     }
-                } catch (err) {}
+                } catch (e) {}
             }
 
             if (!loadedSuccess && window.STOCK_DATA) {
                 allStockItems = window.STOCK_DATA;
             }
 
-            // Include ALL items (both AVAILABLE and SOLD) so SOLD status matches main catalog
-            sTierItems = allStockItems.filter(i => isSTier(i.category));
+            sTierItems = allStockItems;
+        }
+
+        function parseRareTxt(rawText) {
+            const lines = rawText.split('\n');
+            const items = [];
+            lines.forEach(line => {
+                line = line.trim();
+                if (!line || line.startsWith('---')) return;
+                items.push({ number: line, category: 'S TIER (4x digit berulang)', status: 'AVAILABLE' });
+            });
+            return items;
         }
 
         function parseAllTxt(rawText) {

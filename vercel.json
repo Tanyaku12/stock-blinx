@@ -9,6 +9,7 @@
     },
     { "src": "web/**", "use": "@vercel/static" },
     { "src": "RAPI/all.txt", "use": "@vercel/static" },
+    { "src": "RAPI/rare.txt", "use": "@vercel/static" },
     { "src": "RAPI/sold.txt", "use": "@vercel/static" }
   ],
   "rewrites": [
@@ -16,6 +17,7 @@
     { "source": "/api/bonus", "destination": "/api/bonus.py" },
     { "source": "/api/telegram", "destination": "/api/telegram.py" },
     { "source": "/RAPI/all.txt", "destination": "/RAPI/all.txt" },
+    { "source": "/RAPI/rare.txt", "destination": "/RAPI/rare.txt" },
     { "source": "/RAPI/sold.txt", "destination": "/RAPI/sold.txt" },
     { "source": "/bonus", "destination": "/web/bonus.html" },
     { "source": "/bonus.html", "destination": "/web/bonus.html" },
