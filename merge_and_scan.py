@@ -355,22 +355,57 @@ def rebuild_rapi_data_json(sync_spin=None):
     return len(result_list)
 
 def update_web_stock_data():
-    """Generates stock/stock_data.js from RAPI/all.txt and RAPI/sold.txt."""
+    """Generates web/stock_data.js from RAPI/all.txt and RAPI/sold.txt."""
     try:
-        api_dir = os.path.join(BASE, "api")
-        if api_dir not in sys.path:
-            sys.path.append(api_dir)
-        from stock import load_all_stock
-        items = load_all_stock()
-        js_content = "window.STOCK_DATA = " + json.dumps(items, ensure_ascii=False, indent=2) + ";\n"
-        web_stock_path = os.path.join(BASE, "stock", "stock_data.js")
-        with open(web_stock_path, "w", encoding="utf-8") as f:
-            f.write(js_content)
-        avail_count = len([i for i in items if i.get("status") != "SOLD"])
-        print(f"  ✓ Re-generated stock/stock_data.js ({avail_count} stock items ready)")
+        all_path = os.path.join(RAPI, "all.txt")
+        sold_path = os.path.join(RAPI, "sold.txt")
+
+        items = []
+
+        # Load available stock from all.txt
+        if os.path.exists(all_path):
+            current_cat = 'S TIER (4x digit berulang)'
+            with open(all_path, 'r', encoding='utf-8', errors='ignore') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    if line.startswith('---'):
+                        current_cat = line.strip('- ').strip()
+                    else:
+                        items.append({
+                            'number': line,
+                            'category': current_cat,
+                            'status': 'AVAILABLE'
+                        })
+
+        # Load sold stock from sold.txt
+        if os.path.exists(sold_path):
+            current_cat = 'S TIER (4x digit berulang)'
+            with open(sold_path, 'r', encoding='utf-8', errors='ignore') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith('#'):
+                        continue
+                    if line.startswith('---'):
+                        current_cat = line.strip('- ').strip()
+                    elif '|' in line:
+                        num, cat = line.split('|', 1)
+                        items.append({
+                            'number': num.strip(),
+                            'category': cat.strip(),
+                            'status': 'SOLD'
+                        })
+
+        web_stock_path = os.path.join(BASE, "web", "stock_data.js")
+        with open(web_stock_path, 'w', encoding='utf-8') as f:
+            f.write("window.STOCK_DATA = " + json.dumps(items, ensure_ascii=False, indent=2) + ";\n")
+
+        avail_count = len([i for i in items if i['status'] != 'SOLD'])
+        print(f"  ✓ Re-generated web/stock_data.js ({avail_count} stock items ready)")
         return True
     except Exception as e:
-        print(f"  ❌ Failed to update stock/stock_data.js: {e}")
+        print(f"  ❌ Failed to update web/stock_data.js: {e}")
         return False
 
 def auto_push_web_stock():
