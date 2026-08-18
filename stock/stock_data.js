@@ -1340,11 +1340,6 @@ window.STOCK_DATA = [
     "status": "AVAILABLE"
   },
   {
-    "number": "17078055555",
-    "category": "SS TIER (5x digit berulang)",
-    "status": "AVAILABLE"
-  },
-  {
     "number": "16363987694",
     "category": "(URUT)",
     "status": "AVAILABLE"
@@ -12721,31 +12716,6 @@ window.STOCK_DATA = [
   },
   {
     "number": "17042078765",
-    "category": "(URUT)",
-    "status": "AVAILABLE"
-  },
-  {
-    "number": "17077756789",
-    "category": "(URUT)",
-    "status": "AVAILABLE"
-  },
-  {
-    "number": "17077785678",
-    "category": "(URUT)",
-    "status": "AVAILABLE"
-  },
-  {
-    "number": "17078765069",
-    "category": "(URUT)",
-    "status": "AVAILABLE"
-  },
-  {
-    "number": "17078765437",
-    "category": "(URUT)",
-    "status": "AVAILABLE"
-  },
-  {
-    "number": "17145420123",
     "category": "(URUT)",
     "status": "AVAILABLE"
   },
