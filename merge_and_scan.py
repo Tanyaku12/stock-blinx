@@ -581,6 +581,13 @@ def main():
         if os.path.exists(src):
             merge_by_uid(dst, src, key="uid")
 
+        # 2f. BONUS
+        print("\n[2f] Merging BONUS...")
+        src = os.path.join(SRC, "BONUS", "bonus-ID.json")
+        dst = os.path.join(DST, "BONUS", "bonus-ID.json")
+        if os.path.exists(src):
+            merge_by_uid(dst, src, key="uid")
+
         print("\n✅ TUGAS 2 SELESAI — Merge berhasil!")
 
     except Exception as e:

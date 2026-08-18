@@ -173,6 +173,37 @@ def main():
     save_json(rare_path, existing_rares)
     print(f"  → Merged {added_rare_count} new rare items to {rare_path}")
 
+    # 3a-2. BONUS (3-digit urut / bonus accounts)
+    bonus_path = os.path.join(ALL_DIR, "BONUS", "bonus-ID.json")
+    os.makedirs(os.path.dirname(bonus_path), exist_ok=True)
+    existing_bonuses = load_json(bonus_path) if os.path.exists(bonus_path) else []
+    existing_bonus_uids = {x["uid"] for x in existing_bonuses}
+
+    added_bonus_count = 0
+    seqs_3only = ["012", "123", "234", "345", "456", "567", "678", "789", "890", "987", "876", "765", "654", "543", "432", "321", "210", "098"]
+    for uid, item in all_by_uid.items():
+        acc_id = str(item.get("account_id", ""))
+        if any(sq in acc_id for sq in seqs_3only) and uid not in existing_bonus_uids:
+            std_bonus = {
+                "uid": item["uid"],
+                "password": item.get("password", ""),
+                "account_id": acc_id,
+                "name": item.get("name", ""),
+                "region": item.get("region", "ID"),
+                "rarity_type": "BONUS",
+                "rarity_score": item.get("rarity_score", 0),
+                "reason": item.get("reason", ""),
+                "date_identified": get_date_str(item),
+                "jwt_token": item.get("jwt_token", ""),
+                "thread_id": item.get("thread_id", 0)
+            }
+            existing_bonuses.append(std_bonus)
+            existing_bonus_uids.add(uid)
+            added_bonus_count += 1
+
+    save_json(bonus_path, existing_bonuses)
+    print(f"  → Merged {added_bonus_count} new bonus items to {bonus_path}")
+
     # 3b. HUNTER (for score >= 12)
     hunter_dir = os.path.join(ALL_DIR, "HUNTER")
     os.makedirs(hunter_dir, exist_ok=True)
