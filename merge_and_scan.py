@@ -89,18 +89,18 @@ def classify_rapi_id(account_id):
         if seq in s:
             return "URUT"
 
-    # Check 4x repeat (S)
+    # Check 4x repeat (S TIER)
     if re.search(r"(\d)\1{3}", s):
         return "S"
 
-    # Check 3 angka urut (naik & turun/kebalikannya) -> BONUS
+    # Check 3 angka urut (naik & turun/kebalikannya) -> BONUS TIER
     seqs_3only = [
         "012", "123", "234", "345", "456", "567", "678", "789", "890",
         "987", "876", "765", "654", "543", "432", "321", "210", "098"
     ]
     for seq in seqs_3only:
         if seq in s:
-            return "S"
+            return "BONUS"
 
     return None
 
@@ -248,12 +248,17 @@ def update_rapi_files(new_ids, sync_spin=None):
             elif any(sq in s for sq in seqs_4plus):
                 urut_s.add(s)
 
+    s_s = set()
+    bonus_s = set()
+
     for line in all_rare_lines:
         s = line.strip()
         if re.match(r"^\d{10,}$", s):
-            if re.search(r"(\d)\1{3}", s) or any(sq in s for sq in seqs_3only):
-                if s not in sss_s and s not in ss_s and s not in urut_s:
+            if s not in sss_s and s not in ss_s and s not in urut_s:
+                if re.search(r"(\d)\1{3}", s):
                     s_s.add(s)
+                elif any(sq in s for sq in seqs_3only):
+                    bonus_s.add(s)
 
     all_out = []
     all_out.append("--- SSS TIER (6x digit berulang) ---")
@@ -270,9 +275,13 @@ def update_rapi_files(new_ids, sync_spin=None):
     all_out.append("")
     all_out.append("--- S TIER (4x digit berulang) ---")
     all_out.extend(sorted(list(s_s)))
+    all_out.append("")
+    all_out.append("")
+    all_out.append("--- BONUS TIER (3x digit urut) ---")
+    all_out.extend(sorted(list(bonus_s)))
 
     write_rapi_txt(all_path, all_out)
-    tot_all = len(sss_s | ss_s | urut_s | s_s)
+    tot_all = len(sss_s | ss_s | urut_s | s_s | bonus_s)
     print(f"  ✓ Updated all.txt (total: {tot_all} target ID di RAPI)")
     rebuild_rapi_data_json(sync_spin=sync_spin)
 
