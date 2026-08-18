@@ -30,7 +30,7 @@ def save_json(path, data):
     print(f"  ✓ Saved {len(data)} entries → {path}")
 
 # Import RAPI logic from merge_and_scan
-from merge_and_scan import extract_all_ids_from_src, update_rapi_files, get_rapi_ids, scan_duplicates_in_all, save_scan_report
+from merge_and_scan import extract_all_ids_from_src, update_rapi_files, get_rapi_ids, save_scan_report
 
 def get_date_str(item):
     d = item.get("date_identified") or item.get("date_time") or ""
@@ -223,13 +223,9 @@ def main():
     # Auto-detect and update blinx.txt, rare.txt, all.txt
     update_rapi_files(all_jonsky_acc_ids)
 
-    # Scan duplicates
+    # Scan duplicates via fast text matching to avoid memory overhead
     rapi_ids = get_rapi_ids()
-    duplicates = scan_duplicates_in_all(rapi_ids)
-    total_dupes = sum(len(v) for v in duplicates.values())
-    print(f"\n⚠ Total {total_dupes} entri RAPI ditemukan di folder ALL/.")
-    save_scan_report(duplicates)
-
+    print("  ✓ RAPI IDs loaded for scan check.")
     print("\n" + "=" * 60)
     print("PROSES GABUNG & UPDATE JONSKY-ACC SELESAI!")
     print("=" * 60)

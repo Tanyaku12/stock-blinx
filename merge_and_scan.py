@@ -1,3 +1,27 @@
+def safe_load_json(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"  ⚠ JSON standard load failed for {path}: {e}, using fallback recovery...")
+        items = []
+        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+            buf = ""
+            for line in f:
+                line_str = line.strip()
+                if line_str == "[" or line_str == "]":
+                    continue
+                if line_str.endswith(","):
+                    line_str = line_str[:-1]
+                buf += line_str
+                if line_str == "}":
+                    try:
+                        items.append(json.loads(buf))
+                    except:
+                        pass
+                    buf = ""
+        return items
+
 """
 merge_scan_update_rapi.py — Script lengkap untuk:
 1. Auto-detect ID cantik baru (Tier SSS, SS, S, URUT) dari CGU-GEN-JAWA dan update ke RAPI (blinx.txt, rare.txt, all.txt)
@@ -421,7 +445,7 @@ def scan_duplicates_in_all(rapi_ids):
     # Scan ACCOUNTS
     acc_path = os.path.join(DST, "ACCOUNTS", "accounts-ID.json")
     if os.path.exists(acc_path):
-        data = load_json(acc_path)
+        data = safe_load_json(acc_path)
         dupes = [item for item in data if str(item.get("account_id","")) in rapi_ids]
         if dupes:
             duplicates["ACCOUNTS"] = dupes
@@ -430,7 +454,7 @@ def scan_duplicates_in_all(rapi_ids):
     # Scan RARE
     rare_path = os.path.join(DST, "RARE", "rare-ID.json")
     if os.path.exists(rare_path):
-        data = load_json(rare_path)
+        data = safe_load_json(rare_path)
         dupes = [item for item in data if str(item.get("account_id","")) in rapi_ids]
         if dupes:
             duplicates["RARE"] = dupes
@@ -439,7 +463,7 @@ def scan_duplicates_in_all(rapi_ids):
     # Scan TOKENS
     tok_path = os.path.join(DST, "TOKENS", "tokens-ID.json")
     if os.path.exists(tok_path):
-        data = load_json(tok_path)
+        data = safe_load_json(tok_path)
         dupes = [item for item in data if str(item.get("account_id","")) in rapi_ids]
         if dupes:
             duplicates["TOKENS"] = dupes
@@ -451,7 +475,7 @@ def scan_duplicates_in_all(rapi_ids):
         hunter_dupes = []
         for fname in os.listdir(hunter_dir):
             if fname.endswith(".json"):
-                data = load_json(os.path.join(hunter_dir, fname))
+                data = safe_load_json(os.path.join(hunter_dir, fname))
                 for item in data:
                     if str(item.get("account_id","")) in rapi_ids:
                         hunter_dupes.append({"file": fname, **item})
@@ -462,7 +486,7 @@ def scan_duplicates_in_all(rapi_ids):
     # Scan COUPLES
     couples_path = os.path.join(DST, "COUPLES", "couples-ID.json")
     if os.path.exists(couples_path):
-        data = load_json(couples_path)
+        data = safe_load_json(couples_path)
         dupes = []
         for item in data:
             a1 = str(item.get("account1", {}).get("account_id", ""))
